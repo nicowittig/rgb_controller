@@ -123,6 +123,168 @@ controller/fast:
 	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/build
 .PHONY : controller/fast
 
+controller.o: controller.cpp.o
+
+.PHONY : controller.o
+
+# target to build an object file
+controller.cpp.o:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/controller.cpp.o
+.PHONY : controller.cpp.o
+
+controller.i: controller.cpp.i
+
+.PHONY : controller.i
+
+# target to preprocess a source file
+controller.cpp.i:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/controller.cpp.i
+.PHONY : controller.cpp.i
+
+controller.s: controller.cpp.s
+
+.PHONY : controller.s
+
+# target to generate assembly for a file
+controller.cpp.s:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/controller.cpp.s
+.PHONY : controller.cpp.s
+
+effects/fire.o: effects/fire.cpp.o
+
+.PHONY : effects/fire.o
+
+# target to build an object file
+effects/fire.cpp.o:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/effects/fire.cpp.o
+.PHONY : effects/fire.cpp.o
+
+effects/fire.i: effects/fire.cpp.i
+
+.PHONY : effects/fire.i
+
+# target to preprocess a source file
+effects/fire.cpp.i:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/effects/fire.cpp.i
+.PHONY : effects/fire.cpp.i
+
+effects/fire.s: effects/fire.cpp.s
+
+.PHONY : effects/fire.s
+
+# target to generate assembly for a file
+effects/fire.cpp.s:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/effects/fire.cpp.s
+.PHONY : effects/fire.cpp.s
+
+input.o: input.cpp.o
+
+.PHONY : input.o
+
+# target to build an object file
+input.cpp.o:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/input.cpp.o
+.PHONY : input.cpp.o
+
+input.i: input.cpp.i
+
+.PHONY : input.i
+
+# target to preprocess a source file
+input.cpp.i:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/input.cpp.i
+.PHONY : input.cpp.i
+
+input.s: input.cpp.s
+
+.PHONY : input.s
+
+# target to generate assembly for a file
+input.cpp.s:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/input.cpp.s
+.PHONY : input.cpp.s
+
+input_analog.o: input_analog.cpp.o
+
+.PHONY : input_analog.o
+
+# target to build an object file
+input_analog.cpp.o:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/input_analog.cpp.o
+.PHONY : input_analog.cpp.o
+
+input_analog.i: input_analog.cpp.i
+
+.PHONY : input_analog.i
+
+# target to preprocess a source file
+input_analog.cpp.i:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/input_analog.cpp.i
+.PHONY : input_analog.cpp.i
+
+input_analog.s: input_analog.cpp.s
+
+.PHONY : input_analog.s
+
+# target to generate assembly for a file
+input_analog.cpp.s:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/input_analog.cpp.s
+.PHONY : input_analog.cpp.s
+
+input_digital.o: input_digital.cpp.o
+
+.PHONY : input_digital.o
+
+# target to build an object file
+input_digital.cpp.o:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/input_digital.cpp.o
+.PHONY : input_digital.cpp.o
+
+input_digital.i: input_digital.cpp.i
+
+.PHONY : input_digital.i
+
+# target to preprocess a source file
+input_digital.cpp.i:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/input_digital.cpp.i
+.PHONY : input_digital.cpp.i
+
+input_digital.s: input_digital.cpp.s
+
+.PHONY : input_digital.s
+
+# target to generate assembly for a file
+input_digital.cpp.s:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/input_digital.cpp.s
+.PHONY : input_digital.cpp.s
+
+light_element.o: light_element.cpp.o
+
+.PHONY : light_element.o
+
+# target to build an object file
+light_element.cpp.o:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/light_element.cpp.o
+.PHONY : light_element.cpp.o
+
+light_element.i: light_element.cpp.i
+
+.PHONY : light_element.i
+
+# target to preprocess a source file
+light_element.cpp.i:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/light_element.cpp.i
+.PHONY : light_element.cpp.i
+
+light_element.s: light_element.cpp.s
+
+.PHONY : light_element.s
+
+# target to generate assembly for a file
+light_element.cpp.s:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/light_element.cpp.s
+.PHONY : light_element.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -150,6 +312,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+nw_toolkit.o: nw_toolkit.cpp.o
+
+.PHONY : nw_toolkit.o
+
+# target to build an object file
+nw_toolkit.cpp.o:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/nw_toolkit.cpp.o
+.PHONY : nw_toolkit.cpp.o
+
+nw_toolkit.i: nw_toolkit.cpp.i
+
+.PHONY : nw_toolkit.i
+
+# target to preprocess a source file
+nw_toolkit.cpp.i:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/nw_toolkit.cpp.i
+.PHONY : nw_toolkit.cpp.i
+
+nw_toolkit.s: nw_toolkit.cpp.s
+
+.PHONY : nw_toolkit.s
+
+# target to generate assembly for a file
+nw_toolkit.cpp.s:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/nw_toolkit.cpp.s
+.PHONY : nw_toolkit.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -159,9 +348,30 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... controller"
+	@echo "... controller.o"
+	@echo "... controller.i"
+	@echo "... controller.s"
+	@echo "... effects/fire.o"
+	@echo "... effects/fire.i"
+	@echo "... effects/fire.s"
+	@echo "... input.o"
+	@echo "... input.i"
+	@echo "... input.s"
+	@echo "... input_analog.o"
+	@echo "... input_analog.i"
+	@echo "... input_analog.s"
+	@echo "... input_digital.o"
+	@echo "... input_digital.i"
+	@echo "... input_digital.s"
+	@echo "... light_element.o"
+	@echo "... light_element.i"
+	@echo "... light_element.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... nw_toolkit.o"
+	@echo "... nw_toolkit.i"
+	@echo "... nw_toolkit.s"
 .PHONY : help
 
 
