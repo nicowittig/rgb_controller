@@ -150,6 +150,33 @@ controller.cpp.s:
 	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/controller.cpp.s
 .PHONY : controller.cpp.s
 
+effect.o: effect.cpp.o
+
+.PHONY : effect.o
+
+# target to build an object file
+effect.cpp.o:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/effect.cpp.o
+.PHONY : effect.cpp.o
+
+effect.i: effect.cpp.i
+
+.PHONY : effect.i
+
+# target to preprocess a source file
+effect.cpp.i:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/effect.cpp.i
+.PHONY : effect.cpp.i
+
+effect.s: effect.cpp.s
+
+.PHONY : effect.s
+
+# target to generate assembly for a file
+effect.cpp.s:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/effect.cpp.s
+.PHONY : effect.cpp.s
+
 effects/fire.o: effects/fire.cpp.o
 
 .PHONY : effects/fire.o
@@ -351,6 +378,9 @@ help:
 	@echo "... controller.o"
 	@echo "... controller.i"
 	@echo "... controller.s"
+	@echo "... effect.o"
+	@echo "... effect.i"
+	@echo "... effect.s"
 	@echo "... effects/fire.o"
 	@echo "... effects/fire.i"
 	@echo "... effects/fire.s"

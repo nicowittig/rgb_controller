@@ -84,6 +84,12 @@
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/controller.h">
 			<Option target="controller"/>
 		</Unit>
+		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/effect.cpp">
+			<Option target="controller"/>
+		</Unit>
+		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/effect.h">
+			<Option target="controller"/>
+		</Unit>
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/effects/fire.cpp">
 			<Option target="controller"/>
 		</Unit>
@@ -118,6 +124,9 @@
 			<Option target="controller"/>
 		</Unit>
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/nw_toolkit.cpp">
+			<Option target="controller"/>
+		</Unit>
+		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/std_definitions.h">
 			<Option target="controller"/>
 		</Unit>
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/CMakeLists.txt">

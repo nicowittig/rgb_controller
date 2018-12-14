@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/controller.dir/input_analog.cpp.o"
   "CMakeFiles/controller.dir/input_digital.cpp.o"
   "CMakeFiles/controller.dir/effects/fire.cpp.o"
+  "CMakeFiles/controller.dir/effect.cpp.o"
   "controller.pdb"
   "controller"
 )
