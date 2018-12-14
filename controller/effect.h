@@ -5,7 +5,7 @@
 #ifndef CONTROLLER_EFFECT_H
 #define CONTROLLER_EFFECT_H
 
-#include "std_definitions.h"
+#include "arduino_std_definitions.h"
 #include "light_element.h"
 
 class effect {
@@ -16,11 +16,11 @@ protected:
 public:
     effect(light_element* le);
 
-    virtual bool init() = 0;
-    virtual bool run() = 0;
+    bool init();
+    bool run();
 
-    bool check_color_matching(CHSV* color);
-    bool fade_manual(uint8_t* var, uint8_t end, int8_t step);
+    virtual bool check_color_matching(CHSV* color);
+    virtual bool fade_manual(uint8_t* var, uint8_t end, int8_t step);
 
     void set_pixel(uint16_t pixel, uint8_t red, uint8_t green, uint8_t blue);
     void shift(int16_t direction);

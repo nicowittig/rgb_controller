@@ -204,6 +204,33 @@ effects/fire.cpp.s:
 	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/effects/fire.cpp.s
 .PHONY : effects/fire.cpp.s
 
+fire.o: fire.cpp.o
+
+.PHONY : fire.o
+
+# target to build an object file
+fire.cpp.o:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/fire.cpp.o
+.PHONY : fire.cpp.o
+
+fire.i: fire.cpp.i
+
+.PHONY : fire.i
+
+# target to preprocess a source file
+fire.cpp.i:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/fire.cpp.i
+.PHONY : fire.cpp.i
+
+fire.s: fire.cpp.s
+
+.PHONY : fire.s
+
+# target to generate assembly for a file
+fire.cpp.s:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/fire.cpp.s
+.PHONY : fire.cpp.s
+
 input.o: input.cpp.o
 
 .PHONY : input.o
@@ -384,6 +411,9 @@ help:
 	@echo "... effects/fire.o"
 	@echo "... effects/fire.i"
 	@echo "... effects/fire.s"
+	@echo "... fire.o"
+	@echo "... fire.i"
+	@echo "... fire.s"
 	@echo "... input.o"
 	@echo "... input.i"
 	@echo "... input.s"

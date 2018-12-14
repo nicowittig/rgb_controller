@@ -7,6 +7,9 @@
 
 #include <Arduino.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+#include "nw_toolkit.h"
 
 #include "lib/FastLED-3.2.0/FastLED.h"
 #include <FastLED.h>

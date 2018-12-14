@@ -5,7 +5,7 @@
 #ifndef CONTROLLER_LIGHT_ELEMENT_H
 #define CONTROLLER_LIGHT_ELEMENT_H
 
-#include "std_definitions.h"
+#include "arduino_std_definitions.h"
 
 class light_element {
 private:

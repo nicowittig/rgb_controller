@@ -1,9 +1,4 @@
-//
-// Created by Nico Wittig on 2018-12-13.
-//
-
-int modulo(int a, int b);
-int freeRam();
+#include "nw_toolkit.h"
 
 int modulo(int a, int b) {
     return (a < 0) ? b+(a%b) : a%b;

@@ -328,7 +328,7 @@ void blurColumns(CRGB* leds, uint8_t width, uint8_t height, fract8 blur_amount);
 // CRGB HeatColor( uint8_t temperature)
 //
 // Approximates a 'black body radiation' spectrum for
-// a given 'heat' level.  This is useful for animations of 'fire'.
+// a given 'heat' level.  This is useful for animations of 'e_fire'.
 // Heat is specified as an arbitrary scale from 0 (cool) to 255 (hot).
 // This is NOT a chromatically correct 'black body radiation'
 // spectrum, but it's surprisingly close, and it's fast and small.
