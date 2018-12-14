@@ -3,3 +3,15 @@
 //
 
 #include "controller.h"
+
+void c_setup() {
+
+}
+
+void c_loop() {
+
+}
+
+void show() {
+
+}
