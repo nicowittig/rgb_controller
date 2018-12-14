@@ -872,7 +872,7 @@ typedef q<uint16_t, 12,4> q124;
 //  For that effect, add this line just above your existing call to "FastLED.show()":
 //
 //     uint8_t bright = beatsin8( 60 /*BPM*/, 192 /*dimmest*/, 255 /*brightest*/ ));
-//     FastLED.setBrightness( bright );
+//     FastLED.set_brightness( bright );
 //     FastLED.show();
 //
 //  The entire animation will now pulse between brightness 192 and 255 once per second.

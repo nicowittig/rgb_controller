@@ -5,9 +5,6 @@
 int modulo(int a, int b);
 int freeRam();
 
-
-
-
 int modulo(int a, int b) {
     return (a < 0) ? b+(a%b) : a%b;
 }

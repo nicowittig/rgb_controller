@@ -131,7 +131,7 @@ FastLED2
 * Update keywords with all the new stuffs
 
 ## Release Candidate 5
-* Gemma and Trinket: supported except for global "setBrightness"
+* Gemma and Trinket: supported except for global "set_brightness"
 
 ## Release Candidate 4
 * Added NEOPIXEL as a synonym for WS2811

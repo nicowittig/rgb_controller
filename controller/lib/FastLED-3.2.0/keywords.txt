@@ -30,7 +30,7 @@ CRGBPalette256	KEYWORD1
 
 # FastLED methods
 addLeds	KEYWORD2
-setBrightness	KEYWORD2
+set_brightness	KEYWORD2
 getBrightness	KEYWORD2
 show	KEYWORD2
 clear	KEYWORD2
