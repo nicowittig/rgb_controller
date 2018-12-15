@@ -14,6 +14,7 @@ class e_fire : public effect {
 private:
     int16_t cooling;
     int16_t sparking;
+
     void set_pixel_heat_color(uint16_t pixel, uint8_t temperature);
 
 public:

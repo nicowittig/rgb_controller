@@ -14,23 +14,23 @@
 
 CRGB crgb_leds[NUM_LEDS];
 light_element* l_elements;
-effect* effects;
+effect* effects [num_elements];
 
 void c_setup() {
-    Serial.begin(115200);
+    Serial.begin(4800);
 
     FastLED.addLeds<WS2812, LED_PIN, GRB>(crgb_leds, NUM_LEDS);
     for (uint16_t i = 0; i < NUM_LEDS; i++) crgb_leds[i] = CRGB::Black;
 
     l_elements = (light_element *) malloc(sizeof(light_element) * num_elements);
-    effects = (effect *) malloc(sizeof(effect) * num_elements);
 
     l_elements[0] = light_element(0, 15);
-    //effects[0] = e_fire(l_elements[0], 55, 120);
-    effects[0] = effect(&l_elements[0]);
+    effects[0] = new e_fire(l_elements[0], 55, 120);
+
 
     for (int i = 0; i < l_elements[0].get_num_leds(); i++) {
-        l_elements[0].leds[i] = CHSV(i*255/15, 255, 255);
+        //l_elements[0].leds[i] = CHSV(i*255/15, 255, 255);
+        l_elements[0].leds[i] = CHSV(0, 255, 255);
     }
 
     show_all_pixels();
@@ -42,6 +42,7 @@ uint8_t hue = 0;
 
 void c_loop() {
     Serial.println(freeRam());
+    Serial.println(hue++);
 
 
 
@@ -51,8 +52,8 @@ void c_loop() {
     }
     delay(100);
 
-    effects[0].wipe(CHSV(0,255,255), 1);
 
+    effects[0]->run();
 
 
 
@@ -75,7 +76,7 @@ void c_loop() {
         }
 
         if ((message - 48) >= 0 && (message - 48) <= 9) {
-            mode = (message - 48);
+            mode = (uint8_t) (message - 48);
         }
 
     }

@@ -87,22 +87,16 @@
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/controller.h">
 			<Option target="controller"/>
 		</Unit>
+		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_fire.cpp">
+			<Option target="controller"/>
+		</Unit>
+		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_fire.h">
+			<Option target="controller"/>
+		</Unit>
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/effect.cpp">
 			<Option target="controller"/>
 		</Unit>
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/effect.h">
-			<Option target="controller"/>
-		</Unit>
-		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/effects/fire.cpp">
-			<Option target="controller"/>
-		</Unit>
-		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/effects/fire.h">
-			<Option target="controller"/>
-		</Unit>
-		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/fire.cpp">
-			<Option target="controller"/>
-		</Unit>
-		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/fire.h">
 			<Option target="controller"/>
 		</Unit>
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/input.cpp">
@@ -133,6 +127,9 @@
 			<Option target="controller"/>
 		</Unit>
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/nw_toolkit.cpp">
+			<Option target="controller"/>
+		</Unit>
+		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/nw_toolkit.h">
 			<Option target="controller"/>
 		</Unit>
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/CMakeLists.txt">

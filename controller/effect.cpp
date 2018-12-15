@@ -6,12 +6,15 @@
 
 effect::effect(light_element *le) {
     this->le = le;
+    this->effect_index = 0;
 }
 
 bool effect::check_color_matching(CHSV *color) {
+
     for (int i = 0; i < this->le->get_num_leds(); i++) {
         if (this->le->leds[i] != *color) return false;
     }
+
     return true;
 }
 
@@ -46,22 +49,22 @@ void effect::shift(int16_t direction) {
 void effect::shift_hue(int16_t direction) {
 
     if (direction > 0) {
-        uint8_t save_hue = this->le->leds[this->le->get_num_leds() -1].hue;
+        uint8_t save_hue = le->leds[le->get_num_leds() -1].hue;
 
-        for (int i = this->le->get_num_leds() -1; i >= 1; i--) {
-            this->le->leds[i].hue = this->le->leds[i-1].hue;
+        for (int i = le->get_num_leds() -1; i >= 1; i--) {
+            le->leds[i].hue = le->leds[i-1].hue;
         }
 
-        this->le->leds[0].hue = save_hue;
+        le->leds[0].hue = save_hue;
         shift_hue(--direction);
     } else if (direction < 0) {
-        uint8_t save_hue = this->le->leds[0].hue;
+        uint8_t save_hue = le->leds[0].hue;
 
-        for (int i = 0; i < this->le->get_num_leds(); i++) {
-            this->le->leds[i].hue = this->le->leds[i+1].hue;
+        for (int i = 0; i < le->get_num_leds(); i++) {
+            le->leds[i].hue = le->leds[i+1].hue;
         }
 
-        this->le->leds[this->le->get_num_leds()-1].hue = save_hue;
+        le->leds[le->get_num_leds()-1].hue = save_hue;
         shift_hue(++direction);
     } else {
         return;
@@ -70,16 +73,17 @@ void effect::shift_hue(int16_t direction) {
 }
 
 bool effect::wipe(CHSV new_color, int8_t direction) {
-    if (direction == 0 || this->effect_index >= this->le->get_num_leds() || check_color_matching(&new_color)) {
-        this->effect_index = 0;
+
+    if (direction == 0 || effect_index >= le->get_num_leds() || check_color_matching(&new_color)) {
+        effect_index = 0;
         return true;
     } else {
         if (direction > 0) {
-            this->le->leds[this->effect_index] = new_color;
-            this->effect_index += direction;
+            le->leds[effect_index] = new_color;
+            effect_index += direction;
         } else {
-            this->le->leds[this->le->get_num_leds()-this->effect_index-1] = new_color;
-            this->effect_index -= direction;
+            le->leds[le->get_num_leds()-effect_index-1] = new_color;
+            effect_index -= direction;
         }
     }
 
@@ -105,20 +109,20 @@ bool effect::fade_manual(uint8_t *var, uint8_t end, int8_t step) {
     return false;
 }
 
-bool effect::fade(CHSV *new_color, int8_t step) {
+bool effect::fade(CHSV new_color, int8_t step) {
     bool all_colors_ready = true;
 
     for (int i = 0; i < this->le->get_num_leds(); i++) {
 
-        if (!fade_manual(&le->leds[i].hue, new_color->hue, step)) all_colors_ready = false;
+        if (!fade_manual(&le->leds[i].hue, new_color.hue, step)) all_colors_ready = false;
 
-        if (!fade_manual(&le->leds[i].sat, new_color->sat,
-                                (le->leds[i].sat > new_color->sat) ? -abs(step) : abs(step))) {
+        if (!fade_manual(&le->leds[i].sat, new_color.sat,
+                                (le->leds[i].sat > new_color.sat) ? -abs(step) : abs(step))) {
             all_colors_ready = false;
         }
 
-        if (!fade_manual(&le->leds[i].val, new_color->val,
-                                (le->leds[i].val > new_color->val) ? -abs(step) : abs(step))) {
+        if (!fade_manual(&le->leds[i].val, new_color.val,
+                                (le->leds[i].val > new_color.val) ? -abs(step) : abs(step))) {
             all_colors_ready = false;
         }
     }

@@ -150,6 +150,33 @@ controller.cpp.s:
 	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/controller.cpp.s
 .PHONY : controller.cpp.s
 
+e_fire.o: e_fire.cpp.o
+
+.PHONY : e_fire.o
+
+# target to build an object file
+e_fire.cpp.o:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/e_fire.cpp.o
+.PHONY : e_fire.cpp.o
+
+e_fire.i: e_fire.cpp.i
+
+.PHONY : e_fire.i
+
+# target to preprocess a source file
+e_fire.cpp.i:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/e_fire.cpp.i
+.PHONY : e_fire.cpp.i
+
+e_fire.s: e_fire.cpp.s
+
+.PHONY : e_fire.s
+
+# target to generate assembly for a file
+e_fire.cpp.s:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/e_fire.cpp.s
+.PHONY : e_fire.cpp.s
+
 effect.o: effect.cpp.o
 
 .PHONY : effect.o
@@ -176,60 +203,6 @@ effect.s: effect.cpp.s
 effect.cpp.s:
 	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/effect.cpp.s
 .PHONY : effect.cpp.s
-
-effects/fire.o: effects/fire.cpp.o
-
-.PHONY : effects/fire.o
-
-# target to build an object file
-effects/fire.cpp.o:
-	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/effects/fire.cpp.o
-.PHONY : effects/fire.cpp.o
-
-effects/fire.i: effects/fire.cpp.i
-
-.PHONY : effects/fire.i
-
-# target to preprocess a source file
-effects/fire.cpp.i:
-	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/effects/fire.cpp.i
-.PHONY : effects/fire.cpp.i
-
-effects/fire.s: effects/fire.cpp.s
-
-.PHONY : effects/fire.s
-
-# target to generate assembly for a file
-effects/fire.cpp.s:
-	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/effects/fire.cpp.s
-.PHONY : effects/fire.cpp.s
-
-fire.o: fire.cpp.o
-
-.PHONY : fire.o
-
-# target to build an object file
-fire.cpp.o:
-	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/fire.cpp.o
-.PHONY : fire.cpp.o
-
-fire.i: fire.cpp.i
-
-.PHONY : fire.i
-
-# target to preprocess a source file
-fire.cpp.i:
-	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/fire.cpp.i
-.PHONY : fire.cpp.i
-
-fire.s: fire.cpp.s
-
-.PHONY : fire.s
-
-# target to generate assembly for a file
-fire.cpp.s:
-	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/fire.cpp.s
-.PHONY : fire.cpp.s
 
 input.o: input.cpp.o
 
@@ -405,15 +378,12 @@ help:
 	@echo "... controller.o"
 	@echo "... controller.i"
 	@echo "... controller.s"
+	@echo "... e_fire.o"
+	@echo "... e_fire.i"
+	@echo "... e_fire.s"
 	@echo "... effect.o"
 	@echo "... effect.i"
 	@echo "... effect.s"
-	@echo "... effects/fire.o"
-	@echo "... effects/fire.i"
-	@echo "... effects/fire.s"
-	@echo "... fire.o"
-	@echo "... fire.i"
-	@echo "... fire.s"
 	@echo "... input.o"
 	@echo "... input.i"
 	@echo "... input.s"

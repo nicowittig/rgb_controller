@@ -7,27 +7,35 @@
 e_fire::e_fire(light_element le, int16_t cooling, int16_t sparking) : effect(&le) {
     this->cooling = cooling;
     this->sparking = sparking;
+    Serial.println("constructor");
 }
 
 bool e_fire::init() {
-
+    Serial.println("init");
 }
 
 bool e_fire::run() {
-    uint8_t heat[le->get_num_leds()];
+
+    Serial.println("run");
+
+    byte heat[le->get_num_leds()];
     int cooldown;
 
     // Step 1.  Cool down every cell a little
     for( int i = 0; i < le->get_num_leds(); i++) {
+
         cooldown = random(0, ((cooling * 10) / le->get_num_leds()) + 2);
 
-        if(cooldown>heat[i]) {
-            heat[i]=0;
+        if(cooldown > heat[i]) {
+            //Serial.println("true");
+            heat[i] = 0;
         } else {
-            heat[i]=heat[i]-cooldown;
+            //heat[i] = heat[i]-cooldown;
         }
+
     }
 
+/*
     // Step 2.  Heat from each cell drifts 'up' and diffuses a little
     for( int k= le->get_num_leds() - 1; k >= 2; k--) {
         heat[k] = (heat[k - 1] + heat[k - 2] + heat[k - 2]) / 3;
@@ -44,6 +52,7 @@ bool e_fire::run() {
     for( int j = 0; j < le->get_num_leds(); j++) {
         set_pixel_heat_color(j, heat[j] );
     }
+     */
 }
 
 void e_fire::set_pixel_heat_color(uint16_t pixel, uint8_t temperature) {
