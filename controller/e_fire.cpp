@@ -4,55 +4,57 @@
 
 #include "e_fire.h"
 
-e_fire::e_fire(light_element le, int16_t cooling, int16_t sparking) : effect(&le) {
+e_fire::e_fire(light_element* le, int16_t cooling, int16_t sparking) : effect(le) {
     this->cooling = cooling;
     this->sparking = sparking;
-    Serial.println("constructor");
+    Serial.println("construct: e_fire");
 }
 
 bool e_fire::init() {
-    Serial.println("init");
+    Serial.println("init: e_fire");
 }
 
 bool e_fire::run() {
 
-    Serial.println("run");
+    Serial.println("run: e_fire");
 
-    byte heat[le->get_num_leds()];
+    uint8_t* heat = (uint8_t *) malloc(sizeof(uint8_t) * le->get_num_leds());
     int cooldown;
 
     // Step 1.  Cool down every cell a little
-    for( int i = 0; i < le->get_num_leds(); i++) {
+    for(uint16_t i = 0; i < le->get_num_leds(); i++) {
 
         cooldown = random(0, ((cooling * 10) / le->get_num_leds()) + 2);
 
         if(cooldown > heat[i]) {
-            //Serial.println("true");
             heat[i] = 0;
         } else {
-            //heat[i] = heat[i]-cooldown;
+            heat[i] = heat[i]-cooldown;
         }
 
     }
 
-/*
+
+
     // Step 2.  Heat from each cell drifts 'up' and diffuses a little
-    for( int k= le->get_num_leds() - 1; k >= 2; k--) {
+    for(uint16_t k = le->get_num_leds() - 1; k >= 2; k--) {
         heat[k] = (heat[k - 1] + heat[k - 2] + heat[k - 2]) / 3;
     }
 
     // Step 3.  Randomly ignite new 'sparks' near the bottom
-    if( random(255) < sparking ) {
-        int y = random(7);
+    if(random(255) < sparking) {
+        uint8_t y = random(7);
         heat[y] = heat[y] + random(160,255);
         //heat[y] = random(160,255);
     }
 
     // Step 4.  Convert heat to LED colors
-    for( int j = 0; j < le->get_num_leds(); j++) {
+    for(uint16_t j = 0; j < le->get_num_leds(); j++) {
         set_pixel_heat_color(j, heat[j] );
     }
-     */
+
+
+    free(heat);
 }
 
 void e_fire::set_pixel_heat_color(uint16_t pixel, uint8_t temperature) {

@@ -18,7 +18,7 @@ private:
     void set_pixel_heat_color(uint16_t pixel, uint8_t temperature);
 
 public:
-    e_fire(light_element le, int16_t cooling, int16_t sparking);
+    e_fire(light_element* le, int16_t cooling, int16_t sparking);
     virtual bool init();
     virtual bool run();
 

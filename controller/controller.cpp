@@ -13,7 +13,7 @@
 #define num_elements 1
 
 CRGB crgb_leds[NUM_LEDS];
-light_element* l_elements;
+light_element* l_elements = (light_element *) malloc(sizeof(light_element) * num_elements);
 effect* effects [num_elements];
 
 void c_setup() {
@@ -22,10 +22,11 @@ void c_setup() {
     FastLED.addLeds<WS2812, LED_PIN, GRB>(crgb_leds, NUM_LEDS);
     for (uint16_t i = 0; i < NUM_LEDS; i++) crgb_leds[i] = CRGB::Black;
 
-    l_elements = (light_element *) malloc(sizeof(light_element) * num_elements);
+    //l_elements = (light_element *) malloc(sizeof(light_element) * num_elements);
 
     l_elements[0] = light_element(0, 15);
-    effects[0] = new e_fire(l_elements[0], 55, 120);
+
+    effects[0] = new e_fire(&l_elements[0], 55, 120);
 
 
     for (int i = 0; i < l_elements[0].get_num_leds(); i++) {
@@ -37,26 +38,9 @@ void c_setup() {
 
 }
 
-uint8_t mode = 1;
-uint8_t hue = 0;
+uint8_t mode = 0;
 
 void c_loop() {
-    Serial.println(freeRam());
-    Serial.println(hue++);
-
-
-
-
-    for (int i = 0; i < l_elements[0].get_num_leds(); i++) {
-        //l_elements[0].leds[i] = CHSV(hue++, 255, 255);
-    }
-    delay(100);
-
-
-    effects[0]->run();
-
-
-
 
     if (Serial.available() > 0) {
 
@@ -85,13 +69,14 @@ void c_loop() {
 
     switch(mode) {
         case 0 : {
-            //effects[0].run();
+            effects[0]->run();
             delay(15);
             break;
         }
         default: break;
     }
 
+    Serial.println(freeRam());
     show_all_pixels();
 
 }
