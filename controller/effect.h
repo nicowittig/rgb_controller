@@ -27,6 +27,7 @@ protected:
 
 public:
     effect(light_element* le);
+    virtual ~effect();
 
     virtual bool init() = 0;
     virtual bool run() = 0;

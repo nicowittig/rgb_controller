@@ -99,6 +99,9 @@
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/effect.h">
 			<Option target="controller"/>
 		</Unit>
+		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/effect_inclusions.h">
+			<Option target="controller"/>
+		</Unit>
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/input.cpp">
 			<Option target="controller"/>
 		</Unit>

@@ -17,6 +17,4 @@
 #include "lib/Adafruit_NeoPixel/Adafruit_NeoPixel.h"
 #include <Adafruit_NeoPixel.h>
 
-#define DELAY(delay) (delay_counter % ((int) ((delay) / delay_balance)) == 0 && delay_counter >= ((delay) / delay_balance))
-
 #endif //CONTROLLER_STD_DEFINITIONS_H

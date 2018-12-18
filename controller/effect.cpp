@@ -9,6 +9,10 @@ effect::effect(light_element *le) {
     this->effect_index = 0;
 }
 
+effect::~effect() {
+
+}
+
 bool effect::check_color_matching(CHSV *color) {
 
     for (int i = 0; i < this->le->get_num_leds(); i++) {

@@ -5,17 +5,23 @@
 #include "e_fire.h"
 
 e_fire::e_fire(light_element* le, int16_t cooling, int16_t sparking) : effect(le) {
+    Serial.println("construct: e_fire");
+
     this->cooling = cooling;
     this->sparking = sparking;
-    Serial.println("construct: e_fire");
+}
+
+e_fire::~e_fire() {
+
 }
 
 bool e_fire::init() {
     Serial.println("init: e_fire");
+
+    le->set_all(CRGB::Black);
 }
 
 bool e_fire::run() {
-
     Serial.println("run: e_fire");
 
     uint8_t* heat = (uint8_t *) malloc(sizeof(uint8_t) * le->get_num_leds());

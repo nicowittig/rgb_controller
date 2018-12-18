@@ -19,6 +19,7 @@ private:
 
 public:
     e_fire(light_element* le, int16_t cooling, int16_t sparking);
+    virtual ~e_fire();
     virtual bool init();
     virtual bool run();
 

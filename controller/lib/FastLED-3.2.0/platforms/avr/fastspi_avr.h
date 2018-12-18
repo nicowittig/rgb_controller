@@ -32,7 +32,7 @@ public:
 	void init() {
 		UBRR1 = 0;
 
-		/* Set MSPI mode of operation and SPI data mode 0. */
+		/* Set MSPI cur_mode of operation and SPI data cur_mode 0. */
 		UCSR1C = (1<<UMSEL11)|(1<<UMSEL10)|(0<<UCPHA1)|(0<<UCPOL1);
 		/* Enable receiver and transmitter. */
 		UCSR1B = (1<<RXEN1)|(1<<TXEN1);
@@ -179,7 +179,7 @@ public:
 	void init() {
 		UBRR0 = 0;
 
-		/* Set MSPI mode of operation and SPI data mode 0. */
+		/* Set MSPI cur_mode of operation and SPI data cur_mode 0. */
 		UCSR0C = (1<<UMSEL01)|(1<<UMSEL00)/*|(0<<UCPHA0)*/|(0<<UCPOL0);
 		/* Enable receiver and transmitter. */
 		UCSR0B = (1<<RXEN0)|(1<<TXEN0);

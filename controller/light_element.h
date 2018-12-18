@@ -22,6 +22,7 @@ public:
     uint16_t get_num_leds() const;
     void set_brightness(float brightness);
 
+    void set_all(CRGB color);
     void show(CRGB* leds_crgb, float BRIGHTNESS);
 };
 

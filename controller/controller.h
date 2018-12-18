@@ -6,18 +6,42 @@
 #define CONTROLLER_CONTROLLER_H
 
 #include "arduino_std_definitions.h"
-
-#include "effect.h"
-//#include "input.h"
 #include "light_element.h"
+//#include "input.h"
+#include "effect_inclusions.h"
 
-#include "e_fire.h"
+#define delay_balance 36
+#define LED_PIN 6
+#define NUM_LEDS 15 //77
+#define num_elements 1
 
-void c_setup();
-void c_loop();
+class controller {
+private:
+    uint16_t delay_counter = 0;
 
-void adjust_sensors();
-void refresh_inputs();
-void show_all_pixels();
+    uint8_t cur_mode;
+    uint8_t new_mode;
+
+    float brightness = 1;
+
+    CRGB crgb_leds[NUM_LEDS];
+    light_element* l_elements = (light_element *) malloc(sizeof(light_element) * num_elements);
+    effect* effects [num_elements];
+
+    void adjust_sensors();
+    void refresh_inputs();
+    void show_all_pixels();
+
+public:
+    //controller();
+
+    void setup();
+    void loop();
+
+    uint8_t get_mode() const;
+    void set_mode(uint8_t mode);
+    float getBrightness() const;
+    bool setBrightness(float brightness);
+};
 
 #endif //CONTROLLER_CONTROLLER_H

@@ -1,10 +1,12 @@
 #include "controller.h"
 
+controller* c = new controller();
+
 void setup() {
-  c_setup();
+  c->setup();
 }
 
 void loop() {
-  c_loop();
+  c->loop();
 }
 
