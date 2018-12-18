@@ -150,6 +150,33 @@ controller.cpp.s:
 	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/controller.cpp.s
 .PHONY : controller.cpp.s
 
+e_bouncing_balls.o: e_bouncing_balls.cpp.o
+
+.PHONY : e_bouncing_balls.o
+
+# target to build an object file
+e_bouncing_balls.cpp.o:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/e_bouncing_balls.cpp.o
+.PHONY : e_bouncing_balls.cpp.o
+
+e_bouncing_balls.i: e_bouncing_balls.cpp.i
+
+.PHONY : e_bouncing_balls.i
+
+# target to preprocess a source file
+e_bouncing_balls.cpp.i:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/e_bouncing_balls.cpp.i
+.PHONY : e_bouncing_balls.cpp.i
+
+e_bouncing_balls.s: e_bouncing_balls.cpp.s
+
+.PHONY : e_bouncing_balls.s
+
+# target to generate assembly for a file
+e_bouncing_balls.cpp.s:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/e_bouncing_balls.cpp.s
+.PHONY : e_bouncing_balls.cpp.s
+
 e_fire.o: e_fire.cpp.o
 
 .PHONY : e_fire.o
@@ -378,6 +405,9 @@ help:
 	@echo "... controller.o"
 	@echo "... controller.i"
 	@echo "... controller.s"
+	@echo "... e_bouncing_balls.o"
+	@echo "... e_bouncing_balls.i"
+	@echo "... e_bouncing_balls.s"
 	@echo "... e_fire.o"
 	@echo "... e_fire.i"
 	@echo "... e_fire.s"

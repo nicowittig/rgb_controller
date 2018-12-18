@@ -38,5 +38,5 @@ void light_element::show(CRGB* leds_crgb, float BRIGHTNESS) {
         leds_crgb[first_led + i] = CHSV(leds[i].hue, leds[i].sat, static_cast<uint8_t>(leds[i].val * brightness * BRIGHTNESS));
     }
 
-    //FastLED.show();
+    FastLED.show();
 }

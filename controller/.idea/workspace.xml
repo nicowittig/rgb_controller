@@ -12,26 +12,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f127c64-acad-4554-bc5b-6209840f9a0d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/effect_inclusions.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/serialmonitor_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/serialmonitor_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e_bouncing_balls.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e_bouncing_balls.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arduino_std_definitions.h" beforeDir="false" afterPath="$PROJECT_DIR$/arduino_std_definitions.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/controller.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/controller.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/controller.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/controller.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/controller.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/controller.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/controller.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/controller.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/controller.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/controller.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/controller.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/controller.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/controller.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller.h" beforeDir="false" afterPath="$PROJECT_DIR$/controller.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller.ino" beforeDir="false" afterPath="$PROJECT_DIR$/controller.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e_fire.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/e_fire.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e_fire.h" beforeDir="false" afterPath="$PROJECT_DIR$/e_fire.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/effect.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/effect.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/effect.h" beforeDir="false" afterPath="$PROJECT_DIR$/effect.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Adafruit_NeoPixel/COPYING" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Adafruit_NeoPixel/COPYING" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/FastLED-3.2.0/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/lib/FastLED-3.2.0/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/FastLED-3.2.0/platforms/avr/fastspi_avr.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/FastLED-3.2.0/platforms/avr/fastspi_avr.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/FastLED-3.2.0/preview_changes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/FastLED-3.2.0/preview_changes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/effect_inclusions.h" beforeDir="false" afterPath="$PROJECT_DIR$/effect_inclusions.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/light_element.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/light_element.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/light_element.h" beforeDir="false" afterPath="$PROJECT_DIR$/light_element.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nw_toolkit.h" beforeDir="false" afterPath="$PROJECT_DIR$/nw_toolkit.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,11 +58,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+            <state relative-caret-position="364">
+              <caret line="56" column="35" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
               <folding>
                 <element signature="e#1683#1707#0" />
               </folding>
@@ -76,9 +74,93 @@
         <entry file="file://$PROJECT_DIR$/controller.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
-              <caret line="34" column="7" lean-forward="true" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+              <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
               <folding>
                 <element signature="e#113#149#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/light_element.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
+              <folding>
+                <element signature="e#300#324#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/effect.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="628">
+              <caret line="65" column="54" selection-start-line="65" selection-start-column="54" selection-end-line="65" selection-end-column="54" />
+              <folding>
+                <element signature="e#155#177#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/effect.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" column="29" lean-forward="true" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+              <folding>
+                <element signature="e#105#141#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/e_fire.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="159">
+              <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="34" />
+              <folding>
+                <element signature="e#258#280#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/e_fire.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+              <folding>
+                <element signature="e#101#137#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/e_bouncing_balls.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="51" column="57" selection-start-line="51" selection-start-column="57" selection-end-line="51" selection-end-column="57" />
+              <folding>
+                <element signature="e#174#216#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/e_bouncing_balls.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+              <folding>
+                <element signature="e#125#161#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -91,9 +173,11 @@
       <find>e-&gt;</find>
       <find>le-&gt;</find>
       <find>this-&gt;</find>
+      <find>BallCount</find>
     </findStrings>
     <replaceStrings>
       <replace>this-&gt;le-&gt;</replace>
+      <replace>ball_count</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -115,8 +199,6 @@
         <option value="$PROJECT_DIR$/light_element.h" />
         <option value="$PROJECT_DIR$/viewer.h" />
         <option value="$PROJECT_DIR$/viewer.cpp" />
-        <option value="$PROJECT_DIR$/effect.h" />
-        <option value="$PROJECT_DIR$/effect.cpp" />
         <option value="$PROJECT_DIR$/e_fire.h" />
         <option value="$PROJECT_DIR$/e_fire.cpp" />
         <option value="$PROJECT_DIR$/arduino_std_definitions.h" />
@@ -125,10 +207,14 @@
         <option value="$PROJECT_DIR$/communication.h" />
         <option value="$PROJECT_DIR$/communicator.h" />
         <option value="$PROJECT_DIR$/communicator.cpp" />
+        <option value="$PROJECT_DIR$/controller.h" />
+        <option value="$PROJECT_DIR$/effect.h" />
+        <option value="$PROJECT_DIR$/effect.cpp" />
         <option value="$PROJECT_DIR$/effect_inclusions.h" />
         <option value="$PROJECT_DIR$/light_element.cpp" />
-        <option value="$PROJECT_DIR$/controller.h" />
         <option value="$PROJECT_DIR$/controller.cpp" />
+        <option value="$PROJECT_DIR$/e_bouncing_balls.h" />
+        <option value="$PROJECT_DIR$/e_bouncing_balls.cpp" />
       </list>
     </option>
   </component>
@@ -198,7 +284,7 @@
       <workItem from="1544641592565" duration="18991000" />
       <workItem from="1544811452846" duration="20729000" />
       <workItem from="1545081054200" duration="3249000" />
-      <workItem from="1545149300166" duration="9173000" />
+      <workItem from="1545149300166" duration="14425000" />
     </task>
     <task id="LOCAL-00001" summary="ADD CLion-Git-integration">
       <created>1544653615673</created>
@@ -256,11 +342,18 @@
       <option name="project" value="LOCAL" />
       <updated>1545131673696</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="minor CODE OPTIMISATION">
+      <created>1545158988523</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1545158988523</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52142000" />
+    <option name="totallyTimeSpent" value="57394000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -273,8 +366,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49524942" visible="true" weight="0.12820514" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49524942" visible="true" weight="0.12820514" />
       <window_info id="Structure" order="1" sideWeight="0.5047506" side_tool="true" weight="0.12820514" />
       <window_info id="Favorites" order="2" sideWeight="0.50261235" side_tool="true" weight="0.12576313" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -283,11 +377,11 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="6" sideWeight="0.4993895" visible="true" weight="0.33019853" />
+      <window_info anchor="bottom" id="Version Control" order="6" sideWeight="0.4993895" weight="0.33019853" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.3291536" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info active="true" anchor="bottom" id="Messages" order="9" visible="true" weight="0.3291536" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3291536" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.24764891" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50061053" side_tool="true" weight="0.28213167" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.3291536" />
       <window_info anchor="bottom" id="Serial Monitor" order="13" weight="0.24033438" />
@@ -385,7 +479,8 @@
     <MESSAGE value="Major bug fixing." />
     <MESSAGE value="DEBUGGING class structure" />
     <MESSAGE value="RELEASE v0.1 with e_fire" />
-    <option name="LAST_COMMIT_MESSAGE" value="RELEASE v0.1 with e_fire" />
+    <MESSAGE value="minor CODE OPTIMISATION" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor CODE OPTIMISATION" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/input.cpp">
@@ -439,53 +534,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/effect.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="135" lean-forward="true" selection-start-line="135" selection-end-line="135" />
-          <folding>
-            <element signature="e#155#177#0" />
-            <element signature="e#155#342#0" />
-            <element signature="e#344#501#0" />
-            <element signature="e#503#1169#0" />
-            <element signature="e#1171#1809#0" />
-            <element signature="e#1811#2303#0" />
-            <element signature="e#2305#2763#0" />
-            <element signature="e#2765#3439#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/effect.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
-          <folding>
-            <element signature="e#105#141#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/e_fire.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-          <folding>
-            <element signature="e#101#137#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/e_fire.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-          <folding>
-            <element signature="e#258#280#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nw_toolkit.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -528,13 +576,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/effect_inclusions.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller.ino">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -542,10 +583,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/effect_inclusions.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/effect.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="29" lean-forward="true" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+          <folding>
+            <element signature="e#105#141#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/effect.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="628">
+          <caret line="65" column="54" selection-start-line="65" selection-start-column="54" selection-end-line="65" selection-end-column="54" />
+          <folding>
+            <element signature="e#155#177#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e_fire.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="34" />
+          <folding>
+            <element signature="e#258#280#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e_fire.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#101#137#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/light_element.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
-          <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
+          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
           <folding>
             <element signature="e#300#324#0" />
           </folding>
@@ -555,7 +643,7 @@
     <entry file="file://$PROJECT_DIR$/controller.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
-          <caret line="34" column="7" lean-forward="true" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+          <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
           <folding>
             <element signature="e#113#149#0" expanded="true" />
           </folding>
@@ -564,10 +652,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controller.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+        <state relative-caret-position="364">
+          <caret line="56" column="35" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
           <folding>
             <element signature="e#1683#1707#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e_bouncing_balls.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+          <folding>
+            <element signature="e#125#161#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e_bouncing_balls.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="51" column="57" selection-start-line="51" selection-start-column="57" selection-end-line="51" selection-end-column="57" />
+          <folding>
+            <element signature="e#174#216#0" />
           </folding>
         </state>
       </provider>

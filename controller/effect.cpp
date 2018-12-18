@@ -22,9 +22,33 @@ bool effect::check_color_matching(CHSV *color) {
     return true;
 }
 
+//region Pixel Setter
+
 void effect::set_pixel(uint16_t pixel, uint8_t red, uint8_t green, uint8_t blue) {
     this->le->leds[pixel] = rgb2hsv_approximate(CRGB(red, green, blue));
 }
+
+void effect::set_pixel(uint16_t pixel, CHSV color) {
+    this->le->leds[pixel] = color;
+}
+
+void effect::set_pixel(uint16_t pixel, CRGB color) {
+    this->le->leds[pixel] = rgb2hsv_approximate(color);
+}
+
+void effect::set_all(uint8_t red, uint8_t green, uint8_t blue) {
+    for (int i = 0; i < le->get_num_leds(); i++) le->leds[i] = rgb2hsv_approximate(CRGB(red, green, blue));
+}
+
+void effect::set_all(CHSV color) {
+    for (int i = 0; i < le->get_num_leds(); i++) le->leds[i] = color;
+}
+
+void effect::set_all(CRGB color) {
+    for (int i = 0; i < le->get_num_leds(); i++) le->leds[i] = rgb2hsv_approximate(color);
+}
+
+//endregion
 
 void effect::shift(int16_t direction) {
     if (direction > 0) {

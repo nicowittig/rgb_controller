@@ -20,6 +20,12 @@ protected:
     bool fade_manual(uint8_t* var, uint8_t end, int8_t step);
 
     void set_pixel(uint16_t pixel, uint8_t red, uint8_t green, uint8_t blue);
+    void set_pixel(uint16_t pixel, CHSV color);
+    void set_pixel(uint16_t pixel, CRGB color);
+    void set_all(uint8_t red, uint8_t green, uint8_t blue);
+    void set_all(CHSV color);
+    void set_all(CRGB color);
+
     void shift(int16_t direction);
     void shift_hue(int16_t direction);
     bool wipe(CHSV new_color, int8_t direction);

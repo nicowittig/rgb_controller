@@ -9,7 +9,7 @@ void controller::setup() {
     Serial.begin(4800);
 
     cur_mode = 255;
-    new_mode = 0;
+    new_mode = 1;
 
     FastLED.addLeds<WS2812, LED_PIN, GRB>(crgb_leds, NUM_LEDS);
     for (auto &crgb_led : crgb_leds) crgb_led = CRGB::Black;
@@ -36,7 +36,6 @@ void controller::loop() {
         }
 
         if ((message - 48) >= 0 && (message - 48) <= 9) new_mode = (uint8_t) (message - 48);
-
     }
 
 
@@ -49,6 +48,12 @@ void controller::loop() {
         switch (new_mode) {
             case 0 : {
                 effects[0] = new e_fire(&l_elements[0], 55, 120);
+                effects[0]->init();
+                break;
+            }
+            case 1 : {
+                CRGB colors[3] = {CRGB::Red, CRGB::Green, CRGB::Blue};
+                effects[0] = new e_bouncing_balls(&l_elements[0], 3, colors, crgb_leds);
                 effects[0]->init();
                 break;
             }
@@ -65,8 +70,29 @@ void controller::loop() {
             delay(15);
             break;
         }
+        case 1 : {
+            effects[0]->run();
+            break;
+        }
         default: break;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     Serial.println(freeRam());
     show_all_pixels();
