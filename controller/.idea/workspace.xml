@@ -12,12 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f127c64-acad-4554-bc5b-6209840f9a0d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/serialmonitor_settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/controller.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e_fire.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/e_fire.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e_fire.h" beforeDir="false" afterPath="$PROJECT_DIR$/e_fire.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/effect.h" beforeDir="false" afterPath="$PROJECT_DIR$/effect.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,8 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/e_fire.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+            <state relative-caret-position="150">
+              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -135,9 +130,9 @@
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/effect.cpp" />
         <option value="$PROJECT_DIR$/e_fire.h" />
-        <option value="$PROJECT_DIR$/e_fire.cpp" />
         <option value="$PROJECT_DIR$/controller.cpp" />
         <option value="$PROJECT_DIR$/effect.h" />
+        <option value="$PROJECT_DIR$/e_fire.cpp" />
       </list>
     </option>
   </component>
@@ -204,7 +199,7 @@
       <updated>1544641591079</updated>
       <workItem from="1544641592565" duration="18991000" />
       <workItem from="1544811452846" duration="20729000" />
-      <workItem from="1545081054200" duration="2913000" />
+      <workItem from="1545081054200" duration="3249000" />
     </task>
     <task id="LOCAL-00001" summary="ADD CLion-Git-integration">
       <created>1544653615673</created>
@@ -255,11 +250,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544910469902</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="RELEASE v0.1 with e_fire">
+      <created>1545131673696</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1545131673696</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42633000" />
+    <option name="totallyTimeSpent" value="42969000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -277,7 +279,7 @@
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49634275" visible="true" weight="0.12698413" />
       <window_info id="Structure" order="1" sideWeight="0.5036573" side_tool="true" visible="true" weight="0.12698413" />
       <window_info id="Favorites" order="2" sideWeight="0.50261235" side_tool="true" weight="0.12576313" />
-      <window_info anchor="bottom" id="Serial Monitor" />
+      <window_info anchor="bottom" id="Serial Monitor" weight="0.3291536" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3291536" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -291,7 +293,7 @@
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3291536" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50061053" side_tool="true" weight="0.28213167" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.3291536" />
-      <window_info anchor="right" id="Coding Counter" />
+      <window_info anchor="right" id="Coding Counter" weight="0.32967034" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -382,7 +384,8 @@
     <MESSAGE value="building main structure" />
     <MESSAGE value="Major bug fixing." />
     <MESSAGE value="DEBUGGING class structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="DEBUGGING class structure" />
+    <MESSAGE value="RELEASE v0.1 with e_fire" />
+    <option name="LAST_COMMIT_MESSAGE" value="RELEASE v0.1 with e_fire" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/input.cpp">
@@ -482,13 +485,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/e_fire.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/effect.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -506,6 +502,13 @@
           <folding>
             <element signature="e#2765#3439#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e_fire.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
         </state>
       </provider>
     </entry>
