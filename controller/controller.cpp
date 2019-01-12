@@ -9,12 +9,12 @@ void controller::setup() {
     Serial.begin(4800);
 
     cur_mode = 255;
-    new_mode = 1;
+    new_mode = 2;
 
     FastLED.addLeds<WS2812, LED_PIN, GRB>(crgb_leds, NUM_LEDS);
     for (auto &crgb_led : crgb_leds) crgb_led = CRGB::Black;
 
-    l_elements[0] = light_element(0, 15);
+    l_elements[0] = light_element(0, 77);
 
     show_all_pixels();
 }
@@ -43,7 +43,8 @@ void controller::loop() {
 
     if (new_mode != cur_mode) {
 
-        for (auto &effect : effects) delete(effect);
+        //for (auto &effect : effects) delete(effect);
+        for (int i = 0; i < num_elements; i++) delete(effects[0]);
 
         switch (new_mode) {
             case 0 : {
@@ -53,7 +54,12 @@ void controller::loop() {
             }
             case 1 : {
                 CRGB colors[3] = {CRGB::Red, CRGB::Green, CRGB::Blue};
-                effects[0] = new e_bouncing_balls(&l_elements[0], 3, colors, crgb_leds);
+                effects[0] = new e_bouncing_balls(&l_elements[0], 3, colors);
+                effects[0]->init();
+                break;
+            }
+            case 2 : {
+                effects[0] = new e_rainbow_shift(&l_elements[0]);
                 effects[0]->init();
                 break;
             }
@@ -74,64 +80,17 @@ void controller::loop() {
             effects[0]->run();
             break;
         }
+        case 2 : {
+            effects[0]->run();
+            delay(70);
+            break;
+        }
         default: break;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
     Serial.println(freeRam());
     show_all_pixels();
     delay_counter++;
-}
-
-//region Getter & Setter
-
-uint8_t controller::get_mode() const {
-    return cur_mode;
-}
-
-void controller::set_mode(uint8_t mode) {
-    this->new_mode = mode;
-}
-
-float controller::getBrightness() const {
-    return brightness;
-}
-
-bool controller::setBrightness(float brightness) {
-    if (brightness < 0 || brightness > 1) return false;
-    this->brightness = brightness;
-    return true;
-}
-
-//endregion
-
-void controller::adjust_sensors() {
-    //for (int i = 0; i < num_ir_sensors; i++) ir_sensors[i].adjust_trigger_value();
-    //Serial.println("[Sensor-Reset]");
-}
-
-void controller::refresh_inputs() {
-    //for (int i = 0; i < num_ir_sensors; i++) ir_sensors[i].refresh_state();
-    //microphone[0].refresh_state();
-}
-
-void controller::show_all_pixels() {
-    for (int i = 0; i < num_elements; i++) l_elements[i].show(crgb_leds, brightness);
-    FastLED.show();
 }

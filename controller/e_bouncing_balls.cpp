@@ -10,38 +10,32 @@ e_bouncing_balls::e_bouncing_balls(light_element *le, uint8_t ball_count, CHSV* 
     for (int i = 0; i < ball_count; i++) this->colors[i] = colors[i];
 }
 
-e_bouncing_balls::e_bouncing_balls(light_element *le, uint8_t ball_count, CRGB *colors, CRGB* crgb_leds) : effect(le) {
+e_bouncing_balls::e_bouncing_balls(light_element *le, uint8_t ball_count, CRGB *colors) : effect(le) {
     this->ball_count = ball_count;
     this->colors = (CHSV *) malloc(sizeof(CHSV) * ball_count);
-    for (int i = 0; i < ball_count; i++) this->colors[i] = rgb2hsv_approximate(colors[i]);
-
-    this->crgb_leds = crgb_leds;
+    for (uint8_t i = 0; i < ball_count; i++) this->colors[i] = rgb2hsv_approximate(colors[i]);
 }
 
 e_bouncing_balls::~e_bouncing_balls() {
-
+    free(Height);
+    free(ImpactVelocity);
+    free(TimeSinceLastBounce);
+    free(Position);
+    free(ClockTimeSinceLastBounce);
+    free(Dampening);
 }
 
 bool e_bouncing_balls::init() {
     Serial.println("init: e_bouncing_balls");
 
-    set_all(CRGB::Black);
-    return false;
-}
+    ImpactVelocityStart = sqrt( -2 * Gravity * StartHeight );
 
-bool e_bouncing_balls::run() {
-    Serial.println("run: e_bouncing_balls");
-
-    float Gravity = -9.81;
-    int StartHeight = 1;
-
-    float Height[ball_count];
-    float ImpactVelocityStart = sqrt( -2 * Gravity * StartHeight );
-    float ImpactVelocity[ball_count];
-    float TimeSinceLastBounce[ball_count];
-    int   Position[ball_count];
-    long  ClockTimeSinceLastBounce[ball_count];
-    float Dampening[ball_count];
+    Height = (float *) malloc(sizeof(float) * ball_count);
+    ImpactVelocity = (float *) malloc(sizeof(float) * ball_count);
+    TimeSinceLastBounce = (float *) malloc(sizeof(float) * ball_count);
+    Position = (uint16_t *) malloc(sizeof(uint16_t) * ball_count);
+    ClockTimeSinceLastBounce = (uint32_t *) malloc(sizeof(uint32_t) * ball_count);
+    Dampening = (float *) malloc(sizeof(float) * ball_count);
 
     for (int i = 0 ; i < ball_count ; i++) {
         ClockTimeSinceLastBounce[i] = millis();
@@ -52,37 +46,34 @@ bool e_bouncing_balls::run() {
         Dampening[i] = 0.90 - float(i)/pow(ball_count,2);
     }
 
-    while (true) {
-        for (int i = 0; i < ball_count; i++) {
-            TimeSinceLastBounce[i] = millis() - ClockTimeSinceLastBounce[i];
-            Height[i] = 0.5 * Gravity * pow(TimeSinceLastBounce[i] / 1000, 2.0) +
-                        ImpactVelocity[i] * TimeSinceLastBounce[i] / 1000;
+    set_all(CRGB::Black);
 
-            if (Height[i] < 0) {
-                Height[i] = 0;
-                ImpactVelocity[i] = Dampening[i] * ImpactVelocity[i];
-                ClockTimeSinceLastBounce[i] = millis();
+    return true;
+}
 
-                if (ImpactVelocity[i] < 0.01) {
-                    ImpactVelocity[i] = ImpactVelocityStart;
-                }
+bool e_bouncing_balls::run() {
+    Serial.println("run: e_bouncing_balls");
+
+    set_all(CRGB::Black);
+
+    for (int i = 0; i < ball_count; i++) {
+        TimeSinceLastBounce[i] = millis() - ClockTimeSinceLastBounce[i];
+        Height[i] = 0.5 * Gravity * pow(TimeSinceLastBounce[i] / 1000, 2.0) +
+                ImpactVelocity[i] * TimeSinceLastBounce[i] / 1000;
+
+        if (Height[i] < 0) {
+            Height[i] = 0;
+            ImpactVelocity[i] = Dampening[i] * ImpactVelocity[i];
+            ClockTimeSinceLastBounce[i] = millis();
+
+            if (ImpactVelocity[i] < 0.01) {
+                ImpactVelocity[i] = ImpactVelocityStart;
             }
-            Position[i] = round(Height[i] * (le->get_num_leds() - 1) / StartHeight);
         }
+        Position[i] = round(Height[i] * (le->get_num_leds() - 1) / StartHeight);
 
-
-        for (int i = 0; i < ball_count; i++) {
-            set_pixel(Position[i], colors[i]);
-        }
-
-        le->show(this->crgb_leds, 1);
-        set_all(CRGB::Black);
-
+        set_pixel(Position[i], colors[i]);
     }
-
-    //setAll(0,0,0);
-
-
 
     return false;
 }

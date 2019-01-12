@@ -3,4 +3,4 @@ project(controller)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(controller main.cpp controller.cpp controller.h light_element.cpp light_element.h nw_toolkit.cpp input.cpp input.h input_analog.cpp input_analog.h input_digital.cpp input_digital.h effect.cpp effect.h arduino_std_definitions.h e_fire.h nw_toolkit.h e_fire.cpp effect_inclusions.h e_bouncing_balls.cpp e_bouncing_balls.h)
+add_executable(controller main.cpp controller.cpp controller.h light_element.cpp light_element.h nw_toolkit.cpp input.cpp input.h input_analog.cpp input_analog.h input_digital.cpp input_digital.h effect.cpp effect.h arduino_std_definitions.h e_fire.h nw_toolkit.h e_fire.cpp effect_inclusions.h e_bouncing_balls.cpp e_bouncing_balls.h e_rainbow_shift.cpp e_rainbow_shift.h nw_toolkit.cpp)

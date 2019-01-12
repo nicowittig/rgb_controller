@@ -19,6 +19,8 @@ bool e_fire::init() {
     Serial.println("init: e_fire");
 
     le->set_all(CRGB::Black);
+
+    return true;
 }
 
 bool e_fire::run() {
@@ -61,6 +63,8 @@ bool e_fire::run() {
 
 
     free(heat);
+
+    return false;
 }
 
 void e_fire::set_pixel_heat_color(uint16_t pixel, uint8_t temperature) {

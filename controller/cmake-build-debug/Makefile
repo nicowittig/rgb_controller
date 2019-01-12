@@ -204,6 +204,33 @@ e_fire.cpp.s:
 	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/e_fire.cpp.s
 .PHONY : e_fire.cpp.s
 
+e_rainbow_shift.o: e_rainbow_shift.cpp.o
+
+.PHONY : e_rainbow_shift.o
+
+# target to build an object file
+e_rainbow_shift.cpp.o:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/e_rainbow_shift.cpp.o
+.PHONY : e_rainbow_shift.cpp.o
+
+e_rainbow_shift.i: e_rainbow_shift.cpp.i
+
+.PHONY : e_rainbow_shift.i
+
+# target to preprocess a source file
+e_rainbow_shift.cpp.i:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/e_rainbow_shift.cpp.i
+.PHONY : e_rainbow_shift.cpp.i
+
+e_rainbow_shift.s: e_rainbow_shift.cpp.s
+
+.PHONY : e_rainbow_shift.s
+
+# target to generate assembly for a file
+e_rainbow_shift.cpp.s:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/e_rainbow_shift.cpp.s
+.PHONY : e_rainbow_shift.cpp.s
+
 effect.o: effect.cpp.o
 
 .PHONY : effect.o
@@ -411,6 +438,9 @@ help:
 	@echo "... e_fire.o"
 	@echo "... e_fire.i"
 	@echo "... e_fire.s"
+	@echo "... e_rainbow_shift.o"
+	@echo "... e_rainbow_shift.i"
+	@echo "... e_rainbow_shift.s"
 	@echo "... effect.o"
 	@echo "... effect.i"
 	@echo "... effect.s"
