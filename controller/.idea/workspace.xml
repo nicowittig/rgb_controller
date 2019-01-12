@@ -11,39 +11,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f127c64-acad-4554-bc5b-6209840f9a0d" name="Default Changelist" comment="ADD e_bouncing_balls">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/nico.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e_rainbow_shift.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e_rainbow_shift.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/serialmonitor_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/serialmonitor_settings.xml" afterDir="false" />
+    <list default="true" id="3f127c64-acad-4554-bc5b-6209840f9a0d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/controller.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/controller.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/controller.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/controller.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/controller.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/controller.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/controller.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/controller.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/controller.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/controller.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/controller.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/controller.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/controller.dir/input_digital.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/controller.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/controller.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/controller.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/controller.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/controller.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/controller.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/controller.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller.h" beforeDir="false" afterPath="$PROJECT_DIR$/controller.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e_bouncing_balls.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/e_bouncing_balls.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e_bouncing_balls.h" beforeDir="false" afterPath="$PROJECT_DIR$/e_bouncing_balls.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e_fire.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/e_fire.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e_fire.h" beforeDir="false" afterPath="$PROJECT_DIR$/e_fire.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/effect.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/effect.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/effect.h" beforeDir="false" afterPath="$PROJECT_DIR$/effect.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/effect_inclusions.h" beforeDir="false" afterPath="$PROJECT_DIR$/effect_inclusions.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nw_toolkit.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/nw_toolkit.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nw_toolkit.h" beforeDir="false" afterPath="$PROJECT_DIR$/nw_toolkit.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -85,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/controller.ino">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -93,8 +62,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controller.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+            <state relative-caret-position="795">
+              <caret line="53" column="76" lean-forward="true" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="76" />
               <folding>
                 <element signature="e#113#149#0" expanded="true" />
               </folding>
@@ -132,8 +101,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/effect.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
+            <state relative-caret-position="607">
               <caret line="108" selection-start-line="108" selection-end-line="108" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/effect.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1230">
+              <caret line="82" column="29" selection-start-line="82" selection-start-column="29" selection-end-line="82" selection-end-column="29" />
+              <folding>
+                <element signature="e#105#141#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -205,7 +186,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -217,6 +197,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -268,7 +249,8 @@
       <workItem from="1545316625875" duration="5651000" />
       <workItem from="1545833126396" duration="1490000" />
       <workItem from="1546880420643" duration="783000" />
-      <workItem from="1547296292033" duration="2365000" />
+      <workItem from="1547296292033" duration="2990000" />
+      <workItem from="1547304416266" duration="279000" />
     </task>
     <task id="LOCAL-00001" summary="ADD CLion-Git-integration">
       <created>1544653615673</created>
@@ -340,11 +322,18 @@
       <option name="project" value="LOCAL" />
       <updated>1545169118118</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="ADD e_rainbow_shift&#10;ADD documentations&#10;FIX bug fixes">
+      <created>1547303833352</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1547303833352</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73969000" />
+    <option name="totallyTimeSpent" value="74873000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -360,7 +349,7 @@
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49524942" visible="true" weight="0.14041515" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49524942" visible="true" weight="0.14163615" />
       <window_info id="Structure" order="1" sideWeight="0.5047506" side_tool="true" weight="0.12820514" />
       <window_info id="Favorites" order="2" sideWeight="0.50261235" side_tool="true" weight="0.12576313" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -473,7 +462,8 @@
     <MESSAGE value="RELEASE v0.1 with e_fire" />
     <MESSAGE value="minor CODE OPTIMISATION" />
     <MESSAGE value="ADD e_bouncing_balls" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD e_bouncing_balls" />
+    <MESSAGE value="ADD e_rainbow_shift&#10;ADD documentations&#10;FIX bug fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD e_rainbow_shift&#10;ADD documentations&#10;FIX bug fixes" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/input.cpp">
@@ -571,16 +561,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/effect.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1470">
-          <caret line="98" column="24" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
-          <folding>
-            <element signature="e#105#141#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/e_bouncing_balls.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
@@ -649,24 +629,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/controller.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1380">
+          <caret line="92" column="4" selection-start-line="92" selection-start-column="4" selection-end-line="92" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller.ino">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/arduino_std_definitions.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/effect.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nw_toolkit.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -677,24 +657,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller.ino">
+    <entry file="file://$PROJECT_DIR$/nw_toolkit.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="255">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller.cpp">
+    <entry file="file://$PROJECT_DIR$/effect.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1380">
-          <caret line="92" column="4" selection-start-line="92" selection-start-column="4" selection-end-line="92" selection-end-column="4" />
+        <state relative-caret-position="607">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/effect.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1230">
+          <caret line="82" column="29" selection-start-line="82" selection-start-column="29" selection-end-line="82" selection-end-column="29" />
+          <folding>
+            <element signature="e#105#141#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+        <state relative-caret-position="795">
+          <caret line="53" column="76" lean-forward="true" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="76" />
           <folding>
             <element signature="e#113#149#0" expanded="true" />
           </folding>
