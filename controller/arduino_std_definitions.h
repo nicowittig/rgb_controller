@@ -6,6 +6,7 @@
 #define CONTROLLER_STD_DEFINITIONS_H
 
 #include <Arduino.h>
+#include "Arduino.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>

@@ -78,6 +78,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/Arduino.h">
+			<Option target="controller"/>
+		</Unit>
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/arduino_std_definitions.h">
 			<Option target="controller"/>
 		</Unit>
