@@ -7,6 +7,8 @@
 
 #include <Arduino.h>
 #include "Arduino.h"
+#include <EEPROM.h>
+#include "EEPROM.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>

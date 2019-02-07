@@ -16,6 +16,7 @@ private:
 
 protected:
     light_element* le; ///< light element the effects are applied to
+    char* name;
 
     /// Checks the attached light element if the colors are similar to the CHSV-color array
     /// \param color - CHSV-color array
@@ -93,7 +94,14 @@ public:
 
     /// Constructor
     /// \param le - light element the effects are applied to
-    effect(light_element* le) { this->le = le; }
+    effect(light_element* le, char* name) {
+        this->le = le;
+        this->name = name;
+    }
+
+    /// Getter for the effect name
+    /// \return the name of the effect
+    char* getName() { return this->name; }
 
     /// Destructor
     virtual ~effect() {}

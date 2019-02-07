@@ -8,6 +8,8 @@
 #include "arduino_std_definitions.h"
 #include "effect.h"
 
+#define EFFECT_NAME "bouncing balls"
+
 /// Bouncing Balls effect which is a sub class of 'effect' and lets a defined number of colorized balls bounce in the lamp.
 class e_bouncing_balls : public effect {
 

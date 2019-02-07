@@ -4,13 +4,13 @@
 
 #include "e_bouncing_balls.h"
 
-e_bouncing_balls::e_bouncing_balls(light_element *le, uint8_t ball_count, CHSV* colors) : effect(le) {
+e_bouncing_balls::e_bouncing_balls(light_element *le, uint8_t ball_count, CHSV* colors) : effect(le, EFFECT_NAME) {
     this->ball_count = ball_count;
     this->colors = (CHSV *) malloc(sizeof(CHSV) * ball_count);
     for (int i = 0; i < ball_count; i++) this->colors[i] = colors[i];
 }
 
-e_bouncing_balls::e_bouncing_balls(light_element *le, uint8_t ball_count, CRGB *colors) : effect(le) {
+e_bouncing_balls::e_bouncing_balls(light_element *le, uint8_t ball_count, CRGB *colors) : effect(le, EFFECT_NAME) {
     this->ball_count = ball_count;
     this->colors = (CHSV *) malloc(sizeof(CHSV) * ball_count);
     for (uint8_t i = 0; i < ball_count; i++) this->colors[i] = rgb2hsv_approximate(colors[i]);
@@ -26,7 +26,6 @@ e_bouncing_balls::~e_bouncing_balls() {
 }
 
 bool e_bouncing_balls::init() {
-    Serial.println("init: e_bouncing_balls");
 
     ImpactVelocityStart = sqrt( -2 * Gravity * StartHeight );
 
@@ -52,7 +51,6 @@ bool e_bouncing_balls::init() {
 }
 
 bool e_bouncing_balls::run() {
-    Serial.println("run: e_bouncing_balls");
 
     set_all(CRGB::Black);
 

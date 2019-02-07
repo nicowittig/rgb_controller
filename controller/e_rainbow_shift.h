@@ -8,6 +8,8 @@
 #include "arduino_std_definitions.h"
 #include "effect.h"
 
+#define EFFECT_NAME "rainbow shift"
+
 /// Rainbow effect which is a sub class of 'effect' and makes the light element a rainbow and slowly shifts the colors.
 class e_rainbow_shift : public effect {
 

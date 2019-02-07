@@ -17,4 +17,6 @@ int modulo(int a, int b);
 /// \return the free RAM
 int freeRam();
 
+void softReset();
+
 #endif //CONTROLLER_NW_TOOLKIT_H

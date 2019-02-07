@@ -8,6 +8,8 @@
 #include "arduino_std_definitions.h"
 #include "effect.h"
 
+#define EFFECT_NAME "fire"
+
 /// Fire effect which is a sub class of 'effect' and randomly lights up a fire simulation along a light element.
 class e_fire : public effect {
 

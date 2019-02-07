@@ -10,5 +10,6 @@
 #include "e_fire.h"
 #include "e_bouncing_balls.h"
 #include "e_rainbow_shift.h"
+#include "e_static_color.h"
 
 #endif //CONTROLLER_EFFECT_INCLUSIONS_H

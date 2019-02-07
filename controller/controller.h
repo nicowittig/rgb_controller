@@ -10,24 +10,29 @@
 //#include "input.h"
 #include "effect_inclusions.h"
 
-#define delay_balance 36
 #define LED_PIN 6
 #define NUM_LEDS 77
-#define num_elements 1
+#define NUM_ELEMENTS 1
+
+#define EEPROM_MODE_ADDRESS 0
+
+#define DEBUG
 
 /// Controller class to initialize inputs and outputs, pull the inputs, launch effects and show the result.
 class controller {
 private:
-    uint16_t delay_counter = 0; // TODO switch from counter to millis()
-
     uint8_t cur_mode; ///< current effect mode
     uint8_t new_mode; ///< next effect mode
 
     float brightness = 1; ///< brightness of the strip (between 0 and 1)
 
     CRGB crgb_leds[NUM_LEDS]; ///< RGB array of all the pixels
-    light_element* l_elements = (light_element *) malloc(sizeof(light_element) * num_elements); ///< sub-elements of the strip
-    effect* effects [num_elements]; ///< one effect for every element
+    light_element* l_elements = (light_element *) malloc(sizeof(light_element) * NUM_ELEMENTS); ///< sub-elements of the strip
+    effect* effects [NUM_ELEMENTS]; ///< one effect for every element
+
+    void mode_init(uint8_t* mode);
+    void mode_run(uint8_t* mode);
+    void mode_led(uint8_t* mode);
 
     /// Adjust all IR-sensors to the current light intensity of the surrounding.
     void adjust_sensors() {
@@ -41,7 +46,7 @@ private:
     }
     /// Show all sub-elements and call the FastLED output.
     void show_all_pixels() {
-        for (int i = 0; i < num_elements; i++) l_elements[i].show(crgb_leds, brightness);
+        for (int i = 0; i < NUM_ELEMENTS; i++) l_elements[i].show(crgb_leds, brightness);
         FastLED.show();
     }
 
@@ -63,7 +68,7 @@ public:
     void set_mode(uint8_t mode) { new_mode = mode; }
 
     /// Get the brightness of the whole strip. The result should be between 0 and 1.
-    /// \return brithness of the strip
+    /// \return brightness of the strip
     float getBrightness() const { return brightness; }
 
     /// Set the brightness of the whole strip to a value between 0 and 1.

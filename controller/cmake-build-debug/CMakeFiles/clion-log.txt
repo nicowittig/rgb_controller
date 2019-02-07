@@ -1,4 +1,4 @@
-"/Users/nico/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/183.4284.156/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller
+"/Users/nico/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/183.5153.40/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug

@@ -108,6 +108,12 @@
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_rainbow_shift.h">
 			<Option target="controller"/>
 		</Unit>
+		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_static_color.cpp">
+			<Option target="controller"/>
+		</Unit>
+		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_static_color.h">
+			<Option target="controller"/>
+		</Unit>
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/effect.cpp">
 			<Option target="controller"/>
 		</Unit>
