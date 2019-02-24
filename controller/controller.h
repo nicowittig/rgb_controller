@@ -10,13 +10,16 @@
 //#include "input.h"
 #include "effect_inclusions.h"
 
+#define DEBUG
+
 #define LED_PIN 6
-#define NUM_LEDS 77
+//#define NUM_LEDS 77 // Lamp Leipzig
+//#define NUM_LEDS 75 // Bed Brösa
+#define NUM_LEDS 22 // Dev
+
 #define NUM_ELEMENTS 1
 
 #define EEPROM_MODE_ADDRESS 0
-
-#define DEBUG
 
 /// Controller class to initialize inputs and outputs, pull the inputs, launch effects and show the result.
 class controller {

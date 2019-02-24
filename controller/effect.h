@@ -18,6 +18,8 @@ protected:
     light_element* le; ///< light element the effects are applied to
     char* name;
 
+//region effect helper
+
     /// Checks the attached light element if the colors are similar to the CHSV-color array
     /// \param color - CHSV-color array
     /// \return true if the colors do match, else false
@@ -89,6 +91,8 @@ protected:
     /// \param step - steps
     /// \return true if the goal color is reached, else false
     bool fade(CHSV new_color, int8_t step);
+
+//endregion
 
 public:
 

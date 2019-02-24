@@ -6,7 +6,10 @@
 
 
 void controller::setup() {
+#ifdef DEBUG
     Serial.begin(9600);
+    Serial.println("START");
+#endif
 
     pinMode(10, INPUT_PULLUP);
     pinMode(12, OUTPUT);
@@ -17,8 +20,9 @@ void controller::setup() {
 
     FastLED.addLeds<WS2812, LED_PIN, GRB>(crgb_leds, NUM_LEDS);
     for (auto &crgb_led : crgb_leds) crgb_led = CRGB::Black;
+    for (auto &effect : effects) effect = nullptr;
 
-    l_elements[0] = light_element(0, 77);
+    l_elements[0] = light_element(0, NUM_LEDS);
 
     show_all_pixels();
 }
@@ -36,7 +40,7 @@ void controller::loop() {
     for (int i = 0; i < NUM_ELEMENTS; i++) {
         Serial.print(i);
         Serial.print(": ");
-        Serial.print(effects[i]->getName());
+        if (effects[i] != nullptr) Serial.print(effects[i]->getName());
         Serial.print(" | ");
     }
     Serial.println();
@@ -48,7 +52,8 @@ void controller::loop() {
 
         switch(message) {
             case 't': setup(); break;
-            case 'r': softReset(); break;
+            case 'r':
+                soft_reset(); break;
             case 'w': setBrightness(brightness+0.1f); break;
             case 's': setBrightness(brightness-0.1f); break;
             default: break;
@@ -71,67 +76,78 @@ void controller::loop() {
     mode_run(&cur_mode);
 
     show_all_pixels();
-    if (freeRam() < 200) softReset();
+
+    if (freeRam() < 200) soft_reset();
 }
 
 
 void controller::mode_init(uint8_t *mode) {
-    //for (auto &effect : effects) delete(effect);
-    //for (int i = 0; i < NUM_ELEMENTS; i++) delete(effects[0]);
+    for (auto &effect : effects) {
+        if (effect != nullptr) {
+            delete(effect);
+            effect = nullptr;
+        }
+    }
 
-    switch (cur_mode) {
+    switch (*mode) {
         case 0 : {
             effects[0] = new e_static_color(&l_elements[0], CHSV(0, 255, 0));
-            effects[0]->init();
             break;
         }
         case 1 : {
-            effects[0] = new e_static_color(&l_elements[0], CHSV(230, 255, 255));
-            effects[0]->init();
+            //effects[0] = new e_static_color(&l_elements[0], CHSV(230, 255, 255));
+            effects[0] = new e_static_color(&l_elements[0], CHSV(96, 255, 255));
             break;
         }
         case 2 : {
             effects[0] = new e_rainbow_shift(&l_elements[0]);
-            effects[0]->init();
             break;
         }
         case 3 : {
             effects[0] = new e_fire(&l_elements[0], 55, 120);
-            effects[0]->init();
             break;
         }
         case 4 : {
             CRGB colors[3] = {CRGB::Red, CRGB::Green, CRGB::Blue};
             effects[0] = new e_bouncing_balls(&l_elements[0], 3, colors);
-            effects[0]->init();
+            break;
+        }
+        case 5 : { // Test effect
+            for (int i = 0; i < l_elements[0].get_num_leds(); i++) l_elements[0].leds[i] = CHSV (i, 255, 255);
             break;
         }
         default: new_mode = 0;
     }
 
-    EEPROM.write(EEPROM_MODE_ADDRESS, cur_mode);
+    for (auto &effect : effects) {
+        if (effect == nullptr) continue;
+        effect->init();
+    }
+
+    EEPROM.update(EEPROM_MODE_ADDRESS, *mode);
 }
 
 
 void controller::mode_run(uint8_t *mode) {
-    switch(cur_mode) {
-        case 0 : break;
-        case 1 : break;
+    switch(*mode) {
         case 2 : {
-            effects[0]->run();
             delay(70);
             break;
         }
         case 3 : {
-            effects[0]->run();
             delay(15);
             break;
         }
-        case 4 : {
-            effects[0]->run();
+        case 5 : { // Test effect
+            for (int i = 0; i < l_elements[0].get_num_leds(); i++) l_elements[0].leds[i].hue++;
             break;
         }
         default: break;
+    }
+
+    for (auto &effect : effects) {
+        if (effect == nullptr) continue;
+        effect->run();
     }
 }
 
@@ -139,3 +155,4 @@ void controller::mode_run(uint8_t *mode) {
 void controller::mode_led(uint8_t *mode) {
     // TODO
 }
+

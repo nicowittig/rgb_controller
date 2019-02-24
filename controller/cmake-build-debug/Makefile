@@ -150,6 +150,60 @@ controller.cpp.s:
 	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/controller.cpp.s
 .PHONY : controller.cpp.s
 
+e_Test_A.o: e_Test_A.cpp.o
+
+.PHONY : e_Test_A.o
+
+# target to build an object file
+e_Test_A.cpp.o:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/e_Test_A.cpp.o
+.PHONY : e_Test_A.cpp.o
+
+e_Test_A.i: e_Test_A.cpp.i
+
+.PHONY : e_Test_A.i
+
+# target to preprocess a source file
+e_Test_A.cpp.i:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/e_Test_A.cpp.i
+.PHONY : e_Test_A.cpp.i
+
+e_Test_A.s: e_Test_A.cpp.s
+
+.PHONY : e_Test_A.s
+
+# target to generate assembly for a file
+e_Test_A.cpp.s:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/e_Test_A.cpp.s
+.PHONY : e_Test_A.cpp.s
+
+e_Test_B.o: e_Test_B.cpp.o
+
+.PHONY : e_Test_B.o
+
+# target to build an object file
+e_Test_B.cpp.o:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/e_Test_B.cpp.o
+.PHONY : e_Test_B.cpp.o
+
+e_Test_B.i: e_Test_B.cpp.i
+
+.PHONY : e_Test_B.i
+
+# target to preprocess a source file
+e_Test_B.cpp.i:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/e_Test_B.cpp.i
+.PHONY : e_Test_B.cpp.i
+
+e_Test_B.s: e_Test_B.cpp.s
+
+.PHONY : e_Test_B.s
+
+# target to generate assembly for a file
+e_Test_B.cpp.s:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/e_Test_B.cpp.s
+.PHONY : e_Test_B.cpp.s
+
 e_bouncing_balls.o: e_bouncing_balls.cpp.o
 
 .PHONY : e_bouncing_balls.o
@@ -459,6 +513,12 @@ help:
 	@echo "... controller.o"
 	@echo "... controller.i"
 	@echo "... controller.s"
+	@echo "... e_Test_A.o"
+	@echo "... e_Test_A.i"
+	@echo "... e_Test_A.s"
+	@echo "... e_Test_B.o"
+	@echo "... e_Test_B.i"
+	@echo "... e_Test_B.s"
 	@echo "... e_bouncing_balls.o"
 	@echo "... e_bouncing_balls.i"
 	@echo "... e_bouncing_balls.s"

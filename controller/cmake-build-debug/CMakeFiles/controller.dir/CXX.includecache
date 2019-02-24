@@ -44,19 +44,11 @@ light_element.h
 effect_inclusions.h
 /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/effect_inclusions.h
 
-/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_bouncing_balls.cpp
-e_bouncing_balls.h
-/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_bouncing_balls.h
-
 /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_bouncing_balls.h
 arduino_std_definitions.h
 /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/arduino_std_definitions.h
 effect.h
 /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/effect.h
-
-/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_fire.cpp
-e_fire.h
-/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_fire.h
 
 /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_fire.h
 arduino_std_definitions.h
@@ -64,27 +56,15 @@ arduino_std_definitions.h
 effect.h
 /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/effect.h
 
-/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_rainbow_shift.cpp
-e_rainbow_shift.h
-/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_rainbow_shift.h
-
 /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_rainbow_shift.h
 arduino_std_definitions.h
 /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/arduino_std_definitions.h
 effect.h
 /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/effect.h
 
-/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_static_color.cpp
-e_static_color.h
-/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_static_color.h
-
 /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_static_color.h
 arduino_std_definitions.h
 /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/arduino_std_definitions.h
-effect.h
-/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/effect.h
-
-/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/effect.cpp
 effect.h
 /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/effect.h
 
@@ -103,24 +83,8 @@ e_bouncing_balls.h
 /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_bouncing_balls.h
 e_rainbow_shift.h
 /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_rainbow_shift.h
-
-/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/input.cpp
-input.h
-/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/input.h
-
-/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/input.h
-
-/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/input_analog.cpp
-input_analog.h
-/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/input_analog.h
-
-/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/input_analog.h
-
-/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/input_digital.cpp
-input_digital.h
-/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/input_digital.h
-
-/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/input_digital.h
+e_static_color.h
+/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_static_color.h
 
 /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/lib/Adafruit_NeoPixel/Adafruit_NeoPixel.h
 Arduino.h
@@ -632,21 +596,9 @@ FastLED.h
 pixeltypes.h
 /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/lib/FastLED-3.2.0/pixeltypes.h
 
-/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/light_element.cpp
-light_element.h
-/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/light_element.h
-
 /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/light_element.h
 arduino_std_definitions.h
 /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/arduino_std_definitions.h
-
-/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/main.cpp
-iostream
--
-
-/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/nw_toolkit.cpp
-nw_toolkit.h
-/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/nw_toolkit.h
 
 /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/nw_toolkit.h
 

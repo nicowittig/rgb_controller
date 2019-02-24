@@ -8,6 +8,7 @@ CMakeFiles/controller.dir/controller.cpp.o
  /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_bouncing_balls.h
  /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_fire.h
  /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_rainbow_shift.h
+ /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_static_color.h
  /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/effect.h
  /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/effect_inclusions.h
  /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/lib/Adafruit_NeoPixel/Adafruit_NeoPixel.h

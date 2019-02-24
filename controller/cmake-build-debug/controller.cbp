@@ -90,6 +90,18 @@
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/controller.h">
 			<Option target="controller"/>
 		</Unit>
+		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_Test_A.cpp">
+			<Option target="controller"/>
+		</Unit>
+		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_Test_A.h">
+			<Option target="controller"/>
+		</Unit>
+		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_Test_B.cpp">
+			<Option target="controller"/>
+		</Unit>
+		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_Test_B.h">
+			<Option target="controller"/>
+		</Unit>
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_bouncing_balls.cpp">
 			<Option target="controller"/>
 		</Unit>

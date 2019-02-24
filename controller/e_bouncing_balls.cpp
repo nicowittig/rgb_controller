@@ -17,6 +17,8 @@ e_bouncing_balls::e_bouncing_balls(light_element *le, uint8_t ball_count, CRGB *
 }
 
 e_bouncing_balls::~e_bouncing_balls() {
+    free(colors);
+
     free(Height);
     free(ImpactVelocity);
     free(TimeSinceLastBounce);

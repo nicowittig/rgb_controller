@@ -213,6 +213,32 @@ CMakeFiles/controller.dir/e_static_color.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controller.dir/e_static_color.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_static_color.cpp -o CMakeFiles/controller.dir/e_static_color.cpp.s
 
+CMakeFiles/controller.dir/e_Test_A.cpp.o: CMakeFiles/controller.dir/flags.make
+CMakeFiles/controller.dir/e_Test_A.cpp.o: ../e_Test_A.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/controller.dir/e_Test_A.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controller.dir/e_Test_A.cpp.o -c /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_Test_A.cpp
+
+CMakeFiles/controller.dir/e_Test_A.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controller.dir/e_Test_A.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_Test_A.cpp > CMakeFiles/controller.dir/e_Test_A.cpp.i
+
+CMakeFiles/controller.dir/e_Test_A.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controller.dir/e_Test_A.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_Test_A.cpp -o CMakeFiles/controller.dir/e_Test_A.cpp.s
+
+CMakeFiles/controller.dir/e_Test_B.cpp.o: CMakeFiles/controller.dir/flags.make
+CMakeFiles/controller.dir/e_Test_B.cpp.o: ../e_Test_B.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/controller.dir/e_Test_B.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controller.dir/e_Test_B.cpp.o -c /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_Test_B.cpp
+
+CMakeFiles/controller.dir/e_Test_B.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controller.dir/e_Test_B.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_Test_B.cpp > CMakeFiles/controller.dir/e_Test_B.cpp.i
+
+CMakeFiles/controller.dir/e_Test_B.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controller.dir/e_Test_B.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_Test_B.cpp -o CMakeFiles/controller.dir/e_Test_B.cpp.s
+
 # Object files for target controller
 controller_OBJECTS = \
 "CMakeFiles/controller.dir/main.cpp.o" \
@@ -226,7 +252,9 @@ controller_OBJECTS = \
 "CMakeFiles/controller.dir/e_fire.cpp.o" \
 "CMakeFiles/controller.dir/e_bouncing_balls.cpp.o" \
 "CMakeFiles/controller.dir/e_rainbow_shift.cpp.o" \
-"CMakeFiles/controller.dir/e_static_color.cpp.o"
+"CMakeFiles/controller.dir/e_static_color.cpp.o" \
+"CMakeFiles/controller.dir/e_Test_A.cpp.o" \
+"CMakeFiles/controller.dir/e_Test_B.cpp.o"
 
 # External object files for target controller
 controller_EXTERNAL_OBJECTS =
@@ -243,9 +271,11 @@ controller: CMakeFiles/controller.dir/e_fire.cpp.o
 controller: CMakeFiles/controller.dir/e_bouncing_balls.cpp.o
 controller: CMakeFiles/controller.dir/e_rainbow_shift.cpp.o
 controller: CMakeFiles/controller.dir/e_static_color.cpp.o
+controller: CMakeFiles/controller.dir/e_Test_A.cpp.o
+controller: CMakeFiles/controller.dir/e_Test_B.cpp.o
 controller: CMakeFiles/controller.dir/build.make
 controller: CMakeFiles/controller.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable controller"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable controller"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/controller.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

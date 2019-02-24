@@ -7,6 +7,7 @@ CMakeFiles/controller.dir/controller.cpp.o: ../controller.h
 CMakeFiles/controller.dir/controller.cpp.o: ../e_bouncing_balls.h
 CMakeFiles/controller.dir/controller.cpp.o: ../e_fire.h
 CMakeFiles/controller.dir/controller.cpp.o: ../e_rainbow_shift.h
+CMakeFiles/controller.dir/controller.cpp.o: ../e_static_color.h
 CMakeFiles/controller.dir/controller.cpp.o: ../effect.h
 CMakeFiles/controller.dir/controller.cpp.o: ../effect_inclusions.h
 CMakeFiles/controller.dir/controller.cpp.o: ../lib/Adafruit_NeoPixel/Adafruit_NeoPixel.h
