@@ -1,3 +1,2 @@
 .DS_Store
-controller/.idea/
-controller/cmake-build-debug/
+.idea/

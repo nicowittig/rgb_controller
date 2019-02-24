@@ -1,4 +1,4 @@
-# Install script for directory: /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller
+# Install script for directory: /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

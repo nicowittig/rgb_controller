@@ -1,3 +1,3 @@
-/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug/CMakeFiles/controller.dir
+/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug/CMakeFiles/controller.dir

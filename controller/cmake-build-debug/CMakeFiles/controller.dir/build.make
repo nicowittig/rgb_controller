@@ -43,10 +43,10 @@ RM = "/Users/nico/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller
+CMAKE_SOURCE_DIR = /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/controller.dir/depend.make
@@ -59,185 +59,159 @@ include CMakeFiles/controller.dir/flags.make
 
 CMakeFiles/controller.dir/main.cpp.o: CMakeFiles/controller.dir/flags.make
 CMakeFiles/controller.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/controller.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controller.dir/main.cpp.o -c /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/controller.dir/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controller.dir/main.cpp.o -c /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/main.cpp
 
 CMakeFiles/controller.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controller.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/main.cpp > CMakeFiles/controller.dir/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/main.cpp > CMakeFiles/controller.dir/main.cpp.i
 
 CMakeFiles/controller.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controller.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/main.cpp -o CMakeFiles/controller.dir/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/main.cpp -o CMakeFiles/controller.dir/main.cpp.s
 
 CMakeFiles/controller.dir/controller.cpp.o: CMakeFiles/controller.dir/flags.make
 CMakeFiles/controller.dir/controller.cpp.o: ../controller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/controller.dir/controller.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controller.dir/controller.cpp.o -c /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/controller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/controller.dir/controller.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controller.dir/controller.cpp.o -c /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/controller.cpp
 
 CMakeFiles/controller.dir/controller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controller.dir/controller.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/controller.cpp > CMakeFiles/controller.dir/controller.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/controller.cpp > CMakeFiles/controller.dir/controller.cpp.i
 
 CMakeFiles/controller.dir/controller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controller.dir/controller.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/controller.cpp -o CMakeFiles/controller.dir/controller.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/controller.cpp -o CMakeFiles/controller.dir/controller.cpp.s
 
 CMakeFiles/controller.dir/light_element.cpp.o: CMakeFiles/controller.dir/flags.make
 CMakeFiles/controller.dir/light_element.cpp.o: ../light_element.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/controller.dir/light_element.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controller.dir/light_element.cpp.o -c /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/light_element.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/controller.dir/light_element.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controller.dir/light_element.cpp.o -c /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/light_element.cpp
 
 CMakeFiles/controller.dir/light_element.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controller.dir/light_element.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/light_element.cpp > CMakeFiles/controller.dir/light_element.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/light_element.cpp > CMakeFiles/controller.dir/light_element.cpp.i
 
 CMakeFiles/controller.dir/light_element.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controller.dir/light_element.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/light_element.cpp -o CMakeFiles/controller.dir/light_element.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/light_element.cpp -o CMakeFiles/controller.dir/light_element.cpp.s
 
 CMakeFiles/controller.dir/nw_toolkit.cpp.o: CMakeFiles/controller.dir/flags.make
 CMakeFiles/controller.dir/nw_toolkit.cpp.o: ../nw_toolkit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/controller.dir/nw_toolkit.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controller.dir/nw_toolkit.cpp.o -c /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/nw_toolkit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/controller.dir/nw_toolkit.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controller.dir/nw_toolkit.cpp.o -c /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/nw_toolkit.cpp
 
 CMakeFiles/controller.dir/nw_toolkit.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controller.dir/nw_toolkit.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/nw_toolkit.cpp > CMakeFiles/controller.dir/nw_toolkit.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/nw_toolkit.cpp > CMakeFiles/controller.dir/nw_toolkit.cpp.i
 
 CMakeFiles/controller.dir/nw_toolkit.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controller.dir/nw_toolkit.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/nw_toolkit.cpp -o CMakeFiles/controller.dir/nw_toolkit.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/nw_toolkit.cpp -o CMakeFiles/controller.dir/nw_toolkit.cpp.s
 
 CMakeFiles/controller.dir/input.cpp.o: CMakeFiles/controller.dir/flags.make
 CMakeFiles/controller.dir/input.cpp.o: ../input.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/controller.dir/input.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controller.dir/input.cpp.o -c /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/input.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/controller.dir/input.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controller.dir/input.cpp.o -c /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/input.cpp
 
 CMakeFiles/controller.dir/input.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controller.dir/input.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/input.cpp > CMakeFiles/controller.dir/input.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/input.cpp > CMakeFiles/controller.dir/input.cpp.i
 
 CMakeFiles/controller.dir/input.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controller.dir/input.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/input.cpp -o CMakeFiles/controller.dir/input.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/input.cpp -o CMakeFiles/controller.dir/input.cpp.s
 
 CMakeFiles/controller.dir/input_analog.cpp.o: CMakeFiles/controller.dir/flags.make
 CMakeFiles/controller.dir/input_analog.cpp.o: ../input_analog.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/controller.dir/input_analog.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controller.dir/input_analog.cpp.o -c /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/input_analog.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/controller.dir/input_analog.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controller.dir/input_analog.cpp.o -c /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/input_analog.cpp
 
 CMakeFiles/controller.dir/input_analog.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controller.dir/input_analog.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/input_analog.cpp > CMakeFiles/controller.dir/input_analog.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/input_analog.cpp > CMakeFiles/controller.dir/input_analog.cpp.i
 
 CMakeFiles/controller.dir/input_analog.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controller.dir/input_analog.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/input_analog.cpp -o CMakeFiles/controller.dir/input_analog.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/input_analog.cpp -o CMakeFiles/controller.dir/input_analog.cpp.s
 
 CMakeFiles/controller.dir/input_digital.cpp.o: CMakeFiles/controller.dir/flags.make
 CMakeFiles/controller.dir/input_digital.cpp.o: ../input_digital.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/controller.dir/input_digital.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controller.dir/input_digital.cpp.o -c /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/input_digital.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/controller.dir/input_digital.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controller.dir/input_digital.cpp.o -c /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/input_digital.cpp
 
 CMakeFiles/controller.dir/input_digital.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controller.dir/input_digital.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/input_digital.cpp > CMakeFiles/controller.dir/input_digital.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/input_digital.cpp > CMakeFiles/controller.dir/input_digital.cpp.i
 
 CMakeFiles/controller.dir/input_digital.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controller.dir/input_digital.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/input_digital.cpp -o CMakeFiles/controller.dir/input_digital.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/input_digital.cpp -o CMakeFiles/controller.dir/input_digital.cpp.s
 
 CMakeFiles/controller.dir/effect.cpp.o: CMakeFiles/controller.dir/flags.make
 CMakeFiles/controller.dir/effect.cpp.o: ../effect.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/controller.dir/effect.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controller.dir/effect.cpp.o -c /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/effect.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/controller.dir/effect.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controller.dir/effect.cpp.o -c /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/effect.cpp
 
 CMakeFiles/controller.dir/effect.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controller.dir/effect.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/effect.cpp > CMakeFiles/controller.dir/effect.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/effect.cpp > CMakeFiles/controller.dir/effect.cpp.i
 
 CMakeFiles/controller.dir/effect.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controller.dir/effect.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/effect.cpp -o CMakeFiles/controller.dir/effect.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/effect.cpp -o CMakeFiles/controller.dir/effect.cpp.s
 
 CMakeFiles/controller.dir/e_fire.cpp.o: CMakeFiles/controller.dir/flags.make
 CMakeFiles/controller.dir/e_fire.cpp.o: ../e_fire.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/controller.dir/e_fire.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controller.dir/e_fire.cpp.o -c /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_fire.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/controller.dir/e_fire.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controller.dir/e_fire.cpp.o -c /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/e_fire.cpp
 
 CMakeFiles/controller.dir/e_fire.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controller.dir/e_fire.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_fire.cpp > CMakeFiles/controller.dir/e_fire.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/e_fire.cpp > CMakeFiles/controller.dir/e_fire.cpp.i
 
 CMakeFiles/controller.dir/e_fire.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controller.dir/e_fire.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_fire.cpp -o CMakeFiles/controller.dir/e_fire.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/e_fire.cpp -o CMakeFiles/controller.dir/e_fire.cpp.s
 
 CMakeFiles/controller.dir/e_bouncing_balls.cpp.o: CMakeFiles/controller.dir/flags.make
 CMakeFiles/controller.dir/e_bouncing_balls.cpp.o: ../e_bouncing_balls.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/controller.dir/e_bouncing_balls.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controller.dir/e_bouncing_balls.cpp.o -c /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_bouncing_balls.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/controller.dir/e_bouncing_balls.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controller.dir/e_bouncing_balls.cpp.o -c /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/e_bouncing_balls.cpp
 
 CMakeFiles/controller.dir/e_bouncing_balls.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controller.dir/e_bouncing_balls.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_bouncing_balls.cpp > CMakeFiles/controller.dir/e_bouncing_balls.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/e_bouncing_balls.cpp > CMakeFiles/controller.dir/e_bouncing_balls.cpp.i
 
 CMakeFiles/controller.dir/e_bouncing_balls.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controller.dir/e_bouncing_balls.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_bouncing_balls.cpp -o CMakeFiles/controller.dir/e_bouncing_balls.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/e_bouncing_balls.cpp -o CMakeFiles/controller.dir/e_bouncing_balls.cpp.s
 
 CMakeFiles/controller.dir/e_rainbow_shift.cpp.o: CMakeFiles/controller.dir/flags.make
 CMakeFiles/controller.dir/e_rainbow_shift.cpp.o: ../e_rainbow_shift.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/controller.dir/e_rainbow_shift.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controller.dir/e_rainbow_shift.cpp.o -c /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_rainbow_shift.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/controller.dir/e_rainbow_shift.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controller.dir/e_rainbow_shift.cpp.o -c /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/e_rainbow_shift.cpp
 
 CMakeFiles/controller.dir/e_rainbow_shift.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controller.dir/e_rainbow_shift.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_rainbow_shift.cpp > CMakeFiles/controller.dir/e_rainbow_shift.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/e_rainbow_shift.cpp > CMakeFiles/controller.dir/e_rainbow_shift.cpp.i
 
 CMakeFiles/controller.dir/e_rainbow_shift.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controller.dir/e_rainbow_shift.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_rainbow_shift.cpp -o CMakeFiles/controller.dir/e_rainbow_shift.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/e_rainbow_shift.cpp -o CMakeFiles/controller.dir/e_rainbow_shift.cpp.s
 
 CMakeFiles/controller.dir/e_static_color.cpp.o: CMakeFiles/controller.dir/flags.make
 CMakeFiles/controller.dir/e_static_color.cpp.o: ../e_static_color.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/controller.dir/e_static_color.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controller.dir/e_static_color.cpp.o -c /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_static_color.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/controller.dir/e_static_color.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controller.dir/e_static_color.cpp.o -c /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/e_static_color.cpp
 
 CMakeFiles/controller.dir/e_static_color.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controller.dir/e_static_color.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_static_color.cpp > CMakeFiles/controller.dir/e_static_color.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/e_static_color.cpp > CMakeFiles/controller.dir/e_static_color.cpp.i
 
 CMakeFiles/controller.dir/e_static_color.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controller.dir/e_static_color.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_static_color.cpp -o CMakeFiles/controller.dir/e_static_color.cpp.s
-
-CMakeFiles/controller.dir/e_Test_A.cpp.o: CMakeFiles/controller.dir/flags.make
-CMakeFiles/controller.dir/e_Test_A.cpp.o: ../e_Test_A.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/controller.dir/e_Test_A.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controller.dir/e_Test_A.cpp.o -c /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_Test_A.cpp
-
-CMakeFiles/controller.dir/e_Test_A.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controller.dir/e_Test_A.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_Test_A.cpp > CMakeFiles/controller.dir/e_Test_A.cpp.i
-
-CMakeFiles/controller.dir/e_Test_A.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controller.dir/e_Test_A.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_Test_A.cpp -o CMakeFiles/controller.dir/e_Test_A.cpp.s
-
-CMakeFiles/controller.dir/e_Test_B.cpp.o: CMakeFiles/controller.dir/flags.make
-CMakeFiles/controller.dir/e_Test_B.cpp.o: ../e_Test_B.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/controller.dir/e_Test_B.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controller.dir/e_Test_B.cpp.o -c /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_Test_B.cpp
-
-CMakeFiles/controller.dir/e_Test_B.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controller.dir/e_Test_B.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_Test_B.cpp > CMakeFiles/controller.dir/e_Test_B.cpp.i
-
-CMakeFiles/controller.dir/e_Test_B.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controller.dir/e_Test_B.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/e_Test_B.cpp -o CMakeFiles/controller.dir/e_Test_B.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/e_static_color.cpp -o CMakeFiles/controller.dir/e_static_color.cpp.s
 
 # Object files for target controller
 controller_OBJECTS = \
@@ -252,9 +226,7 @@ controller_OBJECTS = \
 "CMakeFiles/controller.dir/e_fire.cpp.o" \
 "CMakeFiles/controller.dir/e_bouncing_balls.cpp.o" \
 "CMakeFiles/controller.dir/e_rainbow_shift.cpp.o" \
-"CMakeFiles/controller.dir/e_static_color.cpp.o" \
-"CMakeFiles/controller.dir/e_Test_A.cpp.o" \
-"CMakeFiles/controller.dir/e_Test_B.cpp.o"
+"CMakeFiles/controller.dir/e_static_color.cpp.o"
 
 # External object files for target controller
 controller_EXTERNAL_OBJECTS =
@@ -271,11 +243,9 @@ controller: CMakeFiles/controller.dir/e_fire.cpp.o
 controller: CMakeFiles/controller.dir/e_bouncing_balls.cpp.o
 controller: CMakeFiles/controller.dir/e_rainbow_shift.cpp.o
 controller: CMakeFiles/controller.dir/e_static_color.cpp.o
-controller: CMakeFiles/controller.dir/e_Test_A.cpp.o
-controller: CMakeFiles/controller.dir/e_Test_B.cpp.o
 controller: CMakeFiles/controller.dir/build.make
 controller: CMakeFiles/controller.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable controller"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable controller"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/controller.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -288,6 +258,6 @@ CMakeFiles/controller.dir/clean:
 .PHONY : CMakeFiles/controller.dir/clean
 
 CMakeFiles/controller.dir/depend:
-	cd /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug/CMakeFiles/controller.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug/CMakeFiles/controller.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/controller.dir/depend
 

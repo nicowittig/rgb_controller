@@ -48,10 +48,10 @@ RM = "/Users/nico/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller
+CMAKE_SOURCE_DIR = /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug/CMakeFiles /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug/CMakeFiles /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/rgb_controller/controller/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -149,60 +149,6 @@ controller.s: controller.cpp.s
 controller.cpp.s:
 	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/controller.cpp.s
 .PHONY : controller.cpp.s
-
-e_Test_A.o: e_Test_A.cpp.o
-
-.PHONY : e_Test_A.o
-
-# target to build an object file
-e_Test_A.cpp.o:
-	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/e_Test_A.cpp.o
-.PHONY : e_Test_A.cpp.o
-
-e_Test_A.i: e_Test_A.cpp.i
-
-.PHONY : e_Test_A.i
-
-# target to preprocess a source file
-e_Test_A.cpp.i:
-	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/e_Test_A.cpp.i
-.PHONY : e_Test_A.cpp.i
-
-e_Test_A.s: e_Test_A.cpp.s
-
-.PHONY : e_Test_A.s
-
-# target to generate assembly for a file
-e_Test_A.cpp.s:
-	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/e_Test_A.cpp.s
-.PHONY : e_Test_A.cpp.s
-
-e_Test_B.o: e_Test_B.cpp.o
-
-.PHONY : e_Test_B.o
-
-# target to build an object file
-e_Test_B.cpp.o:
-	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/e_Test_B.cpp.o
-.PHONY : e_Test_B.cpp.o
-
-e_Test_B.i: e_Test_B.cpp.i
-
-.PHONY : e_Test_B.i
-
-# target to preprocess a source file
-e_Test_B.cpp.i:
-	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/e_Test_B.cpp.i
-.PHONY : e_Test_B.cpp.i
-
-e_Test_B.s: e_Test_B.cpp.s
-
-.PHONY : e_Test_B.s
-
-# target to generate assembly for a file
-e_Test_B.cpp.s:
-	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/e_Test_B.cpp.s
-.PHONY : e_Test_B.cpp.s
 
 e_bouncing_balls.o: e_bouncing_balls.cpp.o
 
@@ -513,12 +459,6 @@ help:
 	@echo "... controller.o"
 	@echo "... controller.i"
 	@echo "... controller.s"
-	@echo "... e_Test_A.o"
-	@echo "... e_Test_A.i"
-	@echo "... e_Test_A.s"
-	@echo "... e_Test_B.o"
-	@echo "... e_Test_B.i"
-	@echo "... e_Test_B.s"
 	@echo "... e_bouncing_balls.o"
 	@echo "... e_bouncing_balls.i"
 	@echo "... e_bouncing_balls.s"

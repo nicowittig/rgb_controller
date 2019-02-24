@@ -11,8 +11,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/controller.dir/e_bouncing_balls.cpp.o"
   "CMakeFiles/controller.dir/e_rainbow_shift.cpp.o"
   "CMakeFiles/controller.dir/e_static_color.cpp.o"
-  "CMakeFiles/controller.dir/e_Test_A.cpp.o"
-  "CMakeFiles/controller.dir/e_Test_B.cpp.o"
   "controller.pdb"
   "controller"
 )
