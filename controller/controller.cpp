@@ -6,10 +6,8 @@
 
 
 void controller::setup() {
-#ifdef DEBUG
     Serial.begin(9600);
     Serial.println("START");
-#endif
 
     pinMode(10, INPUT_PULLUP);
     pinMode(12, OUTPUT);
@@ -22,7 +20,12 @@ void controller::setup() {
     for (auto &crgb_led : crgb_leds) crgb_led = CRGB::Black;
     for (auto &effect : effects) effect = nullptr;
 
-    l_elements[0] = light_element(0, NUM_LEDS);
+    light_elements[0] = light_element(0, NUM_LEDS);
+
+    ir_sensors[0] = new input_analog(4, 100, .025, true);
+    ir_sensors[0]->adjust_trigger_value();
+
+    button[0] = new input_digital(5, true, true);
 
     show_all_pixels();
 }
@@ -44,6 +47,30 @@ void controller::loop() {
         Serial.print(" | ");
     }
     Serial.println();
+#endif
+
+#ifdef DEBUG1
+    Serial.print(button[0]->is_pushed());
+    Serial.print(" | ");
+    Serial.print(button[0]->is_toggled());
+    Serial.print(" | ");
+    Serial.print(button[0]->is_tapped());
+    Serial.print(" | ");
+    Serial.print(button[0]->is_changed());
+    Serial.print(" | ");
+    button[0]->print_to_serial();
+#endif
+#ifdef DEBUG2
+    Serial.print(ir_sensors[0]->is_pushed());
+    Serial.print(" | ");
+    Serial.print(ir_sensors[0]->is_toggled());
+    Serial.print(" | ");
+    Serial.print(ir_sensors[0]->is_tapped());
+    Serial.print(" | ");
+    Serial.print(ir_sensors[0]->is_changed());
+    Serial.print(" | ");
+    ir_sensors[0]->print_to_serial();
+#endif
 
     if (Serial.available() > 0) {
         char message = Serial.read();
@@ -61,7 +88,6 @@ void controller::loop() {
 
         if ((message - 48) >= 0 && (message - 48) <= 9) new_mode = (uint8_t) (message - 48);
     }
-#endif
 
     if (cur_mode != new_mode) {
 
@@ -77,6 +103,8 @@ void controller::loop() {
 
     show_all_pixels();
 
+    refresh_inputs();
+
     if (freeRam() < 200) soft_reset();
 }
 
@@ -91,29 +119,29 @@ void controller::mode_init(uint8_t *mode) {
 
     switch (*mode) {
         case 0 : {
-            effects[0] = new e_static_color(&l_elements[0], CHSV(0, 255, 0));
+            effects[0] = new e_static_color(&light_elements[0], CHSV(0, 255, 0));
             break;
         }
         case 1 : {
-            //effects[0] = new e_static_color(&l_elements[0], CHSV(230, 255, 255));
-            effects[0] = new e_static_color(&l_elements[0], CHSV(96, 255, 255));
+            //effects[0] = new e_static_color(&light_elements[0], CHSV(230, 255, 255));
+            effects[0] = new e_static_color(&light_elements[0], CHSV(96, 255, 255));
             break;
         }
         case 2 : {
-            effects[0] = new e_rainbow_shift(&l_elements[0]);
+            effects[0] = new e_rainbow_shift(&light_elements[0]);
             break;
         }
         case 3 : {
-            effects[0] = new e_fire(&l_elements[0], 55, 120);
+            effects[0] = new e_fire(&light_elements[0], 55, 120);
             break;
         }
         case 4 : {
             CRGB colors[3] = {CRGB::Red, CRGB::Green, CRGB::Blue};
-            effects[0] = new e_bouncing_balls(&l_elements[0], 3, colors);
+            effects[0] = new e_bouncing_balls(&light_elements[0], 3, colors);
             break;
         }
         case 5 : { // Test effect
-            for (int i = 0; i < l_elements[0].get_num_leds(); i++) l_elements[0].leds[i] = CHSV (i, 255, 255);
+            for (int i = 0; i < light_elements[0].get_num_leds(); i++) light_elements[0].leds[i] = CHSV (i, 255, 255);
             break;
         }
         default: new_mode = 0;
@@ -139,7 +167,7 @@ void controller::mode_run(uint8_t *mode) {
             break;
         }
         case 5 : { // Test effect
-            for (int i = 0; i < l_elements[0].get_num_leds(); i++) l_elements[0].leds[i].hue++;
+            for (int i = 0; i < light_elements[0].get_num_leds(); i++) light_elements[0].leds[i].hue++;
             break;
         }
         default: break;
@@ -156,3 +184,8 @@ void controller::mode_led(uint8_t *mode) {
     // TODO
 }
 
+
+void controller::refresh_inputs() {
+    ir_sensors[0]->refresh_state();
+    button[0]->refresh_state();
+}

@@ -13,13 +13,12 @@ e_static_color::e_static_color(light_element *le, CRGB color) : effect(le, EFFEC
 }
 
 e_static_color::~e_static_color() {
-
 }
 
 bool e_static_color::init() {
 
-    for (int i = 0; i < le->get_num_leds(); i++) {
-        le->leds[i] = this->color;
+    for (int led = 0; led < le->get_num_leds(); led++) {
+        le->leds[led] = this->color;
     }
 
     return true;

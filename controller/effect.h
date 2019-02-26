@@ -16,7 +16,7 @@ private:
 
 protected:
     light_element* le; ///< light element the effects are applied to
-    char* name;
+    char* name; // TODO use case for name
 
 //region effect helper
 
@@ -25,44 +25,38 @@ protected:
     /// \return true if the colors do match, else false
     bool check_color_matching(CHSV* color);
 
-    // region color setter
+// region color setter
 
     /// method to set a certain pixel to a specific color
     /// \param pixel
     /// \param red
     /// \param green
     /// \param blue
-    void set_pixel(uint16_t pixel, uint8_t red, uint8_t green, uint8_t blue) {
-        this->le->leds[pixel] = rgb2hsv_approximate(CRGB(red, green, blue));
-    }
+    void set_pixel(uint16_t pixel, uint8_t red, uint8_t green, uint8_t blue);
 
     /// method to set a certain pixel to a specific color
     /// \param pixel - pixel index
     /// \param color - CHSV-color
-    void set_pixel(uint16_t pixel, CHSV color) { this->le->leds[pixel] = color; }
+    void set_pixel(uint16_t pixel, CHSV color);
 
     /// method to set a certain pixel to a specific color
     /// \param pixel - pixel index
     /// \param color - CRGB-color
-    void set_pixel(uint16_t pixel, CRGB color) { this->le->leds[pixel] = rgb2hsv_approximate(color); }
-
-    /// method to set all pixels of the attached light element to a specific color
-    /// \param red
-    /// \param green
-    /// \param blue
-    void set_all(uint8_t red, uint8_t green, uint8_t blue) {
-        for (int i = 0; i < le->get_num_leds(); i++) le->leds[i] = rgb2hsv_approximate(CRGB(red, green, blue));
-    }
+    void set_pixel(uint16_t pixel, CRGB color);
 
     /// method to set all pixels of the attached light element to a specific color
     /// \param color - CHSV-color
-    void set_all(CHSV color) { for (int i = 0; i < le->get_num_leds(); i++) le->leds[i] = color; }
+    void set_all(CHSV color);
 
     /// method to set all pixels of the attached light element to a specific color
     /// \param color - CRGB-color
-    void set_all(CRGB color) { for (int i = 0; i < le->get_num_leds(); i++) le->leds[i] = rgb2hsv_approximate(color); }
+    void set_all(CRGB color);
 
-    // endregion
+// endregion
+
+    /// method to increase the hue of every pixel of the attached light element by value
+    /// \param value  - value to increase the hue
+    void increase_hue(int16_t value);
 
     /// method to shift all pixels of the attached light element by the given direction-value
     /// \param direction - direction and steps to shift
@@ -98,17 +92,14 @@ public:
 
     /// Constructor
     /// \param le - light element the effects are applied to
-    effect(light_element* le, char* name) {
-        this->le = le;
-        this->name = name;
-    }
+    effect(light_element* le, char* name);
+
+    /// Destructor
+    virtual ~effect();
 
     /// Getter for the effect name
     /// \return the name of the effect
-    char* getName() { return this->name; }
-
-    /// Destructor
-    virtual ~effect() {}
+    char* getName();
 
     /// init is called once the effect is constructed and passes the call down to the sub class.
     /// \return the value of the sub class

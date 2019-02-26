@@ -7,10 +7,12 @@
 
 #include "arduino_std_definitions.h"
 #include "light_element.h"
-//#include "input.h"
+#include "input.h"
+#include "input_digital.h"
+#include "input_analog.h"
 #include "effect_inclusions.h"
 
-#define DEBUG
+//#define DEBUG
 
 #define LED_PIN 6
 //#define NUM_LEDS 77 // Lamp Leipzig
@@ -30,8 +32,10 @@ private:
     float brightness = 1; ///< brightness of the strip (between 0 and 1)
 
     CRGB crgb_leds[NUM_LEDS]; ///< RGB array of all the pixels
-    light_element* l_elements = (light_element *) malloc(sizeof(light_element) * NUM_ELEMENTS); ///< sub-elements of the strip
+    light_element* light_elements = (light_element *) malloc(sizeof(light_element) * NUM_ELEMENTS); ///< sub-elements of the strip
     effect* effects [NUM_ELEMENTS]; ///< one effect for every element
+    input_analog* ir_sensors[1];
+    input_digital* button[1];
 
     void mode_init(uint8_t* mode);
     void mode_run(uint8_t* mode);
@@ -43,13 +47,10 @@ private:
         //Serial.println("[Sensor-Reset]");
     }
     /// Let the input-classes check if there was an input.
-    void refresh_inputs() {
-        //for (int i = 0; i < num_ir_sensors; i++) ir_sensors[i].refresh_state();
-        //microphone[0].refresh_state();
-    }
+    void refresh_inputs();
     /// Show all sub-elements and call the FastLED output.
     void show_all_pixels() {
-        for (int i = 0; i < NUM_ELEMENTS; i++) l_elements[i].show(crgb_leds, brightness);
+        for (int i = 0; i < NUM_ELEMENTS; i++) light_elements[i].show(crgb_leds, brightness);
         FastLED.show();
     }
 
