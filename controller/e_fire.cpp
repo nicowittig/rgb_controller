@@ -70,10 +70,10 @@ void e_fire::set_pixel_heat_color(uint16_t pixel, uint8_t temperature) {
 
     // figure out which third of the spectrum we're in:
     if( t192 > 0x80) {                     // hottest
-        set_pixel(pixel, 255, 255, heatramp);
+        set_pixel(pixel, CRGB(255, 255, heatramp));
     } else if( t192 > 0x40 ) {             // middle
-        set_pixel(pixel, 255, heatramp, 0);
+        set_pixel(pixel, CRGB(255, heatramp, 0));
     } else {                               // coolest
-        set_pixel(pixel, heatramp, 0, 0);
+        set_pixel(pixel, CRGB(heatramp, 0, 0));
     }
 }

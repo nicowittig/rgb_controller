@@ -12,7 +12,7 @@
 #include "input_analog.h"
 #include "effect_inclusions.h"
 
-//#define DEBUG
+#define DEBUG
 
 #define LED_PIN 6
 //#define NUM_LEDS 77 // Lamp Leipzig

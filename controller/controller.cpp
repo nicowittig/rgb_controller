@@ -123,8 +123,7 @@ void controller::mode_init(uint8_t *mode) {
             break;
         }
         case 1 : {
-            //effects[0] = new e_static_color(&light_elements[0], CHSV(230, 255, 255));
-            effects[0] = new e_static_color(&light_elements[0], CHSV(96, 255, 255));
+            effects[0] = new e_static_color(&light_elements[0], CHSV(0,255,255), CHSV(96,255,255), true);
             break;
         }
         case 2 : {

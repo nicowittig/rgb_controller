@@ -47,14 +47,14 @@ bool e_bouncing_balls::init() {
         Dampening[ball] = 0.90 - float(ball)/pow(ball_count,2);
     }
 
-    set_all(CRGB::Black);
+    set_color(CHSV(0, 255, 0)); // Black
 
     return true;
 }
 
 bool e_bouncing_balls::run() {
 
-    set_all(CRGB::Black);
+    set_color(CHSV(0, 255, 0)); // Black
 
     for (int ball = 0; ball < ball_count; ball++) {
         TimeSinceLastBounce[ball] = millis() - ClockTimeSinceLastBounce[ball];
