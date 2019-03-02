@@ -12,16 +12,34 @@
 class effect {
 
 private:
-    uint8_t wipe_index = 0; ///< effect index is used by various effects to safe a state or a position
+    uint16_t wipe_index = 0; ///< effect index is used by various effects to safe a state or a position
 
 protected:
     light_element* le; ///< light element the effects are applied to
     char* name; // TODO use case for name
 
-    /// Checks the attached light element if the colors are similar to the CHSV-color array
-    /// \param color - CHSV-color array
+    /// Checks an area of the attached light element if the colors are similar to the CHSV-color
+    /// \param color - CHSV-color
+    /// \param begin_led - first led of the area
+    /// \param end_led - last led of the area
+    /// \return true if the colors do match, else false
+    bool check_color_matching(CHSV* color, uint16_t begin_led, uint16_t end_led);
+
+    /// Checks the attached light element if the colors are similar to the CHSV-color
+    /// \param color - CHSV-color
     /// \return true if the colors do match, else false
     bool check_color_matching(CHSV* color);
+
+    /// get the color the pixel would have if the given gradient would be applied
+    /// \param begin_color - first color
+    /// \param end_color - last color
+    /// \param hue_cycle_forward - direction to walk through the hue colors
+    //    /// true: red, yellow, green, blue, red
+    //    /// false: red, blue, green, yellow, red
+    /// \param area_length - length of the gradient
+    /// \param index_led - led to get the color from
+    /// \return the color of index_led
+    CHSV get_pixel_gradient(CHSV begin_color, CHSV end_color, bool hue_cycle_forward, uint16_t area_length, uint16_t index_led);
 
 // region color setter
 
@@ -37,40 +55,40 @@ protected:
 
     /// set one or multiple gradients from the first to the second color in specified area on the light element
     /// \param begin_color - first color
-    /// \param end_color - second color
+    /// \param end_color - last color
     /// \param hue_cycle_forward - direction to walk through the hue colors
     //    /// true: red, yellow, green, blue, red
     //    /// false: red, blue, green, yellow, red
     /// \param begin_led - first led of the area
-    /// \param end_led - second led of the area
+    /// \param end_led - last led of the area
     /// \param cycles - multiple gradient cycles
     /// \param forward_only - if true invert every 2nd gradient
     void set_color(CHSV begin_color, CHSV end_color, bool hue_cycle_forward, uint16_t begin_led, uint16_t end_led, uint8_t cycles, bool forward_only);
 
     /// set one or multiple gradients from the first to the second color in specified area on the light element
     /// \param begin_color - first color
-    /// \param end_color - second color
+    /// \param end_color - last color
     /// \param hue_cycle_forward - direction to walk through the hue colors
     //    /// true: red, yellow, green, blue, red
     //    /// false: red, blue, green, yellow, red
     /// \param begin_led - first led of the area
-    /// \param end_led - second led of the area
+    /// \param end_led - last led of the area
     /// \param cycles - multiple gradient cycles
     void set_color(CHSV begin_color, CHSV end_color, bool hue_cycle_forward, uint16_t begin_led, uint16_t end_led, uint8_t cycles);
 
     /// set a gradient from the first to the second color in specified area on the light element
     /// \param begin_color - first color
-    /// \param end_color - second color
+    /// \param end_color - last color
     /// \param hue_cycle_forward - direction to walk through the hue colors
     //    /// true: red, yellow, green, blue, red
     //    /// false: red, blue, green, yellow, red
     /// \param begin_led - first led of the area
-    /// \param end_led - second led of the area
+    /// \param end_led - last led of the area
     void set_color(CHSV begin_color, CHSV end_color, bool hue_cycle_forward, uint16_t begin_led, uint16_t end_led);
 
     /// set a gradient from the first to the second color to the whole light element
     /// \param begin_color - first color
-    /// \param end_color - second color
+    /// \param end_color - last color
     /// \param hue_cycle_forward - direction to walk through the hue colors
     //    /// true: red, yellow, green, blue, red
     //    /// false: red, blue, green, yellow, red
@@ -78,7 +96,7 @@ protected:
 
     /// set a gradient from the first to the second color to the whole light element
     /// \param begin_color - first color
-    /// \param end_color - second color
+    /// \param end_color - last color
     void set_color(CHSV begin_color, CHSV end_color);
 
     /// set the whole light element to the given color
@@ -100,21 +118,68 @@ protected:
     /// \param direction - direction and steps to shift
     void shift_hue(int16_t direction);
 
-    // TODO make method without wipe_helper
-    /// method to wipe a color through the light element
+    /// wipe a gradient through the area between one led and another
+    /// //TODO multi-directional wiping over the 255-0 limit
+    /// \param begin_color - first color
+    /// \param end_color - last color
+    /// \param hue_cycle_forward - direction to walk through the hue colors
+    //    /// true: red, yellow, green, blue, red
+    //    /// false: red, blue, green, yellow, red
+    /// \param begin_led - first led of the area
+    /// \param end_led - last led of the area
+    /// \param direction - wipe direction
+    /// \return true if the wipe is complete, else false
+    bool wipe(CHSV begin_color, CHSV end_color, bool hue_cycle_forward, uint16_t begin_led, uint16_t end_led, int8_t direction);
+
+    /// wipe a color through a area of the light element
+    /// \param new_color - CHSV-color
+    /// \param begin_led - first led of the area
+    /// \param end_led - last led of the area
+    /// \param direction - wipe direction
+    /// \return true if the wipe is complete, else false
+    bool wipe(CHSV new_color, uint16_t begin_led, uint16_t end_led, int8_t direction);
+
+    /// wipe a color through the whole light element
     /// \param new_color - CHSV-color
     /// \param direction - direction to wipe
     /// \return true if the wipe is complete, else false
     bool wipe(CHSV new_color, int8_t direction);
 
-    /// method to fade one single parameter to a certain value by the given steps
+    /// fade one single parameter to a certain value by the given steps
     /// \param var - pointer to the parameter that has to be changed
     /// \param end - goal value
     /// \param step - steps
     /// \return true if the goal value is reached, else false
-    bool fade_manual(uint8_t* var, uint8_t end, int8_t step);
+    bool fade_var(uint8_t *var, uint8_t end, int8_t step);
 
-    /// method to fade all pixels of the attached light element to a certain CHSV-color
+    /// fade one pixel of the attached light element to a certain CHSV-color
+    /// \param pixel - pixel of the light element
+    /// \param new_color - goal color to be faded to
+    /// \param step - steps
+    /// \return true if the goal color is reached, else false
+    bool fade(CHSV new_color, uint16_t pixel, uint8_t step);
+
+    /// fade all pixels in an area of the attached light element to a certain color gradient
+    /// \param begin_color - first color
+    /// \param end_color - last color
+    /// \param hue_cycle_forward - direction to walk through the hue colors
+    //    /// true: red, yellow, green, blue, red
+    //    /// false: red, blue, green, yellow, red
+    /// \param begin_led - first led of the area
+    /// \param end_led - last led of the area
+    /// \param step - steps
+    /// \return true if the goal gradient is reached, else false
+    bool fade(CHSV begin_color, CHSV end_color, bool hue_cycle_forward, uint16_t begin_led, uint16_t end_led, int8_t step);
+
+    /// fade all pixels in an area of the attached light element to a certain CHSV-color
+    /// \param begin_led - first pixel of the area
+    /// \param end_led - last pixel of the area
+    /// \param new_color - goal color to be faded to
+    /// \param step - steps
+    /// \return true if the goal color is reached, else false
+    bool fade(CHSV new_color, uint16_t begin_led, uint16_t end_led, int8_t step);
+
+    /// fade all pixels of the attached light element to a certain CHSV-color
     /// \param new_color - goal color to be faded to
     /// \param step - steps
     /// \return true if the goal color is reached, else false
