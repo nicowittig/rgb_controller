@@ -19,6 +19,7 @@ char* effect::getName() {
     return this->name;
 }
 
+// region effect helper
 
 bool effect::check_color_matching(CHSV *color, uint16_t begin_led, uint16_t end_led) {
 
@@ -318,3 +319,5 @@ bool effect::fade(CHSV new_color, uint16_t begin_led, uint16_t end_led, int8_t s
 bool effect::fade(CHSV new_color, int8_t step) {
     return fade(new_color, 0, le->get_num_leds()-1, step);
 }
+
+// endregion

@@ -18,6 +18,8 @@ protected:
     light_element* le; ///< light element the effects are applied to
     char* name; // TODO use case for name
 
+// region effect helper
+
     /// Checks an area of the attached light element if the colors are similar to the CHSV-color
     /// \param color - CHSV-color
     /// \param begin_led - first led of the area
@@ -184,6 +186,8 @@ protected:
     /// \param step - steps
     /// \return true if the goal color is reached, else false
     bool fade(CHSV new_color, int8_t step);
+
+// endregion
 
 public:
 
