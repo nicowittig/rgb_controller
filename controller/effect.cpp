@@ -2,7 +2,7 @@
 // Created by Nico Wittig on 2018-12-14.
 //
 
-#include "effect.h"
+#include "effect.hpp"
 
 
 effect::effect(light_element *le, char *name) {

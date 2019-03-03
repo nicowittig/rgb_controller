@@ -5,7 +5,7 @@
 #ifndef CONTROLLER_INPUT_DIGITAL_H
 #define CONTROLLER_INPUT_DIGITAL_H
 
-#include "input.h"
+#include "input.hpp"
 
 /// digital input extends input
 class input_digital : public input {

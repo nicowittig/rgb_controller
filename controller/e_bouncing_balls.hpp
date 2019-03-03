@@ -6,7 +6,7 @@
 #define CONTROLLER_E_BOUNCING_BALLS_H
 
 #include "arduino_std_definitions.h"
-#include "effect.h"
+#include "effect.hpp"
 
 #define EFFECT_NAME "bouncing balls"
 
@@ -43,7 +43,7 @@ public:
     e_bouncing_balls(light_element* le, uint8_t ball_count, CRGB* colors);
 
     /// Destructor
-    virtual ~e_bouncing_balls();
+    ~e_bouncing_balls();
 
     /// init is called once the effect is constructed to allocate the array etc.
     /// \return true

@@ -6,7 +6,7 @@
 #define CONTROLLER_E_RAINBOW_SHIFT_H
 
 #include "arduino_std_definitions.h"
-#include "effect.h"
+#include "effect.hpp"
 
 #define EFFECT_NAME "rainbow shift"
 
@@ -20,7 +20,7 @@ public:
     e_rainbow_shift(light_element* le);
 
     /// Destructor
-    virtual ~e_rainbow_shift();
+    ~e_rainbow_shift();
 
     /// init is called once the effect is constructed to make the element a rainbow.
     /// \return true

@@ -6,13 +6,13 @@
 #define CONTROLLER_CONTROLLER_H
 
 #include "arduino_std_definitions.h"
-#include "light_element.h"
-#include "input.h"
-#include "input_digital.h"
-#include "input_analog.h"
+#include "light_element.hpp"
+#include "input.hpp"
+#include "input_digital.hpp"
+#include "input_analog.hpp"
 #include "effect_inclusions.h"
 
-//#define DEBUG
+#define DEBUG
 
 #define LED_PIN 6
 //#define NUM_LEDS 77 // Lamp Leipzig

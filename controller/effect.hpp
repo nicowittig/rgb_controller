@@ -6,7 +6,7 @@
 #define CONTROLLER_EFFECT_H
 
 #include "arduino_std_definitions.h"
-#include "light_element.h"
+#include "light_element.hpp"
 
 /// Super class of all the effects, which provides the effects with standard functionality.
 class effect {
@@ -16,7 +16,7 @@ private:
 
 protected:
     light_element* le; ///< light element the effects are applied to
-    char* name; // TODO use case for name
+    char* name; ///< human name of the effect
 
 // region effect helper
 
@@ -196,7 +196,7 @@ public:
     effect(light_element* le, char* name);
 
     /// Destructor
-    virtual ~effect();
+    ~effect();
 
     /// Getter for the effect name
     /// \return the name of the effect

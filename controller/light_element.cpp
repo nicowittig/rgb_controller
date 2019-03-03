@@ -2,7 +2,7 @@
 // Created by Nico Wittig on 2018-12-13.
 //
 
-#include "light_element.h"
+#include "light_element.hpp"
 
 light_element::light_element(uint16_t first_led, uint16_t num_leds) {
     this->leds = (CHSV *) malloc(sizeof(CHSV) * num_leds);

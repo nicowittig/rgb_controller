@@ -2,7 +2,7 @@
 // Created by Nico Wittig on 2018-12-13.
 //
 
-#include "e_fire.h"
+#include "e_fire.hpp"
 
 e_fire::e_fire(light_element* le, int16_t cooling, int16_t sparking) : effect(le, EFFECT_NAME) {
     this->cooling = cooling;

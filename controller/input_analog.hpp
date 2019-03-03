@@ -5,7 +5,7 @@
 #ifndef CONTROLLER_INPUT_ANALOG_H
 #define CONTROLLER_INPUT_ANALOG_H
 
-#include "input.h"
+#include "input.hpp"
 
 /// analog input extends input
 class input_analog : public input {

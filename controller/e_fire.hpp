@@ -6,7 +6,7 @@
 #define CONTROLLER_FIRE_H
 
 #include "arduino_std_definitions.h"
-#include "effect.h"
+#include "effect.hpp"
 
 #define EFFECT_NAME "fire"
 
@@ -31,7 +31,7 @@ public:
     e_fire(light_element* le, int16_t cooling, int16_t sparking);
 
     /// Destructor
-    virtual ~e_fire();
+    ~e_fire();
 
     /// init is called once the effect is constructed to darken (reset) the fire.
     /// \return true

@@ -2,7 +2,7 @@
 // Created by Nico Wittig on 2018-12-13.
 //
 
-#include "controller.h"
+#include "controller.hpp"
 
 
 void controller::setup() {
@@ -144,6 +144,10 @@ void controller::mode_init(uint8_t *mode) {
             for (int i = 0; i < light_elements[0].get_num_leds(); i++) light_elements[0].leds[i] = CHSV (i, 255, 255);
             break;
         }
+        case 6 : {
+            effects[0] = new e_meteor(&light_elements[0], false, 60);
+            break;
+        }
         default: new_mode = 0;
     }
 
@@ -168,6 +172,10 @@ void controller::mode_run(uint8_t *mode) {
         }
         case 5 : { // Test effect
             for (int i = 0; i < light_elements[0].get_num_leds(); i++) light_elements[0].leds[i].hue++;
+            break;
+        }
+        case 6 : {
+            delay(80);
             break;
         }
         default: break;

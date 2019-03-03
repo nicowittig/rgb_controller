@@ -15,6 +15,7 @@ int modulo(int a, int b);
 /// \return the free RAM
 int freeRam();
 
+/// reset the Arduino
 void soft_reset();
 
 #endif //CONTROLLER_NW_TOOLKIT_H

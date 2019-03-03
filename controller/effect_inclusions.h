@@ -5,11 +5,12 @@
 #ifndef CONTROLLER_EFFECT_INCLUSIONS_H
 #define CONTROLLER_EFFECT_INCLUSIONS_H
 
-#include "effect.h"
+#include "effect.hpp"
 
-#include "e_fire.h"
-#include "e_bouncing_balls.h"
-#include "e_rainbow_shift.h"
-#include "e_static_color.h"
+#include "e_fire.hpp"
+#include "e_bouncing_balls.hpp"
+#include "e_rainbow_shift.hpp"
+#include "e_static_color.hpp"
+#include "e_meteor.hpp"
 
 #endif //CONTROLLER_EFFECT_INCLUSIONS_H

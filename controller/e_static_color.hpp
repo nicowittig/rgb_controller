@@ -6,7 +6,7 @@
 #define CONTROLLER_E_STATIC_COLOR_H
 
 #include "arduino_std_definitions.h"
-#include "effect.h"
+#include "effect.hpp"
 
 #define EFFECT_NAME "static color"
 
@@ -67,7 +67,7 @@ public:
     e_static_color(light_element* le, CHSV begin_color, CHSV end_color, bool hue_cycle_forward, uint8_t cycles, bool forward_only);
 
     /// Destructor
-    virtual ~e_static_color();
+    ~e_static_color();
 
     /// init is called once the effect is constructed to colorize the element
     /// \return true

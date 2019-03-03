@@ -2,7 +2,7 @@
 // Created by Nico Wittig on 2018-12-18.
 //
 
-#include "e_bouncing_balls.h"
+#include "e_bouncing_balls.hpp"
 
 e_bouncing_balls::e_bouncing_balls(light_element *le, uint8_t ball_count, CHSV* colors) : effect(le, EFFECT_NAME) {
     this->ball_count = ball_count;

@@ -2,7 +2,7 @@
 // Created by Nico Wittig on 2018-12-13.
 //
 
-#include "input_digital.h"
+#include "input_digital.hpp"
 
 
 input_digital::input_digital(uint8_t input_pin, bool pullup, bool invert) :input(input_pin, invert) {

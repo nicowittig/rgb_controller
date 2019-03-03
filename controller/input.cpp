@@ -2,7 +2,7 @@
 // Created by Nico Wittig on 2018-12-13.
 //
 
-#include "input.h"
+#include "input.hpp"
 
 
 input::input(uint8_t input_pin, bool invert) {

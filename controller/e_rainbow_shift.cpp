@@ -2,7 +2,7 @@
 // Created by Nico Wittig on 2018-12-19.
 //
 
-#include "e_rainbow_shift.h"
+#include "e_rainbow_shift.hpp"
 
 e_rainbow_shift::e_rainbow_shift(light_element *le) : effect(le, EFFECT_NAME) {
 }

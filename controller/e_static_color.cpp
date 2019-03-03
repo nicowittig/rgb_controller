@@ -2,7 +2,7 @@
 // Created by Nico Wittig on 2019-02-07.
 //
 
-#include "e_static_color.h"
+#include "e_static_color.hpp"
 
 e_static_color::e_static_color(light_element *le, CHSV color) : effect(le, EFFECT_NAME) {
     this->begin_color = color;

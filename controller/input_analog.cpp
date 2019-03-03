@@ -2,7 +2,7 @@
 // Created by Nico Wittig on 2018-12-13.
 //
 
-#include "input_analog.h"
+#include "input_analog.hpp"
 
 //region Constructors and Setters
 
