@@ -420,33 +420,6 @@ light_element.cpp.s:
 	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/light_element.cpp.s
 .PHONY : light_element.cpp.s
 
-main.o: main.cpp.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/main.cpp.s
-.PHONY : main.cpp.s
-
 nw_toolkit.o: nw_toolkit.cpp.o
 
 .PHONY : nw_toolkit.o
@@ -516,9 +489,6 @@ help:
 	@echo "... light_element.o"
 	@echo "... light_element.i"
 	@echo "... light_element.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 	@echo "... nw_toolkit.o"
 	@echo "... nw_toolkit.i"
 	@echo "... nw_toolkit.s"

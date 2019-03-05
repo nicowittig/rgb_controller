@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/controller.dir/main.cpp.o"
   "CMakeFiles/controller.dir/controller.cpp.o"
   "CMakeFiles/controller.dir/light_element.cpp.o"
   "CMakeFiles/controller.dir/nw_toolkit.cpp.o"

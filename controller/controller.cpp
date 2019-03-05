@@ -48,7 +48,6 @@ void controller::loop() {
     }
     Serial.println();
 #endif
-
 #ifdef DEBUG1
     Serial.print(button[0]->is_pushed());
     Serial.print(" | ");
@@ -86,7 +85,7 @@ void controller::loop() {
             default: break;
         }
 
-        if ((message - 48) >= 0 && (message - 48) <= 9) new_mode = (uint8_t) (message - 48);
+        if ((message - 48) >= 0 && (message - 48) <= 9) set_mode((uint8_t) (message - 48));
     }
 
     if (cur_mode != new_mode) {
@@ -148,7 +147,7 @@ void controller::mode_init(uint8_t *mode) {
             effects[0] = new e_meteor(&light_elements[0], false, 60);
             break;
         }
-        default: new_mode = 0;
+        default: set_mode(0);
     }
 
     for (auto &effect : effects) {

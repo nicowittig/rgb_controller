@@ -14,13 +14,24 @@ class e_meteor : public effect {
 
 private:
     bool forward; ///< let the meteor fly forward or backward
+    bool no_random = false; ///< let the trail fade off randomly or not
     uint8_t trail_decay; ///< value to decrease the trail brightness randomly
     uint16_t meteor_position = 0; ///< current position of the meteor
 
 public:
 
-    // Constructor
+    /// Constructor
+    /// \param le - light element
+    /// \param forward - direction of the meteor
+    /// \param trail_decay - trail decay
     e_meteor(light_element* le, bool forward, uint8_t trail_decay);
+
+    /// Constructor
+    /// \param le - light element
+    /// \param forward - direction of the meteor
+    /// \param trail_decay - trail decay
+    /// \param no_random - let the trail fade off randomly or not
+    e_meteor(light_element* le, bool forward, uint8_t trail_decay, bool no_random);
 
     /// Destructor
     ~e_meteor();
@@ -30,7 +41,7 @@ public:
     virtual bool init();
 
     /// \return false
-    virtual bool run();
+   virtual bool run();
 
 };
 

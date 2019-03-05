@@ -11,12 +11,33 @@ effect::effect(light_element *le, char *name) {
 }
 
 
+effect::effect(light_element *le, char *name, uint8_t num_delay_helper) {
+    this->le = le;
+    this->name = name;
+    this->delay_helper = (uint64_t *) malloc(sizeof(uint64_t) * num_delay_helper);
+    for (int i = 0; i < num_delay_helper; i++) delay_helper[i] = 0;
+}
+
+
 effect::~effect() {
+    free(this->delay_helper);
 }
 
 
 char* effect::getName() {
     return this->name;
+}
+
+
+bool effect::delay(uint8_t delay_index, uint32_t delay) {
+
+    if (millis() >= delay_helper[delay_index]) {
+        delay_helper[delay_index] = millis() + delay;
+        return true;
+    } else {
+        return false;
+    }
+
 }
 
 // region effect helper

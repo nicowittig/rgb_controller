@@ -13,10 +13,17 @@ class effect {
 
 private:
     uint16_t wipe_index = 0; ///< effect index is used by various effects to safe a state or a position
+    char* name; ///< human name of the effect
+    uint64_t* delay_helper; ///< length of n is needed for n delays to safe the last execution
 
 protected:
     light_element* le; ///< light element the effects are applied to
-    char* name; ///< human name of the effect
+
+    /// delay method to simulate a thread-based delay
+    /// \param delay_index - index of the delay helper
+    /// \param delay - delay
+    /// \return true if the time is over, else false
+    bool delay(uint8_t delay_index, uint32_t delay);
 
 // region effect helper
 
@@ -193,7 +200,14 @@ public:
 
     /// Constructor
     /// \param le - light element the effects are applied to
+    /// \param name - natural name of the effect
     effect(light_element* le, char* name);
+
+    /// Constructor
+    /// \param le - light element the effects are applied to
+    /// \param name - natural name of the effect
+    /// \param num_delay_helper - number of delay helper the effect needs
+    effect(light_element* le, char* name, uint8_t num_delay_helper);
 
     /// Destructor
     ~effect();

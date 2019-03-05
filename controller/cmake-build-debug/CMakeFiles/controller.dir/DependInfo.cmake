@@ -15,7 +15,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/input_analog.cpp" "/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug/CMakeFiles/controller.dir/input_analog.cpp.o"
   "/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/input_digital.cpp" "/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug/CMakeFiles/controller.dir/input_digital.cpp.o"
   "/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/light_element.cpp" "/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug/CMakeFiles/controller.dir/light_element.cpp.o"
-  "/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/main.cpp" "/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug/CMakeFiles/controller.dir/main.cpp.o"
   "/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/nw_toolkit.cpp" "/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/cmake-build-debug/CMakeFiles/controller.dir/nw_toolkit.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

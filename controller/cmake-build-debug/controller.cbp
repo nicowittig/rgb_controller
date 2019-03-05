@@ -86,43 +86,43 @@
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/controller.cpp">
 			<Option target="controller"/>
 		</Unit>
-		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/controller.h">
+		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/controller.hpp">
 			<Option target="controller"/>
 		</Unit>
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/e_bouncing_balls.cpp">
 			<Option target="controller"/>
 		</Unit>
-		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/e_bouncing_balls.h">
+		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/e_bouncing_balls.hpp">
 			<Option target="controller"/>
 		</Unit>
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/e_fire.cpp">
 			<Option target="controller"/>
 		</Unit>
-		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/e_fire.h">
+		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/e_fire.hpp">
 			<Option target="controller"/>
 		</Unit>
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/e_meteor.cpp">
 			<Option target="controller"/>
 		</Unit>
-		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/e_meteor.h">
+		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/e_meteor.hpp">
 			<Option target="controller"/>
 		</Unit>
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/e_rainbow_shift.cpp">
 			<Option target="controller"/>
 		</Unit>
-		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/e_rainbow_shift.h">
+		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/e_rainbow_shift.hpp">
 			<Option target="controller"/>
 		</Unit>
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/e_static_color.cpp">
 			<Option target="controller"/>
 		</Unit>
-		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/e_static_color.h">
+		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/e_static_color.hpp">
 			<Option target="controller"/>
 		</Unit>
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/effect.cpp">
 			<Option target="controller"/>
 		</Unit>
-		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/effect.h">
+		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/effect.hpp">
 			<Option target="controller"/>
 		</Unit>
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/effect_inclusions.h">
@@ -131,19 +131,19 @@
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/input.cpp">
 			<Option target="controller"/>
 		</Unit>
-		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/input.h">
+		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/input.hpp">
 			<Option target="controller"/>
 		</Unit>
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/input_analog.cpp">
 			<Option target="controller"/>
 		</Unit>
-		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/input_analog.h">
+		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/input_analog.hpp">
 			<Option target="controller"/>
 		</Unit>
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/input_digital.cpp">
 			<Option target="controller"/>
 		</Unit>
-		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/input_digital.h">
+		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/input_digital.hpp">
 			<Option target="controller"/>
 		</Unit>
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/lib/Arduino.h">
@@ -152,10 +152,7 @@
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/light_element.cpp">
 			<Option target="controller"/>
 		</Unit>
-		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/light_element.h">
-			<Option target="controller"/>
-		</Unit>
-		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/main.cpp">
+		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/light_element.hpp">
 			<Option target="controller"/>
 		</Unit>
 		<Unit filename="/Users/nico/Documents/Projects/Cpp/2018-12-rgb_controller/controller/nw_toolkit.cpp">

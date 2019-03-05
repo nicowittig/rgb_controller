@@ -9,6 +9,12 @@ e_meteor::e_meteor(light_element *le, bool forward, uint8_t trail_decay) : effec
     this->trail_decay = trail_decay;
 }
 
+e_meteor::e_meteor(light_element *le, bool forward, uint8_t trail_decay, bool no_random) : effect(le, EFFECT_NAME) {
+    this->forward = forward;
+    this->trail_decay = trail_decay;
+    this->no_random = no_random;
+}
+
 
 e_meteor::~e_meteor() {
 }
@@ -27,7 +33,7 @@ bool e_meteor::run() {
 
     // fade out the trail
     for (int led = 0; led < le->get_num_leds(); led++) {
-        if (random8()%2 == 0) {
+        if (no_random || random8()%2 == 0) {
             fade_var(&le->leds[led%le->get_num_leds()].val, 0, -trail_decay);
         }
     }
