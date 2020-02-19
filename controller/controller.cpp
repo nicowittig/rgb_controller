@@ -2,96 +2,197 @@
 // Created by Nico Wittig on 2018-12-13.
 //
 
-#include "controller.h"
+#include "controller.hpp"
 
-#define delay_balance 36
-#define BRIGHTNESS 1
 
-#define LED_PIN 6
+void controller::setup() {
+    Serial.begin(9600);
+    Serial.println("START");
 
-#define NUM_LEDS 15 //77
-#define num_elements 1
+    pinMode(10, INPUT_PULLUP);
+    pinMode(12, OUTPUT);
+    digitalWrite(12, LOW);
 
-CRGB crgb_leds[NUM_LEDS];
-light_element* l_elements = (light_element *) malloc(sizeof(light_element) * num_elements);
-effect* effects [num_elements];
-
-void c_setup() {
-    Serial.begin(4800);
+    cur_mode = 255;
+    new_mode = EEPROM.read(EEPROM_MODE_ADDRESS);
 
     FastLED.addLeds<WS2812, LED_PIN, GRB>(crgb_leds, NUM_LEDS);
-    for (uint16_t i = 0; i < NUM_LEDS; i++) crgb_leds[i] = CRGB::Black;
+    for (auto &crgb_led : crgb_leds) crgb_led = CRGB::Black;
+    for (auto &effect : effects) effect = nullptr;
 
-    //l_elements = (light_element *) malloc(sizeof(light_element) * num_elements);
+    light_elements[0] = light_element(0, NUM_LEDS);
 
-    l_elements[0] = light_element(0, 15);
+    ir_sensors[0] = new input_analog(4, 100, .025, true);
+    ir_sensors[0]->adjust_trigger_value();
 
-    effects[0] = new e_fire(&l_elements[0], 55, 120);
-
-
-    for (int i = 0; i < l_elements[0].get_num_leds(); i++) {
-        //l_elements[0].leds[i] = CHSV(i*255/15, 255, 255);
-        l_elements[0].leds[i] = CHSV(0, 255, 255);
-    }
+    button[0] = new input_digital(5, true, true);
 
     show_all_pixels();
-
 }
 
-uint8_t mode = 0;
 
-void c_loop() {
+void controller::loop() {
+
+#ifdef DEBUG
+    Serial.print("RAM: ");
+    Serial.print(freeRam());
+    Serial.print(" | ");
+    Serial.print("MODE: ");
+    Serial.print(cur_mode);
+    Serial.print(" | ");
+    for (int i = 0; i < NUM_ELEMENTS; i++) {
+        Serial.print(i);
+        Serial.print(": ");
+        if (effects[i] != nullptr) Serial.print(effects[i]->getName());
+        Serial.print(" | ");
+    }
+    Serial.println();
+#endif
+#ifdef DEBUG1
+    Serial.print(button[0]->is_pushed());
+    Serial.print(" | ");
+    Serial.print(button[0]->is_toggled());
+    Serial.print(" | ");
+    Serial.print(button[0]->is_tapped());
+    Serial.print(" | ");
+    Serial.print(button[0]->is_changed());
+    Serial.print(" | ");
+    button[0]->print_to_serial();
+#endif
+#ifdef DEBUG2
+    Serial.print(ir_sensors[0]->is_pushed());
+    Serial.print(" | ");
+    Serial.print(ir_sensors[0]->is_toggled());
+    Serial.print(" | ");
+    Serial.print(ir_sensors[0]->is_tapped());
+    Serial.print(" | ");
+    Serial.print(ir_sensors[0]->is_changed());
+    Serial.print(" | ");
+    ir_sensors[0]->print_to_serial();
+#endif
 
     if (Serial.available() > 0) {
-
         char message = Serial.read();
-
-        //Serial.print("Received message: ");
-        //Serial.println(message);
+        Serial.print("Received serial message: ");
+        Serial.println(message);
 
         switch(message) {
-            case 'r': {
-                c_setup();
-                mode = -1;
-                break;
-            }
-
+            case 't': setup(); break;
+            case 'r':
+                soft_reset(); break;
+            case 'w': setBrightness(brightness+0.1f); break;
+            case 's': setBrightness(brightness-0.1f); break;
             default: break;
         }
 
-        if ((message - 48) >= 0 && (message - 48) <= 9) {
-            mode = (uint8_t) (message - 48);
-        }
-
+        if ((message - 48) >= 0 && (message - 48) <= 9) set_mode((uint8_t) (message - 48));
     }
 
+    if (cur_mode != new_mode) {
+
+#ifdef DEBUG
+        Serial.print("new Mode: ");
+        Serial.println(new_mode);
+#endif
+        cur_mode = new_mode;
+        mode_init(&cur_mode);
+    }
+
+    mode_run(&cur_mode);
+
+    show_all_pixels();
+
+    refresh_inputs();
+
+    if (freeRam() < 200) soft_reset();
+}
 
 
-    switch(mode) {
+void controller::mode_init(uint8_t *mode) {
+    for (auto &effect : effects) {
+        if (effect != nullptr) {
+            delete(effect);
+            effect = nullptr;
+        }
+    }
+
+    switch (*mode) {
         case 0 : {
-            effects[0]->run();
+            effects[0] = new e_static_color(&light_elements[0], CHSV(0, 255, 0));
+            break;
+        }
+        case 1 : {
+            //effects[0] = new e_static_color(&light_elements[0], CHSV(0,255,255), CHSV(96,255,255), false);
+            effects[0] = new e_static_color(&light_elements[0], CHSV(160,255,255));
+            break;
+        }
+        case 2 : {
+            effects[0] = new e_rainbow_shift(&light_elements[0]);
+            break;
+        }
+        case 3 : {
+            effects[0] = new e_fire(&light_elements[0], 55, 120);
+            break;
+        }
+        case 4 : {
+            CRGB colors[3] = {CRGB::Red, CRGB::Green, CRGB::Blue};
+            effects[0] = new e_bouncing_balls(&light_elements[0], 3, colors);
+            break;
+        }
+        case 5 : { // Test effect
+            for (int i = 0; i < light_elements[0].get_num_leds(); i++) light_elements[0].leds[i] = CHSV (i, 255, 255);
+            break;
+        }
+        case 6 : {
+            effects[0] = new e_meteor(&light_elements[0], false, 60);
+            break;
+        }
+        default: set_mode(0);
+    }
+
+    for (auto &effect : effects) {
+        if (effect == nullptr) continue;
+        effect->init();
+    }
+
+    EEPROM.update(EEPROM_MODE_ADDRESS, *mode);
+}
+
+
+void controller::mode_run(uint8_t *mode) {
+    switch(*mode) {
+        case 2 : {
+            delay(70);
+            break;
+        }
+        case 3 : {
             delay(15);
+            break;
+        }
+        case 5 : { // Test effect
+            for (int i = 0; i < light_elements[0].get_num_leds(); i++) light_elements[0].leds[i].hue++;
+            break;
+        }
+        case 6 : {
+            delay(80);
             break;
         }
         default: break;
     }
 
-    Serial.println(freeRam());
-    show_all_pixels();
-
+    for (auto &effect : effects) {
+        if (effect == nullptr) continue;
+        effect->run();
+    }
 }
 
-void adjust_sensors() {
-    //for (int i = 0; i < num_ir_sensors; i++) ir_sensors[i].adjust_trigger_value();
-    //Serial.println("[Sensor-Reset]");
+
+void controller::mode_led(uint8_t *mode) {
+    // TODO
 }
 
-void refresh_inputs() {
-    //for (int i = 0; i < num_ir_sensors; i++) ir_sensors[i].refresh_state();
-    //microphone[0].refresh_state();
-}
 
-void show_all_pixels() {
-    for (int i = 0; i < num_elements; i++) l_elements[i].show(crgb_leds, BRIGHTNESS);
-    //FastLED.show();
+void controller::refresh_inputs() {
+    ir_sensors[0]->refresh_state();
+    button[0]->refresh_state();
 }

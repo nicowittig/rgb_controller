@@ -2,34 +2,36 @@
 // Created by Nico Wittig on 2018-12-13.
 //
 
-#include "e_fire.h"
+#include "e_fire.hpp"
 
-e_fire::e_fire(light_element* le, int16_t cooling, int16_t sparking) : effect(le) {
+e_fire::e_fire(light_element* le, int16_t cooling, int16_t sparking) : effect(le, EFFECT_NAME) {
     this->cooling = cooling;
     this->sparking = sparking;
-    Serial.println("construct: e_fire");
+}
+
+e_fire::~e_fire() {
+
 }
 
 bool e_fire::init() {
-    Serial.println("init: e_fire");
+    le->set_all(CRGB::Black);
+    return true;
 }
 
 bool e_fire::run() {
-
-    Serial.println("run: e_fire");
 
     uint8_t* heat = (uint8_t *) malloc(sizeof(uint8_t) * le->get_num_leds());
     int cooldown;
 
     // Step 1.  Cool down every cell a little
-    for(uint16_t i = 0; i < le->get_num_leds(); i++) {
+    for(uint16_t led = 0; led < le->get_num_leds(); led++) {
 
         cooldown = random(0, ((cooling * 10) / le->get_num_leds()) + 2);
 
-        if(cooldown > heat[i]) {
-            heat[i] = 0;
+        if(cooldown > heat[led]) {
+            heat[led] = 0;
         } else {
-            heat[i] = heat[i]-cooldown;
+            heat[led] = heat[led]-cooldown;
         }
 
     }
@@ -53,8 +55,9 @@ bool e_fire::run() {
         set_pixel_heat_color(j, heat[j] );
     }
 
-
     free(heat);
+
+    return false;
 }
 
 void e_fire::set_pixel_heat_color(uint16_t pixel, uint8_t temperature) {
@@ -67,10 +70,10 @@ void e_fire::set_pixel_heat_color(uint16_t pixel, uint8_t temperature) {
 
     // figure out which third of the spectrum we're in:
     if( t192 > 0x80) {                     // hottest
-        set_pixel(pixel, 255, 255, heatramp);
+        set_pixel(pixel, CRGB(255, 255, heatramp));
     } else if( t192 > 0x40 ) {             // middle
-        set_pixel(pixel, 255, heatramp, 0);
+        set_pixel(pixel, CRGB(255, heatramp, 0));
     } else {                               // coolest
-        set_pixel(pixel, heatramp, 0, 0);
+        set_pixel(pixel, CRGB(heatramp, 0, 0));
     }
 }
