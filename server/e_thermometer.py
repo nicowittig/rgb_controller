@@ -4,7 +4,7 @@ from effect import Effect
 
 class E_Thermometer(Effect):
     def __init__(self, light_element, input_temperature, min_temp, max_temp, inverted=False):
-        super().__init__(light_element, "Thermometer")
+        super().__init__(light_element, delay=0, name="Thermometer")
 
         self.__input_temperature = input_temperature
         self.__min_temp = min_temp

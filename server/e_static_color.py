@@ -3,7 +3,7 @@ from effect import Effect
 
 class E_Static_Color(Effect):
     def __init__(self, light_element, start_color, end_color=None, hue_cycle_forward=None, cycles=1, forward_only=True):
-        super().__init__(light_element, "Static Color")
+        super().__init__(light_element, delay=0, name="Static Color")
 
         self.__start_color = start_color
         self.__end_color = end_color

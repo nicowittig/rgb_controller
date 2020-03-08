@@ -1,10 +1,9 @@
 from color import Color
 
 class Light_Element(object):
-    def __init__(self, neoPixels, first_pixel, num_pixels, brightness=1.0):
+    def __init__(self, first_pixel, num_pixels, brightness=1.0):
         super().__init__()
 
-        self.__neoPixels = neoPixels
         self.__first_pixel = first_pixel
         self.__num_pixels = num_pixels
         self.__brightness = brightness
@@ -43,10 +42,12 @@ class Light_Element(object):
             p.hsv = [0, 0, 0]
 
     def show(self):
+        pixels = []
         for i in range(self.__num_pixels):
             current_color = Color(self.__pixels[i].hsv)
             current_color.v *= self.__brightness
-            self.__neoPixels[self.__first_pixel + i] = tuple(current_color.rgb)
+            pixels.append(tuple(current_color.rgb))
+        return pixels
 
     def __str__(self):
         return "first: " + str(self.__first_pixel) + " num: " + str(self.__num_pixels) + " brightness: " + str(self.__brightness)

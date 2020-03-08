@@ -3,8 +3,8 @@ from effect import Effect
 
 
 class E_Rainbow_Shift(Effect):
-    def __init__(self, light_element, soft_shift=False, shift_forward=True, invert_colors=False, speed=1):
-        super().__init__(light_element, "Rainbow Shift")
+    def __init__(self, light_element, soft_shift=False, shift_forward=True, invert_colors=False, speed=1, delay=75):
+        super().__init__(light_element, delay, name="Rainbow Shift")
 
         self.__soft_shift = soft_shift
         self.__shift_forward = shift_forward
@@ -19,8 +19,11 @@ class E_Rainbow_Shift(Effect):
         return True
 
     def run(self):
-        if self.__soft_shift:
-            super().increase_hue(self.__speed if self.__shift_forward else -self.__speed)
-        else:
-            super().shift(self.__speed if self.__shift_forward else -self.__speed)
+        if self.ready_to_run():
+
+            if self.__soft_shift:
+                super().increase_hue(self.__speed if self.__shift_forward else -self.__speed)
+            else:
+                super().shift(self.__speed if self.__shift_forward else -self.__speed)
+
         return True

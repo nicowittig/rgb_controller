@@ -4,7 +4,8 @@
 # custom
 node_modules
 __pycache__
-config.py
+config.json
+controller2.py
 connect.sh
 sync.sh
 #*.pem

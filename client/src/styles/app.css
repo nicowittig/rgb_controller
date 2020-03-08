@@ -1,0 +1,85 @@
+.z-depth-0 {
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0);
+}
+
+nav {
+  margin-bottom: 15px;
+  height: 40px;
+  background-color: #782c0b !important;
+}
+
+nav .brand-logo {
+  font-size: 20px;
+  margin-top: -12px;
+  margin-left: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1e1e1e !important;
+  }
+
+  .dark-mode {
+    background-color: #1e1e1e !important;
+    color: #fff !important;
+  }
+
+  tr {
+    border-color: #fff;
+  }
+}
+
+nav .brand-logo:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.body {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  text-align: center;
+  background-color: white;
+}
+
+footer a {
+  color: black;
+}
+
+footer a:hover {
+  color: black;
+}
+
+.error {
+  color: #a00000;
+  font-weight: bold;
+}
+
+.btn {
+  margin-top: 10px;
+  margin-right: 10px;
+  color: white;
+}
+
+.btn-submit {
+  background-color: #782c0b !important;
+  color: white;
+  border: none !important;
+}
+
+.btn-submit:focus {
+  box-shadow: none !important;
+}
+
+.btn-submit:hover {
+  background-color: #a5725c !important;
+}

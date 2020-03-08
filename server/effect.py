@@ -1,14 +1,17 @@
 import sys
+from time import time
 
 from color import Color
 
 
 class Effect(object):
-    def __init__(self, light_element, name="Effect"):
+    def __init__(self, light_element, delay=0, name="Effect"):
         super().__init__()
 
         self.__light_element = light_element
         self.__name = name
+        self.__delay = delay
+        self.__next_run = 0
 
     def __get_name(self):
         return self.__name
@@ -17,6 +20,13 @@ class Effect(object):
 
     def __str__(self):
         return self.__name + ": " + str(self.__light_element)
+
+    def ready_to_run(self):
+        now = int(round(time() * 1000))
+        rtr = now >= self.__next_run
+        if rtr:
+            self.__next_run = now + self.__delay
+        return rtr
 
     # returns the color of a given pixel
     def get_pixel(self, index):
@@ -134,6 +144,16 @@ class Effect(object):
     def increase_hue(self, value):
         for p in self.__light_element.pixels:
             p.hue += value
+
+    # increase the sat of every pixel of the attached light element by value
+    def increase_sat(self, value):
+        for p in self.__light_element.pixels:
+            p.sat += value
+
+    # increase the val of every pixel of the attached light element by value
+    def increase_val(self, value):
+        for p in self.__light_element.pixels:
+            p.val += value
 
     # shift all pixels of the attached light element by the given direction-value
     def shift(self, direction):

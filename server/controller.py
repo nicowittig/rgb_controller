@@ -1,54 +1,113 @@
-from time import sleep
+from threading import Thread
 
-import config
 import neopixel
-from color import Color
-from e_meteor import E_Meteor
-from e_rainbow_shift import E_Rainbow_Shift
-from e_static_color import E_Static_Color
-from e_thermometer import E_Thermometer
-from effect import Effect
-from input import Input_Analog, Input_Digital, Input_Temperature
-from light_element import Light_Element
+from flask import Flask, jsonify, request
+from input import Input_Analog, Input_Temperature
 
-neoPixels = neopixel.NeoPixel(config.LED_PIN, config.NUM_LEDS)
+#from flask_cors import CORS, cross_origin
 
-light_elements = [
-    Light_Element(neoPixels, 0, 10, .2)
-]
+app = Flask(__name__)
+#cors = CORS(app)
+#cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
+#app.config['CORS_HEADERS'] = 'Content-Type'
 
-inputs = [
-    Input_Analog(0),
-    Input_Temperature(trigger_value=25)
-]
+class Controller(Thread):
+    def __init__(self, config):
+        super().__init__()
 
-effects = [
-    #E_Static_Color(light_elements[0], Color((0,255,255)), Color((170,255,255)), hue_cycle_forward=None, cycles=1, forward_only=True),
-    #E_Rainbow_Shift(light_elements[0], soft_shift=True, shift_forward=True, invert_colors=False, speed=1),
-    #E_Meteor(light_elements[0], color_hue=190, forward=False, trail_decay=60, no_random=False),
-    E_Thermometer(light_elements[0], inputs[1], 20, 30, inverted=True)
-]
+        self.__active = True
 
-def refresh_inputs():
-    for i in inputs:
-        i.refresh()
+        self.__api_host = config.host
+        self.__api_port = config.port
+        self.__api_debug = config.debug
 
-def init_effects():
-    for e in effects:
-        e.init()
+        self.__mode_switch = config.mode_switch
+        self.__light_elements = config.light_elements
+        self.__inputs = config.inputs
+        self.__effects = []
 
-def run_effects():
-    for e in effects:
-        e.run()
+        num_pixels = 0
+        for le in self.__light_elements:
+            num_pixels += le.num_pixels
+        self.__neoPixels = neopixel.NeoPixel(config.board_pin, num_pixels)
 
-def show_all():
-    for le in light_elements:
-        le.show()
+        self.__mode = config.default_mode
+        self.switch_mode(self.__mode)
 
-init_effects()
-while True:
-    refresh_inputs()
-    run_effects()
-    show_all()
-    #print(inputs[1])
-    sleep(.0)
+        return None
+
+    def run(self):
+        t_refresh_inputs = Thread(target=self.refresh_inputs)
+        t_refresh_temperature_inputs = Thread(target=self.refresh_temperture_inputs)
+        t_refresh_inputs.start()
+        t_refresh_temperature_inputs.start()
+
+        app.run(host=self.__api_host, port=self.__api_port, debug=self.__api_debug)
+
+        while self.__active:
+            self.run_effects()
+            self.show_all()
+
+        return None
+
+    def stop(self):
+        self.__active = False
+        return None
+
+    @app.route('/api/v1/mode', methods=['POST'])
+    #@cross_origin()
+    def api_switch_mode(self):
+        mode = request.json["mode"] 
+
+        if mode == "r":
+            self.adjust_all_analog_inputs()
+        else:
+            self.__mode = mode
+            self.__effects = self.__mode_switch(mode)
+            self.init_effects()
+
+        return jsonify({'mode': mode})
+
+    @app.route('/api/v1/input', methods=['POST'])
+    #@cross_origin()
+    def external_tap(self):
+        input = request.json["input"] 
+        self.__inputs[input].external_tap()
+        return jsonify({'input': self.__inputs[input]})
+
+    def adjust_all_analog_inputs(self):
+        for i in self.__inputs:
+            if isinstance(i, Input_Analog):
+                i.adjust_trigger_value()
+        return None
+
+    def refresh_inputs(self):
+        while self.__active:
+            for i in self.__inputs:
+                if not isinstance(i, Input_Temperature):
+                    i.refresh()
+        return None
+
+    def refresh_temperture_inputs(self):
+        while self.__active:
+            for i in self.__inputs:
+                if isinstance(i, Input_Temperature):
+                    i.refresh()
+        return None
+
+    def init_effects(self):
+        for e in self.__effects:
+            e.init()
+        return None
+
+    def run_effects(self):
+        for e in self.__effects:
+            e.run()
+        return None
+
+    def show_all(self):
+        pixels = []
+        for le in self.__light_elements:
+            pixels += le.show()
+        self.__neoPixels[::] = pixels
+        return None

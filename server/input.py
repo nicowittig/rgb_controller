@@ -19,11 +19,17 @@ class Input(object):
         self.__state = [False, False, False, False]
         self.__ready_for_next_input = [True, True, True, True]
 
+        self.__external_tap = False
+
     def digital_read(self):
         return None
 
+    def external_tap(self):
+        self.__external_tap = True
+        return None
+
     def refresh(self):
-        val = self.digital_read()
+        val = self.digital_read() or self.__external_tap
 
         # Push Mode
         self.__state[0] = val
@@ -50,6 +56,8 @@ class Input(object):
             if self.__ready_for_next_input[3] != val:
                 self.__ready_for_next_input[3] = val
                 self.__state[3] = True
+
+        self.__external_tap = False
 
     def is_pushed(self):
         return self.__state[0]
@@ -100,7 +108,7 @@ class Input_Digital(Input):
 
 
 class Input_Analog(Input):
-    def __init__(self, adc_channel, adc_bus=0, adc_device=0, adc_max_speed_hz=1000000, trigger_value=None, trigger_adjustment_duration=100, trigger_adjustment_tolerance=.00625, trigger_adjustment_absolute=False, invert=True):
+    def __init__(self, adc_channel, adc_bus=0, adc_device=0, adc_max_speed_hz=1000000, trigger_value=None, trigger_adjustment_duration=100, trigger_adjustment_tolerance=.03, trigger_adjustment_absolute=False, invert=True):
         super().__init__(invert)
 
         self.__adc_channel = adc_channel
