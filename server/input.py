@@ -6,7 +6,7 @@ from spidev import SpiDev
 
 
 class Input(object):
-    def __init__(self, invert):
+    def __init__(self, invert=False):
         super().__init__()
 
         # Input Modes:
@@ -22,7 +22,7 @@ class Input(object):
         self.__external_tap = False
 
     def digital_read(self):
-        return None
+        return 0
 
     def external_tap(self):
         self.__external_tap = True

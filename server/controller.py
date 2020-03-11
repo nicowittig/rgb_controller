@@ -1,27 +1,16 @@
-from threading import Thread
-
 import neopixel
-from flask import Flask, jsonify, request
+from threading import Thread
 from input import Input_Analog, Input_Temperature
 
-#from flask_cors import CORS, cross_origin
 
-app = Flask(__name__)
-#cors = CORS(app)
-#cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
-#app.config['CORS_HEADERS'] = 'Content-Type'
-
-class Controller(Thread):
+class Controller(object):
     def __init__(self, config):
         super().__init__()
 
-        self.__active = True
+        self.__active = False
 
-        self.__api_host = config.host
-        self.__api_port = config.port
-        self.__api_debug = config.debug
+        self.__config = config
 
-        self.__mode_switch = config.mode_switch
         self.__light_elements = config.light_elements
         self.__inputs = config.inputs
         self.__effects = []
@@ -32,48 +21,54 @@ class Controller(Thread):
         self.__neoPixels = neopixel.NeoPixel(config.board_pin, num_pixels)
 
         self.__mode = config.default_mode
-        self.switch_mode(self.__mode)
-
+        self.__brightness = config.brightness
         return None
 
-    def run(self):
-        t_refresh_inputs = Thread(target=self.refresh_inputs)
-        t_refresh_temperature_inputs = Thread(target=self.refresh_temperture_inputs)
-        t_refresh_inputs.start()
-        t_refresh_temperature_inputs.start()
+    def start(self):
+        if not self.__active:
+            self.__active = True
 
-        app.run(host=self.__api_host, port=self.__api_port, debug=self.__api_debug)
+            self.switch_mode(self.__mode)
 
-        while self.__active:
-            self.run_effects()
-            self.show_all()
+            t_run = Thread(target=self.__run)
+            t_refresh_inputs = Thread(target=self.refresh_inputs)
+            t_refresh_temperature_inputs = Thread(target=self.refresh_temperture_inputs)
+
+            t_refresh_inputs.start()
+            t_refresh_temperature_inputs.start()
+            t_run.start()
 
         return None
 
     def stop(self):
+        self.switch_mode(0, discreet=True)
+        self.show_all()
         self.__active = False
         return None
 
-    @app.route('/api/v1/mode', methods=['POST'])
-    #@cross_origin()
-    def api_switch_mode(self):
-        mode = request.json["mode"] 
+    def __run(self):
+        while self.__active:
+            self.run_effects()
+            self.show_all()
+        return None
 
-        if mode == "r":
-            self.adjust_all_analog_inputs()
-        else:
+    def switch_mode(self, mode, discreet=False):
+        if not discreet:
             self.__mode = mode
-            self.__effects = self.__mode_switch(mode)
+        if self.__active:
+            self.__effects = self.__config.mode_switch(mode)
             self.init_effects()
+        return None
 
-        return jsonify({'mode': mode})
+    def external_tap(self, input):
+        if self.__active:
+            self.__inputs[input].external_tap()
+        return None
 
-    @app.route('/api/v1/input', methods=['POST'])
-    #@cross_origin()
-    def external_tap(self):
-        input = request.json["input"] 
-        self.__inputs[input].external_tap()
-        return jsonify({'input': self.__inputs[input]})
+    def reset_all_inputs(self):
+        for i in range(len(self.__inputs)):
+            if self.__inputs[i].is_toggled():
+                self.external_tap(i)
 
     def adjust_all_analog_inputs(self):
         for i in self.__inputs:
@@ -104,6 +99,14 @@ class Controller(Thread):
         for e in self.__effects:
             e.run()
         return None
+
+    def get_brightness(self):
+        return self.__brightness
+
+    def set_brightness(self, brightness):
+        self.__brightness = brightness
+        for le in self.__light_elements:
+            le.brightness = brightness
 
     def show_all(self):
         pixels = []

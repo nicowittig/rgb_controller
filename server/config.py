@@ -1,13 +1,14 @@
 import board
 from color import Color
 
+from e_fire import E_Fire
 from e_interactive_spin import E_Interactive_Spin
 from e_meteor import E_Meteor
 from e_rainbow_shift import E_Rainbow_Shift
 from e_static_color import E_Static_Color
 from e_thermometer import E_Thermometer
 
-from input import Input_Analog, Input_Digital, Input_Temperature
+from input import Input, Input_Analog, Input_Digital, Input_Temperature
 from light_element import Light_Element
 
 #################
@@ -15,14 +16,6 @@ from light_element import Light_Element
 #################
 
 board_pin = board.D18
-
-#########
-# Flask #
-#########
-
-host = "192.168.178.150"
-port = 2001
-debug = False
 
 #################
 # LEDs & Inputs #
@@ -45,68 +38,77 @@ inputs = [
     Input_Analog(3),
     Input_Analog(2),
     Input_Analog(1),
-    Input_Analog(0),
-    Input_Temperature(trigger_value=25)
+    Input_Analog(0)
 ]
 
 ###################
 # Modes & Effects #
 ###################
 
-default_mode = 0
+default_mode = 1
 
 def mode_switch(mode):
     if mode == 0:
-        return [
-            E_Static_Color(light_elements[0], Color((0,255,0))),
-            E_Static_Color(light_elements[1], Color((0,255,0))),
-            E_Static_Color(light_elements[2], Color((0,255,0))),
-            E_Static_Color(light_elements[3], Color((0,255,0))),
-            E_Static_Color(light_elements[4], Color((0,255,0))),
-            E_Static_Color(light_elements[5], Color((0,255,0))),
-            E_Static_Color(light_elements[6], Color((0,255,0)))
-        ]
+        return [E_Static_Color(light_elements[i], Color((0,255,0))) for i in range(len(light_elements))]
     elif mode == 1:
-        return [
-            E_Static_Color(light_elements[0], Color((0,255,255)), Color((170,255,255)), hue_cycle_forward=None, cycles=1, forward_only=True),
-            E_Static_Color(light_elements[1], Color((0,255,255)), Color((170,255,255)), hue_cycle_forward=None, cycles=1, forward_only=True),
-            E_Static_Color(light_elements[2], Color((0,255,255)), Color((170,255,255)), hue_cycle_forward=None, cycles=1, forward_only=True),
-            E_Static_Color(light_elements[3], Color((0,255,255)), Color((170,255,255)), hue_cycle_forward=None, cycles=1, forward_only=True),
-            E_Static_Color(light_elements[4], Color((0,255,255)), Color((170,255,255)), hue_cycle_forward=None, cycles=1, forward_only=True),
-            E_Static_Color(light_elements[5], Color((0,255,255)), Color((170,255,255)), hue_cycle_forward=None, cycles=1, forward_only=True),
-            E_Static_Color(light_elements[6], Color((0,255,255)), Color((170,255,255)), hue_cycle_forward=None, cycles=1, forward_only=True)
-        ]
+        return [E_Static_Color(light_elements[i], Color((0,255,255)), Color((170,255,255)), hue_cycle_forward=None, cycles=2, forward_only=False, increase_hue=1, shift=0, input=inputs[i]) for i in range(len(light_elements) -1 )] \
+             + [E_Static_Color(light_elements[6], Color((0,255,255)), Color((170,255,255)), hue_cycle_forward=None, cycles=2, forward_only=False, increase_hue=1, shift=1)]
     elif mode == 2:
-        return [
-            E_Interactive_Spin(light_elements[0], inputs[0]),
-            E_Interactive_Spin(light_elements[1], inputs[1]),
-            E_Interactive_Spin(light_elements[2], inputs[2]),
-            E_Interactive_Spin(light_elements[3], inputs[3]),
-            E_Interactive_Spin(light_elements[4], inputs[4]),
-            E_Interactive_Spin(light_elements[5], inputs[5]),
-            E_Rainbow_Shift(light_elements[6], soft_shift=True, speed=1, delay=50)
-        ]
+        return [E_Interactive_Spin(light_elements[i], inputs[i]) for i in range(len(light_elements) - 1)] \
+             + [E_Rainbow_Shift(light_elements[6], soft_shift=True, speed=1, delay=50)]
     elif mode == 3:
-        return [
-            E_Static_Color(light_elements[0], Color((0,255,0))),
-            E_Static_Color(light_elements[1], Color((0,255,0))),
-            E_Static_Color(light_elements[2], Color((0,255,0))),
-            E_Static_Color(light_elements[3], Color((0,255,0))),
-            E_Static_Color(light_elements[4], Color((0,255,0))),
-            E_Static_Color(light_elements[5], Color((0,255,0))),
-            E_Meteor(light_elements[6], color_hue=190, forward=False, trail_decay=60, no_random=False)
-        ]
+        return [E_Static_Color(light_elements[i], Color((0,255,0))) for i in range(len(light_elements) - 1)] \
+             + [E_Meteor(light_elements[6], color_hue=190, forward=False, trail_decay=60, no_random=False)]
     elif mode == 4:
-        return [
-            E_Thermometer(light_elements[6], inputs[6], 20, 30, inverted=True)
-        ]
+        return [E_Static_Color(light_elements[i], Color((0,255,0))) for i in range(len(light_elements) - 1)] \
+             + [E_Fire(light_elements[6], 55, 120)]
     else:
-        return [
-            E_Static_Color(light_elements[0], Color((0,255,0))),
-            E_Static_Color(light_elements[1], Color((0,255,0))),
-            E_Static_Color(light_elements[2], Color((0,255,0))),
-            E_Static_Color(light_elements[3], Color((0,255,0))),
-            E_Static_Color(light_elements[4], Color((0,255,0))),
-            E_Static_Color(light_elements[5], Color((0,255,0))),
-            E_Static_Color(light_elements[6], Color((0,255,0)))
+        return [E_Static_Color(light_elements[i], Color((0,255,0))) for i in range(len(light_elements))]
+
+#######
+# API #
+#######
+
+api_host = "192.168.178.150"
+api_port = 2001
+api_debug = False
+
+init_json = {
+    "switches": {
+        "api": "general",
+        "elements": [
+            { "id": 0, "key": "on", "name": "On" },
+            { "id": 1, "key": "off", "name": "Off" },
         ]
+    },
+    "general": {
+        "api": "general",
+        "brightness": brightness,
+        "elements": [
+            { "id": 0, "key": "input-all", "name": "Trigger all Inputs" },
+            { "id": 1, "key": "input-reset-all", "name": "Reset all Inputs" },
+            { "id": 2, "key": "calibrate", "name": "Calibrate Sensors" }
+        ]
+    },
+    "modes": {
+        "api": "mode",
+        "elements": [
+            { "id": 0, "key": 1, "name": "Shifting Color" },
+            { "id": 1, "key": 2, "name": "Interactive Spin" },
+            { "id": 2, "key": 3, "name": "Meteor" },
+            { "id": 3, "key": 4, "name": "Fire" }
+        ]
+    },
+    "inputs": {
+        "api": "input",
+        "elements": [
+            {"id": 0, "key": 0, "name": "Input UL"},
+            {"id": 1, "key": 1, "name": "Input UM"},
+            {"id": 2, "key": 2, "name": "Input R"},
+            {"id": 3, "key": 3, "name": "Input LM"},
+            {"id": 4, "key": 4, "name": "Input LL"},
+            {"id": 5, "key": 5, "name": "Input M"}
+        ],
+        "elements2": [{"id": i, "key": i, "name": "Input " + str(i)} for i in range(len(inputs)) if not isinstance(inputs[i], Input_Temperature)]
+    }
+}
