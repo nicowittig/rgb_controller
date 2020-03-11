@@ -6,7 +6,7 @@ from effect import Effect
 
 class E_Fire(Effect):
     def __init__(self, light_element, cooling, sparking):
-        super().__init__(light_element, 0, name="Fire")
+        super().__init__(light_element, delay=0, name="Fire")
 
         self.__cooling = cooling
         self.__sparking = sparking

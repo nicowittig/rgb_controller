@@ -1,6 +1,7 @@
 import board
 from color import Color
 
+from e_bouncing_balls import E_Bouncing_Balls
 from e_fire import E_Fire
 from e_interactive_spin import E_Interactive_Spin
 from e_meteor import E_Meteor
@@ -45,7 +46,7 @@ inputs = [
 # Modes & Effects #
 ###################
 
-default_mode = 1
+default_mode = 5
 
 def mode_switch(mode):
     if mode == 0:
@@ -62,6 +63,9 @@ def mode_switch(mode):
     elif mode == 4:
         return [E_Static_Color(light_elements[i], Color((0,255,0))) for i in range(len(light_elements) - 1)] \
              + [E_Fire(light_elements[6], 55, 120)]
+    elif mode == 5:
+        return [E_Static_Color(light_elements[i], Color((0,255,0))) for i in range(len(light_elements) - 1)] \
+             + [E_Bouncing_Balls(light_elements[6], [Color((0, 255, 255)), Color((100, 255, 255)), Color((200, 255, 255))])]
     else:
         return [E_Static_Color(light_elements[i], Color((0,255,0))) for i in range(len(light_elements))]
 
@@ -96,7 +100,8 @@ init_json = {
             { "id": 0, "key": 1, "name": "Shifting Color" },
             { "id": 1, "key": 2, "name": "Interactive Spin" },
             { "id": 2, "key": 3, "name": "Meteor" },
-            { "id": 3, "key": 4, "name": "Fire" }
+            { "id": 3, "key": 4, "name": "Fire" },
+            { "id": 4, "key": 5, "name": "Bouncing Balls" },
         ]
     },
     "inputs": {

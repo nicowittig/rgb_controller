@@ -1,6 +1,7 @@
 import board
 from color import Color
 
+from e_bouncing_balls import E_Bouncing_Balls
 from e_fire import E_Fire
 from e_interactive_spin import E_Interactive_Spin
 from e_meteor import E_Meteor
@@ -47,8 +48,10 @@ def mode_switch(mode):
     elif mode == 3:
         return [E_Meteor(light_elements[0], color_hue=190, forward=False, trail_decay=60, no_random=False)]
     elif mode == 4:
-        return [E_Fire(light_elements[6], 55, 120)]
+        return [E_Fire(light_elements[0], 55, 120)]
     elif mode == 5:
+        return [E_Bouncing_Balls(light_elements[0], [Color((0, 255, 255)), Color((100, 255, 255)), Color((200, 255, 255))])]
+    elif mode == 6:
         return [E_Thermometer(light_elements[0], inputs[0], 20, 35, inverted=True)]
     else:
         return [E_Static_Color(light_elements[0], Color((0,255,0)))]
@@ -57,9 +60,9 @@ def mode_switch(mode):
 # API #
 #######
 
-host = "192.168.178.150"
-port = 2001
-debug = False
+api_host = "192.168.178.150"
+api_port = 2001
+api_debug = False
 
 init_json = {
     "switches": {
@@ -85,7 +88,8 @@ init_json = {
             { "id": 1, "key": 2, "name": "Rainbow Shift" },
             { "id": 2, "key": 3, "name": "Meteor" },
             { "id": 3, "key": 4, "name": "Fire" },
-            { "id": 4, "key": 5, "name": "Thermometer" }
+            { "id": 4, "key": 5, "name": "Bouncing Balls" },
+            { "id": 5, "key": 6, "name": "Thermometer" },
         ]
     },
     "inputs": {
