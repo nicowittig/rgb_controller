@@ -2,6 +2,7 @@ import board
 from color import Color
 
 from e_bouncing_balls import E_Bouncing_Balls
+from e_clock import E_Clock
 from e_fire import E_Fire
 from e_interactive_spin import E_Interactive_Spin
 from e_meteor import E_Meteor
@@ -46,7 +47,7 @@ inputs = [
 # Modes & Effects #
 ###################
 
-default_mode = 5
+default_mode = 1
 
 def mode_switch(mode):
     if mode == 0:
@@ -58,12 +59,22 @@ def mode_switch(mode):
         return [E_Interactive_Spin(light_elements[i], inputs[i]) for i in range(len(light_elements) - 1)] \
              + [E_Rainbow_Shift(light_elements[6], soft_shift=True, speed=1, delay=50)]
     elif mode == 3:
-        return [E_Static_Color(light_elements[i], Color((0,255,0))) for i in range(len(light_elements) - 1)] \
-             + [E_Meteor(light_elements[6], color_hue=190, forward=False, trail_decay=60, no_random=False)]
+        return [
+            E_Clock(light_elements[0], Color((0,255,255)), Color((0,255,255)), time_diff=15, index_pixel=0, show_time_range=True, reverse=False),
+            E_Clock(light_elements[1], Color((0,255,255)), Color((0,255,255)), time_diff=30, index_pixel=0, show_time_range=True, reverse=False),
+            E_Clock(light_elements[2], Color((0,255,255)), Color((0,255,255)), time_diff=60, index_pixel=0, show_time_range=True, reverse=False),
+            E_Clock(light_elements[3], Color((0,255,255)), Color((80,255,255)), time_diff=300, index_pixel=0, show_time_range=True, reverse=False),
+            E_Clock(light_elements[4], Color((0,255,255)), Color((80,255,255)), time_diff=900, index_pixel=0, show_time_range=True, reverse=False),
+            E_Clock(light_elements[5], Color((0,255,255)), Color((150,255,255)), time_diff=3600, index_pixel=0, show_time_range=True, reverse=False),
+            E_Clock(light_elements[6], Color((0,255,255)), Color((0,255,255)), time_diff=30, index_pixel=0, show_time_range=True, reverse=True),
+        ]
     elif mode == 4:
         return [E_Static_Color(light_elements[i], Color((0,255,0))) for i in range(len(light_elements) - 1)] \
-             + [E_Fire(light_elements[6], 55, 120)]
+             + [E_Meteor(light_elements[6], color_hue=190, forward=False, trail_decay=60, no_random=False)]
     elif mode == 5:
+        return [E_Static_Color(light_elements[i], Color((0,255,0))) for i in range(len(light_elements) - 1)] \
+             + [E_Fire(light_elements[6], 55, 120)]
+    elif mode == 6:
         return [E_Static_Color(light_elements[i], Color((0,255,0))) for i in range(len(light_elements) - 1)] \
              + [E_Bouncing_Balls(light_elements[6], [Color((0, 255, 255)), Color((100, 255, 255)), Color((200, 255, 255))])]
     else:
@@ -99,9 +110,10 @@ init_json = {
         "elements": [
             { "id": 0, "key": 1, "name": "Shifting Color" },
             { "id": 1, "key": 2, "name": "Interactive Spin" },
-            { "id": 2, "key": 3, "name": "Meteor" },
-            { "id": 3, "key": 4, "name": "Fire" },
-            { "id": 4, "key": 5, "name": "Bouncing Balls" },
+            { "id": 2, "key": 3, "name": "Clock" },
+            { "id": 3, "key": 4, "name": "Meteor" },
+            { "id": 4, "key": 5, "name": "Fire" },
+            { "id": 5, "key": 6, "name": "Bouncing Balls" },
         ]
     },
     "inputs": {

@@ -36,6 +36,18 @@ class Effect(object):
     def set_pixel(self, index, color):
         self.__light_element.set_pixel(index, color)
 
+    # set the hue of a pixel to a specifiv value
+    def set_pixel_hue(self, index, value):
+        self.__light_element.pixels[index].hue = value
+
+    # set the saturation of a pixel to a specifiv value
+    def set_pixel_sat(self, index, value):
+        self.__light_element.pixels[index].sat = value
+
+    # set the brightness of a pixel to a specifiv value
+    def set_pixel_val(self, index, value):
+        self.__light_element.pixels[index].val = value
+
     # checks the attached light element if the colors are similar to the given color
     def check_color_matching(self, color, start_pixel=0, end_pixel=None):
 
@@ -154,6 +166,21 @@ class Effect(object):
     def increase_val(self, value):
         for p in self.__light_element.pixels:
             p.val += value
+
+    # set the hue of every pixel of the attached light element to value
+    def set_hue(self, value):
+        for p in self.__light_element.pixels:
+            p.hue = value
+
+    # set the sat of every pixel of the attached light element to value
+    def set_sat(self, value):
+        for p in self.__light_element.pixels:
+            p.sat = value
+
+    # set the val of every pixel of the attached light element to value
+    def set_val(self, value):
+        for p in self.__light_element.pixels:
+            p.val = value
 
     # shift all pixels of the attached light element by the given direction-value
     def shift(self, direction):

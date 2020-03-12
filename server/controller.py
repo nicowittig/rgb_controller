@@ -32,14 +32,14 @@ class Controller(object):
             self.switch_mode(self.__mode)
 
             t_run_effects = Thread(target=self.run_effects)
-            t_show_all = Thread(target=self.show_all)
+            #t_show_all = Thread(target=self.show_all)
             t_refresh_inputs = Thread(target=self.refresh_inputs)
             t_refresh_temperature_inputs = Thread(target=self.refresh_temperture_inputs)
 
             t_refresh_inputs.start()
             t_refresh_temperature_inputs.start()
             t_run_effects.start()
-            t_show_all.start()
+            #t_show_all.start()
 
         return None
 
@@ -105,6 +105,7 @@ class Controller(object):
         while self.__active:
             for e in self.__effects:
                 e.run()
+            self.show_all()
         return None
 
     def get_brightness(self):
@@ -116,9 +117,9 @@ class Controller(object):
             le.brightness = brightness
 
     def show_all(self):
-        while self.__active:
-            pixels = []
-            for le in self.__light_elements:
-                pixels += le.show()
-            self.__neoPixels[::] = pixels
+        #while self.__active:
+        pixels = []
+        for le in self.__light_elements:
+            pixels += le.show()
+        self.__neoPixels[::] = pixels
         return None

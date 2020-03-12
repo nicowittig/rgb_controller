@@ -2,6 +2,7 @@ import board
 from color import Color
 
 from e_bouncing_balls import E_Bouncing_Balls
+from e_clock import E_Clock
 from e_fire import E_Fire
 from e_interactive_spin import E_Interactive_Spin
 from e_meteor import E_Meteor
@@ -46,12 +47,14 @@ def mode_switch(mode):
     elif mode == 2:
         return [E_Rainbow_Shift(light_elements[0], soft_shift=True, speed=1, delay=50)]
     elif mode == 3:
-        return [E_Meteor(light_elements[0], color_hue=190, forward=False, trail_decay=60, no_random=False)]
+        return [E_Clock(light_elements[0], Color((0,255,255)), Color((0,255,255)), time_diff=30, index_pixel=0, show_time_range=True, reverse=False)]
     elif mode == 4:
-        return [E_Fire(light_elements[0], 55, 120)]
+        return [E_Meteor(light_elements[0], color_hue=190, forward=False, trail_decay=60, no_random=False)]
     elif mode == 5:
-        return [E_Bouncing_Balls(light_elements[0], [Color((0, 255, 255)), Color((100, 255, 255)), Color((200, 255, 255))])]
+        return [E_Fire(light_elements[0], 55, 120)]
     elif mode == 6:
+        return [E_Bouncing_Balls(light_elements[0], [Color((0, 255, 255)), Color((100, 255, 255)), Color((200, 255, 255))])]
+    elif mode == 7:
         return [E_Thermometer(light_elements[0], inputs[0], 20, 35, inverted=True)]
     else:
         return [E_Static_Color(light_elements[0], Color((0,255,0)))]
@@ -86,10 +89,11 @@ init_json = {
         "elements": [
             { "id": 0, "key": 1, "name": "Shifting Color" },
             { "id": 1, "key": 2, "name": "Rainbow Shift" },
-            { "id": 2, "key": 3, "name": "Meteor" },
-            { "id": 3, "key": 4, "name": "Fire" },
-            { "id": 4, "key": 5, "name": "Bouncing Balls" },
-            { "id": 5, "key": 6, "name": "Thermometer" },
+            { "id": 2, "key": 3, "name": "Clock" },
+            { "id": 3, "key": 4, "name": "Meteor" },
+            { "id": 4, "key": 5, "name": "Fire" },
+            { "id": 5, "key": 6, "name": "Bouncing Balls" },
+            { "id": 6, "key": 7, "name": "Thermometer" },
         ]
     },
     "inputs": {
