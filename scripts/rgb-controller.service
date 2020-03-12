@@ -1,0 +1,14 @@
+[Unit]
+Description=RGB-Controller  
+After=multi-user.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/home/pi/rgb_controller/server
+ExecStart=/usr/bin/python3 /home/pi/rgb_controller/server/main.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

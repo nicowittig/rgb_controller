@@ -20,12 +20,12 @@ export default class App extends Component {
     // page settings
     this.state = {
       apiUrl: "http://192.168.178.150:2001/api/v1",
-      //apiUrl: "http://localhost:2001/api/v1",
       switches: [],
       generals: [],
       modes: [],
       inputs: [],
-      brightness: 100
+      brightness: 100,
+      connected: false
     };
 
     axios.defaults.baseURL = this.state.apiUrl;
@@ -52,6 +52,7 @@ export default class App extends Component {
           modes: modes,
           inputs: response.data.inputs,
           brightness: response.data.general.brightness * 100,
+          connected: true,
           showApiError: false
         });
       }, 0);
@@ -109,47 +110,52 @@ export default class App extends Component {
             <Header />
           </nav>
           <div className="body">
+            {this.state.connected ? 
+              <React.Fragment>
+                <Form>
+                  <div className="btn-row btn-switches">{this.getButtonItems(this.state.switches)}</div>
+                  <div className="brightness-label dark-mode">
+                    <p>Brightness: {Math.round(this.state.brightness)}%</p>
+                  </div>
 
-            <React.Fragment>
-              <Form>
-                <div className="btn-row btn-switches">{this.getButtonItems(this.state.switches)}</div>
-                <div className="brightness-label dark-mode">
-                  <p>Brightness: {Math.round(this.state.brightness)}%</p>
-                </div>
+                  <Slider
+                    axis="x"
+                    x={this.state.brightness}
+                    xmin={0}
+                    xmax={100}
+                    xstep={5}
+                    onChange={({x}) => this.setState({ brightness: x })}
+                    onDragEnd={this.onChangeBrightness}
+                    styles={{
+                      track: {
+                        backgroundColor: '#555456'
+                      },
+                      active: {
+                        backgroundColor: '#aaa'
+                      },
+                      thumb: {
+                        width: 30,
+                        height: 30
+                      },
+                      disabled: {
+                        opacity: 0.5
+                      }
+                    }}
+                  />
 
-                <Slider
-                  axis="x"
-                  x={this.state.brightness}
-                  xmin={0}
-                  xmax={100}
-                  xstep={5}
-                  onChange={({x}) => this.setState({ brightness: x })}
-                  onDragEnd={this.onChangeBrightness}
-                  styles={{
-                    track: {
-                      backgroundColor: '#555456'
-                    },
-                    active: {
-                      backgroundColor: '#aaa'
-                    },
-                    thumb: {
-                      width: 30,
-                      height: 30
-                    },
-                    disabled: {
-                      opacity: 0.5
-                    }
-                  }}
-                />
-
-                <div className="btn-row btn-generals">{this.getButtonItems(this.state.generals)}</div>
-                <div className="btn-row btn-modes">{this.getButtonItems(this.state.modes)}</div>
-                <div className="btn-row btn-inputs">{this.getButtonItems(this.state.inputs)}</div>
-                {this.state.show_api_Error && (
-                  <Form.Label className="error">Api Error!</Form.Label>
-                )}
-              </Form>
-            </React.Fragment>
+                  <div className="btn-row btn-generals">{this.getButtonItems(this.state.generals)}</div>
+                  <div className="btn-row btn-modes">{this.getButtonItems(this.state.modes)}</div>
+                  <div className="btn-row btn-inputs">{this.getButtonItems(this.state.inputs)}</div>
+                  {this.state.show_api_Error && (
+                    <Form.Label className="error">Api Error!</Form.Label>
+                  )}
+                </Form>
+              </React.Fragment>
+            :
+              <div className="brightness-label dark-mode">
+                <p>Not connected!</p>
+              </div>
+            }
 
           </div>
           <footer>

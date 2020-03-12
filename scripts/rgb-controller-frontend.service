@@ -1,0 +1,12 @@
+[Unit]
+Description=RGB-Controller  
+After=multi-user.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/rgb_controller/client
+ExecStart=/usr/bin/npm start
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

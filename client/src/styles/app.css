@@ -104,20 +104,20 @@ footer a:hover {
   background-color: #9e7460 !important;
 }
 
-.btn-inputs button, .btn-calibrate, .btn-input-all {
-  background-color: #506085 !important;
-}
-
-.btn-inputs button:hover, .btn-calibrate:hover, .btn-input-all:hover {
-  background-color: #8b95aa !important;
-}
-
 .btn-modes button {
   background-color: #c3873f !important;
 }
 
 .btn-modes button:hover {
   background-color: #d1b086 !important;
+}
+
+.btn-inputs button, .btn-generals button {
+  background-color: #506085 !important;
+}
+
+.btn-inputs button:hover, .btn-generals button:hover {
+  background-color: #8b95aa !important;
 }
 
 .brightness-label p {
