@@ -4,7 +4,7 @@ After=multi-user.target
 
 [Service]
 Type=simple
-WorkingDirectory=/home/pi/rgb_controller/client
+WorkingDirectory=/home/pi/Git/rgb_controller/client
 ExecStart=/usr/bin/npm start
 Restart=on-failure
 

@@ -1,5 +1,6 @@
 adafruit-circuitpython-neopixel==5.0.0
 Flask==1.1.1
+Flask-Cors==3.0.8
 numpy==1.18.1
 rpi-ws281x==4.2.3
 spidev==3.4

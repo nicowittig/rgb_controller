@@ -63,11 +63,12 @@ def mode_switch(mode):
 # API #
 #######
 
-api_host = "192.168.178.150"
+api_host = "192.168.1.8"
 api_port = 2001
 api_debug = False
 
 init_json = {
+    "system": {},
     "switches": {
         "api": "general",
         "elements": [

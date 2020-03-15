@@ -8,6 +8,8 @@ import Slider from 'react-input-slider';
 import Header from './components/header.jsx';
 import Footer from './components/footer.jsx';
 
+import { config } from './config';
+
 import './styles/app.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -19,11 +21,12 @@ export default class App extends Component {
 
     // page settings
     this.state = {
-      apiUrl: "http://192.168.178.150:2001/api/v1",
+      apiUrl: config.apiUrl,
       switches: [],
       generals: [],
       modes: [],
       inputs: [],
+      system: Object(),
       brightness: 100,
       connected: false
     };
@@ -44,13 +47,13 @@ export default class App extends Component {
       setTimeout(() => {
         var modes = response.data.modes
         modes.elements.sort((a, b) => a.id - b.id)
-        console.log(response.data.general.brightness * 100)
 
         this.setState({
           switches: response.data.switches,
           generals: response.data.general,
           modes: modes,
           inputs: response.data.inputs,
+          system: response.data.system,
           brightness: response.data.general.brightness * 100,
           connected: true,
           showApiError: false
@@ -114,8 +117,17 @@ export default class App extends Component {
               <React.Fragment>
                 <Form>
                   <div className="btn-row btn-switches">{this.getButtonItems(this.state.switches)}</div>
+
                   <div className="brightness-label dark-mode">
-                    <p>Brightness: {Math.round(this.state.brightness)}%</p>
+                    {this.state.connected && (
+                      <React.Fragment>
+                        <p>CPU Temperature: {Math.round(this.state.system.cpu.temperature)}°C</p>
+                        {this.state.system.ambient.temperature.length > 0 && (
+                          <p>Ambient Temperature: {this.state.system.ambient.temperature[0]}°C</p>
+                        )}
+                        <p>Brightness: {Math.round(this.state.brightness)}%</p>
+                      </React.Fragment>
+                    )}
                   </div>
 
                   <Slider

@@ -23,7 +23,7 @@ board_pin = board.D18
 # LEDs & Inputs #
 #################
 
-brightness = 1.0
+brightness = 0.6
 light_elements = [
     Light_Element(0, 15, brightness),
     Light_Element(15, 15, brightness),
@@ -84,11 +84,12 @@ def mode_switch(mode):
 # API #
 #######
 
-api_host = "192.168.178.150"
+api_host = "192.168.178.152"
 api_port = 2001
 api_debug = False
 
 init_json = {
+    "system": {},
     "switches": {
         "api": "general",
         "elements": [
@@ -120,11 +121,11 @@ init_json = {
         "api": "input",
         "elements": [
             {"id": 0, "key": 0, "name": "Input UL"},
-            {"id": 1, "key": 1, "name": "Input UM"},
-            {"id": 2, "key": 2, "name": "Input R"},
-            {"id": 3, "key": 3, "name": "Input LM"},
-            {"id": 4, "key": 4, "name": "Input LL"},
-            {"id": 5, "key": 5, "name": "Input M"}
+            {"id": 1, "key": 4, "name": "Input LL"},
+            {"id": 2, "key": 1, "name": "Input UM"},
+            {"id": 3, "key": 5, "name": "Input M"},
+            {"id": 4, "key": 3, "name": "Input LM"},
+            {"id": 5, "key": 2, "name": "Input R"},
         ],
         "elements2": [{"id": i, "key": i, "name": "Input " + str(i)} for i in range(len(inputs)) if not isinstance(inputs[i], Input_Temperature)]
     }

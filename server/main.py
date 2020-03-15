@@ -5,6 +5,8 @@ import config as config
 from color import Color
 from controller import Controller
 from flask import Flask, Response, jsonify, request
+from gpiozero import CPUTemperature
+from input import Input_Temperature
 
 sys.path.append("/home/pi/.local/lib/python3.7/site-packages")
 from flask_cors import CORS, cross_origin
@@ -12,12 +14,15 @@ from flask_cors import CORS, cross_origin
 app = Flask(__name__)
 cors = CORS(app)
 
+cpu = CPUTemperature()
 controller = Controller(config)
 
 @app.route('/api/v1/init', methods=['GET'])
 def api_init():
     init_json = config.init_json
     init_json["general"]["brightness"] = controller.get_brightness()
+    init_json["system"]["cpu"] =  {"temperature": cpu.temperature}
+    init_json["system"]["ambient"] =  {"temperature": [i.analog_read() for i in config.inputs if isinstance(i, Input_Temperature)]}
     return jsonify(init_json)
 
 @app.route('/api/v1/general', methods=['POST'])

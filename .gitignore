@@ -4,8 +4,6 @@
 # custom
 node_modules
 __pycache__
-config.json
-controller2.py
 #*.pem
 *.zip
 .vscode
