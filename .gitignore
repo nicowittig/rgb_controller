@@ -4,6 +4,8 @@
 # custom
 node_modules
 __pycache__
+client/src/config.jsx
+server/config.py
 #*.pem
 *.zip
 .vscode
