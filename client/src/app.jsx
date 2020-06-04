@@ -8,7 +8,7 @@ import Slider from 'react-input-slider';
 import Header from './components/header.jsx';
 import Footer from './components/footer.jsx';
 
-import { config } from './config';
+import config from './config.js';
 
 import './styles/app.css';
 import 'bootstrap/dist/css/bootstrap.css';

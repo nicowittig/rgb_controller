@@ -29,8 +29,8 @@ light_elements = [
 ]
 
 inputs = [
-    Input(),
-    Input_Temperature(trigger_value=25)
+    Input_Temperature(trigger_value=25),
+    Input()
 ]
 
 ###################
@@ -43,7 +43,7 @@ def mode_switch(mode):
     if mode == 0:
         return [E_Static_Color(light_elements[0], Color((0,255,0)))]
     elif mode == 1:
-        return [E_Static_Color(light_elements[0], Color((0,255,255)), Color((170,255,255)), hue_cycle_forward=None, cycles=2, forward_only=False, increase_hue=1, shift=0, input=inputs[0])]
+        return [E_Static_Color(light_elements[0], Color((0,255,255)), Color((170,255,255)), hue_cycle_forward=None, cycles=2, forward_only=False, increase_hue=1, shift=0, input=inputs[1])]
     elif mode == 2:
         return [E_Rainbow_Shift(light_elements[0], soft_shift=True, speed=1, delay=50)]
     elif mode == 3:
@@ -100,7 +100,7 @@ init_json = {
     "inputs": {
         "api": "input",
         "elements": [
-            {"id": 0, "key": 0, "name": "Input"},
+            {"id": 0, "key": 1, "name": "Input"},
         ],
         "elements2": [{"id": i, "key": i, "name": "Input " + str(i)} for i in range(len(inputs)) if not isinstance(inputs[i], Input_Temperature)]
     }
