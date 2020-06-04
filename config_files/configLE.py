@@ -37,7 +37,7 @@ inputs = [
 # Modes & Effects #
 ###################
 
-default_mode = 1
+default_mode = 0
 
 def mode_switch(mode):
     if mode == 0:
@@ -51,11 +51,11 @@ def mode_switch(mode):
     elif mode == 4:
         return [E_Meteor(light_elements[0], color_hue=190, forward=False, trail_decay=60, no_random=False)]
     elif mode == 5:
-        return [E_Fire(light_elements[0], 55, 120)]
+        return [E_Fire(light_elements[0], 35, 120)]
     elif mode == 6:
         return [E_Bouncing_Balls(light_elements[0], [Color((0, 255, 255)), Color((100, 255, 255)), Color((200, 255, 255))])]
     elif mode == 7:
-        return [E_Thermometer(light_elements[0], inputs[0], 20, 35, inverted=True)]
+        return [E_Thermometer(light_elements[0], inputs[0], 20, 35, inverted=False)]
     else:
         return [E_Static_Color(light_elements[0], Color((0,255,0)))]
 
