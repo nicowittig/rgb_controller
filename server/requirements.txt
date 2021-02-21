@@ -5,3 +5,4 @@ numpy==1.18.1
 rpi-ws281x==4.2.3
 spidev==3.4
 termplotlib==0.2.3
+pyglet

@@ -17,6 +17,7 @@ from light_element import Light_Element
 # Board Setting #
 #################
 
+emulator = False
 board_pin = board.D18
 
 #################

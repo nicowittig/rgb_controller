@@ -1,7 +1,20 @@
-import neopixel
 from threading import Thread
-from input import Input_Analog, Input_Temperature
 from time import time
+import sys
+import os
+abspath = os.path.abspath(__file__)
+dname = os.path.dirname(abspath)
+#os.chdir(dname)
+emulator_path = os.path.abspath(os.path.join(dname, os.pardir, 'emulator'))
+
+try:
+    from neopixel import NeoPixel
+    from input import Input_Analog, Input_Temperature
+except:
+    sys.path.append(emulator_path)
+    from emulator_backend import Adafruit_NeoPixel
+    NeoPixel = Adafruit_NeoPixel
+    from dummy import Input_Analog, Input_Temperature
 
 
 class Controller(object):
@@ -19,7 +32,11 @@ class Controller(object):
         num_pixels = 0
         for le in self.__light_elements:
             num_pixels += le.num_pixels
-        self.__neoPixels = neopixel.NeoPixel(config.board_pin, num_pixels)
+
+        self.__neoPixels = NeoPixel(config.board_pin, num_pixels)
+        if self.__config.emulator:
+            self.__neoPixels.begin()
+            self.__neoPixels.setBrightness(100)
 
         self.__mode = config.default_mode
         self.__brightness = config.brightness
@@ -31,15 +48,18 @@ class Controller(object):
 
             self.switch_mode(self.__mode)
 
-            t_run_effects = Thread(target=self.run_effects)
-            #t_show_all = Thread(target=self.show_all)
-            t_refresh_inputs = Thread(target=self.refresh_inputs)
-            t_refresh_temperature_inputs = Thread(target=self.refresh_temperture_inputs)
+            if not self.__config.emulator:
+                t_run_effects = Thread(target=self.run_effects)
+                #t_show_all = Thread(target=self.show_all)
+                t_refresh_inputs = Thread(target=self.refresh_inputs)
+                t_refresh_temperature_inputs = Thread(target=self.refresh_temperture_inputs)
 
-            t_refresh_inputs.start()
-            t_refresh_temperature_inputs.start()
-            t_run_effects.start()
-            #t_show_all.start()
+                t_refresh_inputs.start()
+                t_refresh_temperature_inputs.start()
+                t_run_effects.start()
+                #t_show_all.start()
+            else:
+                self. run_effects()
 
         return None
 
@@ -118,8 +138,16 @@ class Controller(object):
 
     def show_all(self):
         #while self.__active:
-        pixels = []
-        for le in self.__light_elements:
-            pixels += le.show()
-        self.__neoPixels[::] = pixels
+        if not self.__config.emulator:
+            pixels = []
+            for le in self.__light_elements:
+                pixels += le.show()
+            self.__neoPixels[::] = pixels
+        else:
+            i = 0
+            for le in self.__light_elements:
+                for pixel in le.pixels:
+                    self.__neoPixels.setPixelColor(i, self.__neoPixels.Color(pixel.r, pixel.g, pixel.b))
+                    i+=1
+            self.__neoPixels.show()
         return None

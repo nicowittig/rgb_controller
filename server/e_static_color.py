@@ -1,5 +1,4 @@
 from effect import Effect
-from input import Input
 
 
 class E_Static_Color(Effect):

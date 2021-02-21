@@ -5,8 +5,12 @@ import config as config
 from color import Color
 from controller import Controller
 from flask import Flask, Response, jsonify, request
-from gpiozero import CPUTemperature
-from input import Input_Temperature
+
+if not config.emulator:
+    from gpiozero import CPUTemperature
+    from input import Input_Temperature
+else:
+    from dummy import CPUTemperature, Input_Temperature
 
 sys.path.append("/home/pi/.local/lib/python3.7/site-packages")
 from flask_cors import CORS, cross_origin
